@@ -70,7 +70,7 @@ export default function Footer() {
                 className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
-                <span>hi@digitalplayground.com</span>
+                <span>hi@digitalplayground.io</span>
               </a>
               <div className="flex items-start gap-2 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5" />

@@ -13,7 +13,9 @@ export default function Navigation() {
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-white text-sm font-bold">Digital</span>
-              <span className="text-white text-sm font-bold">Playground</span>
+              <span className="text-white text-sm font-bold">
+                Playground.io
+              </span>
             </div>
           </div>
 
