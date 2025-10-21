@@ -29,8 +29,8 @@ export default function Home() {
           </h1>
           <p className="text-lg sm:text-xl max-w-2xl text-gray-300 mb-10">
             Custom web applications, seamless integrations, and intelligent
-            workflows designed to transform your business operations. Full-stack
-            developer + UX designer helping SMBs scale efficiently without the
+            workflows designed to transform your business operations. Specialized
+            development service helping SMBs scale efficiently without the
             overhead of traditional enterprise solutions.
           </p>
           <div className="flex items-center justify-center gap-4">
