@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Facebook, Twitter, Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and About */}
           <div className="flex flex-col gap-4">
-            <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="relative flex items-center justify-center">
                 <div className="w-10 h-10 rounded-full border-2 border-white" />
                 <div className="absolute w-6 h-6 rounded-full bg-white" />
@@ -18,7 +19,7 @@ export default function Footer() {
                 <span>Digital</span>
                 <span>Playground</span>
               </div>
-            </a>
+            </Link>
             <p className="text-white/60 text-sm">
               Smart Solutions for Growing Businesses
             </p>
