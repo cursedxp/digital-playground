@@ -49,7 +49,7 @@ export default function PrivacyPolicy() {
             <p>
               When you visit our website, we may automatically collect certain information about your device,
               including information about your web browser, IP address, time zone, and pages you visit.
-              We use privacy-focused analytics (Plausible Analytics) that doesn't collect personally identifiable information.
+              We use privacy-focused analytics (Plausible Analytics) that doesn&apos;t collect personally identifiable information.
             </p>
           </section>
 
@@ -145,7 +145,7 @@ export default function PrivacyPolicy() {
               We use minimal, privacy-focused tracking on our website and applications:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Analytics:</strong> We use Plausible Analytics, a privacy-friendly analytics tool that doesn't use cookies and doesn't collect personally identifiable information</li>
+              <li><strong>Analytics:</strong> We use Plausible Analytics, a privacy-friendly analytics tool that doesn&apos;t use cookies and doesn&apos;t collect personally identifiable information</li>
               <li><strong>Essential Cookies:</strong> We may use essential cookies necessary for website functionality, such as session management for contact forms</li>
               <li><strong>Facebook Cookies:</strong> When you use our Facebook application, Facebook may set cookies according to their own privacy policy</li>
             </ul>
@@ -179,7 +179,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-white">11. Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-white">11. Children&apos;s Privacy</h2>
             <p>
               Our services are designed for businesses and are not intended for individuals under the age of 18.
               We do not knowingly collect personal information from children. If you become aware that
@@ -191,7 +191,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold mb-4 text-white">12. Changes to This Privacy Policy</h2>
             <p>
               We may update our Privacy Policy from time to time to reflect changes in our practices or legal requirements.
-              We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+              We will notify you of any material changes by posting the new Privacy Policy on this page and updating the &quot;Last updated&quot; date.
               For significant changes, we may provide additional notice such as email notification.
             </p>
           </section>
