@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-white">1. Introduction</h2>
             <p>
-              Digital Playground ("we," "our," or "us") is committed to protecting your privacy.
+              Digital Playground (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;) is committed to protecting your privacy.
               This Privacy Policy explains how we collect, use, disclose, and safeguard your information
               when you visit our website, use our services, or interact with our Facebook application.
             </p>
@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
               <li><strong>Consent:</strong> When you provide explicit consent for specific purposes (e.g., newsletter subscriptions)</li>
-              <li><strong>Contract Performance:</strong> To fulfill our obligations in providing services you've requested</li>
+              <li><strong>Contract Performance:</strong> To fulfill our obligations in providing services you&apos;ve requested</li>
               <li><strong>Legitimate Interests:</strong> To improve our services and communicate relevant business information</li>
               <li><strong>Legal Compliance:</strong> To comply with applicable laws and regulations</li>
             </ul>
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p className="mt-4">
               You can configure your browser to refuse cookies, though this may affect some website functionality.
-              To manage cookies from Facebook, please refer to Facebook's privacy settings.
+              To manage cookies from Facebook, please refer to Facebook&apos;s privacy settings.
             </p>
           </section>
 
@@ -161,7 +161,7 @@ export default function PrivacyPolicy() {
               Our website and services may contain links to third-party websites or integrate with third-party services, including:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-4">
-              <li><strong>Facebook:</strong> Our Facebook application operates within Facebook's platform and is subject to Facebook's Privacy Policy</li>
+              <li><strong>Facebook:</strong> Our Facebook application operates within Facebook&apos;s platform and is subject to Facebook&apos;s Privacy Policy</li>
               <li><strong>Other Integration Platforms:</strong> We may integrate with various business tools and platforms as part of our service delivery</li>
             </ul>
             <p className="mt-4">
