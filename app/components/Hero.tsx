@@ -10,7 +10,7 @@ export default function Hero() {
     <div className="relative flex items-center justify-center min-h-screen bg-white overflow-hidden">
       <BackgroundVideo />
       <Overlay />
-      <TransitionComp />
+      <TransitionComp className="bottom-0 left-0 w-full h-48" />
       {/* Content */}
       <div className="relative z-10 max-w-4xl m-auto flex flex-col items-center px-6 text-center">
         <div className="rounded-full flex items-center justify-center radial-gradient p-10">
@@ -19,8 +19,7 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
-          Smart Solutions for{" "}
-          <span className="font-serif text-8xl ">Growing </span>
+          Smart Solutions <span className="font-serif text-8xl ">Growing </span>
           <span className="relative inline-block font-serif text-8xl font-extralight tracking-tight">
             <span className="relative z-10">Businesses</span>
             <span

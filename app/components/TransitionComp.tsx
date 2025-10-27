@@ -1,5 +1,11 @@
-export default function TransitionComp() {
+interface TransitionCompProps {
+  className?: string;
+}
+
+export default function TransitionComp({ className }: TransitionCompProps) {
   return (
-    <div className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-b from-transparent via-black/80 to-black pointer-events-none z-10" />
+    <div
+      className={`absolute ${className} bg-gradient-to-b from-transparent via-black/80 to-black pointer-events-none z-10`}
+    />
   );
 }

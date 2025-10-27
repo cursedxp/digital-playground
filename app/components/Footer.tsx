@@ -59,6 +59,12 @@ export default function Footer() {
               >
                 Impressum
               </a>
+              <a
+                href="/privacy"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Privacy Policy
+              </a>
             </nav>
           </div>
 

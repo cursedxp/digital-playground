@@ -7,16 +7,17 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Left side - Logo */}
-          <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <Link
+            href="/"
+            className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+          >
             <div className="relative flex items-center justify-center">
               <div className="w-8 h-8 rounded-full border-2 border-white" />
               <div className="absolute w-4 h-4 rounded-full bg-white" />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-white text-sm font-bold">Digital</span>
-              <span className="text-white text-sm font-bold">
-                Playground.io
-              </span>
+              <span className="text-white text-sm font-bold">Playground</span>
             </div>
           </Link>
 
