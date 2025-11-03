@@ -121,13 +121,10 @@ export default function ComplencyCurve() {
             initial={{ pathLength: 0, opacity: 0 }}
             whileInView={{ pathLength: 1, opacity: 1 }}
             viewport={{
-              once: false,
+              once: true,
               amount: 0.5,
             }}
-            transition={{
-              duration: 1.5,
-              ease: "easeInOut",
-            }}
+            transition={{ duration: 1.5, ease: "easeInOut" }}
           />
 
           {/* Group with mask applied */}
