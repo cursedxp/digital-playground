@@ -7,9 +7,9 @@ import Overlay from "@/app/components/Overlay";
 
 export default function Hero() {
   return (
-    <div className="relative flex items-center justify-center min-h-screen bg-white overflow-hidden">
-      <BackgroundVideo />
-      <Overlay />
+    <div className="relative flex items-center justify-center min-h-screen overflow-hidden">
+      {/* <BackgroundVideo /> */}
+      {/* <Overlay /> */}
       <TransitionComp className="bottom-0 left-0 w-full h-48" />
       {/* Content */}
       <div className="relative z-10 max-w-4xl m-auto flex flex-col items-center px-6 text-center">
