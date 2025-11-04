@@ -1,122 +1,106 @@
 "use client";
 
-import { useState } from "react";
-import TransitionComp from "./TransitionComp";
+import { motion } from "framer-motion";
+
+const pricingOptions = [
+  {
+    type: "Task-Based",
+    price: "$2,400",
+    description:
+      "Pre-scoped, well-defined deliverables with fast turnaround. Perfect for multi-step automations and standard integrations.",
+    features: [
+      "Clear scope and timeline",
+      "1-2 week delivery",
+      "Multi-step workflows",
+      "Standard integrations",
+      "Documentation included",
+    ],
+  },
+  {
+    type: "Project-Based",
+    price: "From $8,000",
+    description:
+      "Full-scope custom applications and complex integrations. Includes discovery, design, development, and deployment.",
+    features: [
+      "Discovery & planning",
+      "Custom design & UX",
+      "Full-stack development",
+      "Testing & deployment",
+      "Training & support",
+    ],
+  },
+  {
+    type: "Custom",
+    price: "Let's Talk",
+    description:
+      "Simple integrations, basic automations, or unique requirements that need a tailored approach.",
+    features: [
+      "Flexible pricing",
+      "Quick assessment",
+      "Tailored solutions",
+      "No commitment required",
+      "Fast response time",
+    ],
+  },
+];
 
 export default function Pricing() {
-  const [selectedPlan, setSelectedPlan] = useState<"monthly" | "custom">(
-    "monthly"
-  );
-
   return (
-    <section className="relative text-white flex flex-col items-center w-full py-20">
-      <div className="flex flex-col justify-center items-center max-w-7xl px-4">
-        {/* Large background text */}
-        <div className="relative w-full mb-16">
-          <h2 className="text-[22rem] font-serif font-normal leading-none mb-8 bg-gradient-to-b from-white to-black bg-clip-text text-transparent">
-            Pricing
-          </h2>
-          <TransitionComp className="bottom-9 left-0 w-full h-56" />
-        </div>
-
-        {/* Pricing toggle */}
-        <div className="flex gap-4 mb-12">
-          <button
-            onClick={() => setSelectedPlan("monthly")}
-            className={`px-6 py-3 rounded-full flex items-center gap-2 transition-all ${
-              selectedPlan === "monthly"
-                ? "bg-gray-700 text-white"
-                : "bg-transparent text-gray-400"
-            }`}
-          >
-            <span className="text-xl">🔄</span>
-            <span>Monthly</span>
-            <span className="text-sm text-gray-400">$8,000/mo</span>
-          </button>
-          <button
-            onClick={() => setSelectedPlan("custom")}
-            className={`px-6 py-3 rounded-full flex items-center gap-2 transition-all ${
-              selectedPlan === "custom"
-                ? "bg-gray-700 text-white"
-                : "bg-transparent text-gray-400"
-            }`}
-          >
-            <span className="text-xl">✦</span>
-            <span>Custom</span>
-            <span className="text-sm text-gray-400">Starts at $20,000</span>
-          </button>
-        </div>
-
-        {/* Pricing card */}
-        <div className="w-full max-w-4xl">
-          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-12">
-            <h4 className="text-3xl sm:text-4xl font-bold mb-8 text-gray-200">
-              Monthly Design Retainer
-            </h4>
-
-            <ul className="space-y-4 mb-12">
-              <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
-                <span className="text-gray-300">
-                  Ongoing design support for any project
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
-                <span className="text-gray-300">
-                  Custom development or no-code (limits apply)
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
-                <span className="text-gray-300">
-                  Clear timeline and milestone deliverables
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-green-400 mt-1">✓</span>
-                <span className="text-gray-300">
-                  Expert project manager & weekly async updates
-                </span>
-              </li>
-            </ul>
-
-            <div className="flex items-end justify-between">
-              <div>
-                <div className="text-6xl sm:text-7xl font-bold text-white mb-2">
-                  $8,000
-                </div>
-                <div className="text-gray-400">
-                  <div>per month</div>
-                  <div>billed monthly</div>
-                </div>
-              </div>
-              <button className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-gray-200 transition-colors flex items-center gap-2">
-                Get Started
-                <span>→</span>
-              </button>
+    <section className="bg-black text-white px-6 mb-20">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          {/* Title - First on mobile, Right on desktop */}
+          <div className="lg:col-span-4 lg:order-2">
+            <div className="lg:sticky lg:top-24">
+              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+                Simple,
+                <br />
+                Transparent
+                <br />
+                Pricing
+              </h2>
+              <p className="text-white/70 text-lg leading-relaxed mt-6">
+                No hidden fees, no surprises. Choose the engagement model that
+                fits your needs and budget. All options include our commitment
+                to quality and clear communication.
+              </p>
+              <a
+                href="#contact"
+                className="inline-block mt-8 px-8 py-3 bg-white text-black text-base font-semibold rounded-full hover:bg-white/90 transition-all hover:scale-105"
+              >
+                Book a Call
+              </a>
             </div>
           </div>
-        </div>
 
-        {/* Testimonial */}
-        <div className="mt-16 max-w-2xl">
-          <h5 className="font-serif italic text-2xl mb-6">
-            The 5 Types of Wealth
-          </h5>
-          <p className="text-gray-300 mb-6">
-            &quot;For us it has been important to find a creative partner like
-            Off Menu a team we can trust to deliver quality work on time, even
-            with short notices.&quot;
-          </p>
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-gray-700"></div>
-            <div>
-              <div className="font-semibold">Sahil Bloom</div>
-              <div className="text-sm text-gray-400">
-                Author, The 5 Types of Wealth
-              </div>
-            </div>
+          {/* Pricing Options - Second on mobile, Left on desktop */}
+          <div className="lg:col-span-8 lg:order-1 grid grid-cols-1 md:grid-cols-3 gap-6">
+            {pricingOptions.map((option, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold mb-2">{option.type}</h3>
+                  <div className="text-4xl font-bold mb-4">{option.price}</div>
+                  <p className="text-white/70 text-sm leading-relaxed">
+                    {option.description}
+                  </p>
+                </div>
+
+                <ul className="space-y-3">
+                  {option.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-sm">
+                      <span className="text-white/40 flex-shrink-0">—</span>
+                      <span className="text-white/80">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>
