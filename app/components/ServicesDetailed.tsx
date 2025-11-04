@@ -47,7 +47,7 @@ export default function ServicesDetailed() {
               Specialized development services designed to eliminate operational
               friction and accelerate business growth.
             </p>
-            <div className="grid grid-cols-3 gap-4 mt-8">
+            <div className="grid lg:grid-cols-3 gap-4 mt-8">
               {services.map((service) => (
                 <div key={service.number}>
                   <span className="font-bold block mb-2 ">{service.title}</span>

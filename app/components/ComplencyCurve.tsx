@@ -59,7 +59,7 @@ export default function ComplencyCurve() {
               Growth is easy until you take it for granted. We help growing
               companies keep growing.
             </p>
-            <div className="grid grid-cols-3 gap-4 mt-8 text-sm">
+            <div className="grid lg:grid-cols-3 gap-4 mt-8 text-sm">
               <p>
                 As businesses scale, they hit the same ceiling: workflows break,
                 systems don&apos;t talk to each other, and teams drown in manual

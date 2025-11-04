@@ -12,10 +12,7 @@ export default function ServiceOverview() {
         </p>
       </div>
       <div className="max-w-7xl pb-30">
-        <div className="grid grid-cols-6 gap-4">
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="grid lg:grid-cols-3 lg:pl-[50%] md:grid-cols-3 sm:grid-cols-3 gap-4">
           <div>
             <h3 className="font-bold mb-2">Integrated Design & Development</h3>
             <p className="text-sm">
