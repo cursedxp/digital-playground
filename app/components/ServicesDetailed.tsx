@@ -30,7 +30,7 @@ export default function ServicesDetailed() {
 
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20">
-      <div className="flex max-w-7xl">
+      <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1">
           <h2 className="text-7xl font-bold">
             What We

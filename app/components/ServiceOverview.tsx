@@ -5,13 +5,13 @@ export default function ServiceOverview() {
         <h2 className="text-5xl sm:text-7xl font-bold text-center mb-10 ">
           Your Business, Elevated
         </h2>
-        <p className="text-center mb-10 max-w-3xl">
+        <p className="text-center mb-10 max-w-3xl px-8 sm:px-0">
           A specialized development service delivering custom solutions that
           eliminate friction and drive measurable results—without the overhead
           of traditional agencies.
         </p>
       </div>
-      <div className="max-w-7xl pb-30">
+      <div className="max-w-7xl pb-30 px-8 sm:px-0">
         <div className="grid lg:grid-cols-3 lg:pl-[50%] md:grid-cols-3 sm:grid-cols-3 gap-4">
           <div>
             <h3 className="font-bold mb-2">Integrated Design & Development</h3>

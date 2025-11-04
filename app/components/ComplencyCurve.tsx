@@ -52,7 +52,7 @@ export default function ComplencyCurve() {
   };
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20">
-      <div className="flex max-w-7xl">
+      <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
         <div className="flex-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">

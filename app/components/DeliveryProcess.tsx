@@ -24,7 +24,7 @@ const phases = [
 export default function DeliveryProcess() {
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20">
-      <div className="flex max-w-7xl w-full">
+      <div className="flex max-w-7xl w-full flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
@@ -55,7 +55,7 @@ export default function DeliveryProcess() {
           </h2>
         </div>
       </div>
-      <div className="grid md:hidden gap-4 mt-8 text-sm max-w-7xl w-full">
+      <div className="grid md:hidden px-8 gap-4 mt-8 text-sm max-w-7xl w-full">
         {phases.map((phase, index) => (
           <div key={index} className="flex flex-col gap-2">
             <div className="text-6xl md:text-7xl font-bold text-white/10 mb-2">
