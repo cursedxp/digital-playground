@@ -33,6 +33,9 @@ export default function TechStack() {
     <section className="text-white flex flex-col items-center w-full relative mb-20">
       <div className="flex max-w-7xl w-full mb-8">
         <div className="flex-1">
+          <h2 className="text-7xl font-bold">Tech Stack</h2>
+        </div>
+        <div className="flex-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
               We work with modern, proven technologies to build scalable and
@@ -55,9 +58,6 @@ export default function TechStack() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="flex-1">
-          <h2 className="text-right text-7xl font-bold">Tech Stack</h2>
         </div>
       </div>
 
