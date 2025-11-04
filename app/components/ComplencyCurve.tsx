@@ -2,6 +2,7 @@
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
+import ComplencyCurveMobile from "./ComplencyCurveMobile";
 
 export default function ComplencyCurve() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -51,7 +52,14 @@ export default function ComplencyCurve() {
     moveToPosition(normalizedX);
   };
   return (
-    <section className="text-white flex flex-col items-center w-full relative mb-20">
+    <>
+      {/* Mobile Version */}
+      <div className="block lg:hidden">
+        <ComplencyCurveMobile />
+      </div>
+
+      {/* Desktop Version */}
+      <section className="hidden lg:flex text-white flex-col items-center w-full relative mb-20">
       <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
         <div className="flex-1">
           <div className="flex flex-col">
@@ -160,7 +168,7 @@ export default function ComplencyCurve() {
               width="200"
               height="150"
               rx="20"
-              className="fill-orange-500"
+              fill="#FFE028"
               transform="rotate(45 600 175)"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -183,14 +191,14 @@ export default function ComplencyCurve() {
           onMouseLeave={() => setHoveredSection(null)}
         >
           <div className="absolute bottom-[140px]">
-            <div className="w-[1px] h-8 bg-gray-700 group-hover:bg-orange-500 relative pointer-events-auto">
-              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5 group-hover:border-orange-500"></div>
+            <div className="w-[1px] h-8 bg-gray-700 relative pointer-events-auto" style={{ backgroundColor: hoveredSection === 0 ? '#FFE028' : '' }}>
+              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5" style={{ borderColor: hoveredSection === 0 ? '#FFE028' : '' }}></div>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-10">
             <div className="flex flex-col">
-              <span className="text-sm group-hover:text-orange-500">001</span>
-              <span className="font-semibold text-lg group-hover:text-orange-500">
+              <span className="text-sm" style={{ color: hoveredSection === 0 ? '#FFE028' : '' }}>001</span>
+              <span className="font-semibold text-lg" style={{ color: hoveredSection === 0 ? '#FFE028' : '' }}>
                 Start up
               </span>
             </div>
@@ -218,14 +226,14 @@ export default function ComplencyCurve() {
           onMouseLeave={() => setHoveredSection(null)}
         >
           <div className="absolute bottom-[140px]">
-            <div className="w-[1px] h-16 bg-gray-700 group-hover:bg-orange-500 relative pointer-events-auto">
-              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5 group-hover:border-orange-500"></div>
+            <div className="w-[1px] h-16 bg-gray-700 relative pointer-events-auto" style={{ backgroundColor: hoveredSection === 1 ? '#FFE028' : '' }}>
+              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5" style={{ borderColor: hoveredSection === 1 ? '#FFE028' : '' }}></div>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-10">
             <div className="flex flex-col">
-              <span className="text-sm group-hover:text-orange-500">002</span>
-              <span className="font-semibold text-lg group-hover:text-orange-500">
+              <span className="text-sm" style={{ color: hoveredSection === 1 ? '#FFE028' : '' }}>002</span>
+              <span className="font-semibold text-lg" style={{ color: hoveredSection === 1 ? '#FFE028' : '' }}>
                 Growth
               </span>
             </div>
@@ -253,14 +261,14 @@ export default function ComplencyCurve() {
           onMouseLeave={() => setHoveredSection(null)}
         >
           <div className="absolute bottom-[140px]">
-            <div className="w-[1px] h-64 bg-gray-700 group-hover:bg-orange-500 relative pointer-events-auto">
-              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5 group-hover:border-orange-500"></div>
+            <div className="w-[1px] h-64 bg-gray-700 relative pointer-events-auto" style={{ backgroundColor: hoveredSection === 2 ? '#FFE028' : '' }}>
+              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5" style={{ borderColor: hoveredSection === 2 ? '#FFE028' : '' }}></div>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-10">
             <div className="flex flex-col">
-              <span className="text-sm group-hover:text-orange-500">003</span>
-              <span className="font-semibold text-lg group-hover:text-orange-500">
+              <span className="text-sm" style={{ color: hoveredSection === 2 ? '#FFE028' : '' }}>003</span>
+              <span className="font-semibold text-lg" style={{ color: hoveredSection === 2 ? '#FFE028' : '' }}>
                 Maturity
               </span>
             </div>
@@ -288,14 +296,14 @@ export default function ComplencyCurve() {
           onMouseLeave={() => setHoveredSection(null)}
         >
           <div className="absolute bottom-[140px]">
-            <div className="w-[1px] h-96 bg-gray-700 group-hover:bg-orange-500 relative pointer-events-auto">
-              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5 group-hover:border-orange-500"></div>
+            <div className="w-[1px] h-96 bg-gray-700 relative pointer-events-auto" style={{ backgroundColor: hoveredSection === 3 ? '#FFE028' : '' }}>
+              <div className="w-3 h-3 rounded-full border border-gray-700 absolute -top-3 -left-1.5" style={{ borderColor: hoveredSection === 3 ? '#FFE028' : '' }}></div>
             </div>
           </div>
           <div className="flex flex-col gap-4 mt-10">
             <div className="flex flex-col">
-              <span className="text-sm group-hover:text-orange-500">004</span>
-              <span className="font-semibold text-lg group-hover:text-orange-500">
+              <span className="text-sm" style={{ color: hoveredSection === 3 ? '#FFE028' : '' }}>004</span>
+              <span className="font-semibold text-lg" style={{ color: hoveredSection === 3 ? '#FFE028' : '' }}>
                 Decline
               </span>
             </div>
@@ -316,5 +324,6 @@ export default function ComplencyCurve() {
         </div>
       </div>
     </section>
+    </>
   );
 }
