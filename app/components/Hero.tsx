@@ -1,9 +1,7 @@
 import MoleculeBackground from "@/app/components/MoleculeBackground";
-import BackgroundVideo from "@/app/components/BackgroundVideo";
 import SoundWave from "@/app/components/SoundWave";
 import BookCallButton from "@/app/components/BookCallButton";
 import TransitionComp from "@/app/components/TransitionComp";
-import Overlay from "@/app/components/Overlay";
 
 export default function Hero() {
   return (
