@@ -84,7 +84,7 @@ export default function ComplencyCurve() {
                 <p>
                   Every growing business hits the same bottleneck: workflows
                   that worked for 10 people break at 50. Manual processes that
-                  were "fine for now" become full-time jobs. Systems that
+                  were &quot;fine for now&quot; become full-time jobs. Systems that
                   don&apos;t talk to each other create chaos.
                 </p>
                 <p>
@@ -400,7 +400,7 @@ export default function ComplencyCurve() {
           <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
             Growth phase: You need automation before manual processes break.
             Maturity: You need integration and dashboards to scale efficiently.
-            Already struggling: Let's talk about rescue and rebuild.
+            Already struggling: Let&apos;s talk about rescue and rebuild.
           </p>
           <BookCallButton
             text="Book a Discovery Call"

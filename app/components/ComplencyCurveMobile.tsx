@@ -254,7 +254,7 @@ export default function ComplencyCurveMobile() {
       <div className="flex flex-col items-center w-full max-w-md mt-12 text-center">
         <h3 className="text-xl font-bold mb-3">Where are you on this curve?</h3>
         <p className="text-white/70 text-sm mb-6">
-          Growth phase: Automate before manual processes break. Maturity: Integrate and scale efficiently. Struggling: Let's rebuild.
+          Growth phase: Automate before manual processes break. Maturity: Integrate and scale efficiently. Struggling: Let&apos;s rebuild.
         </p>
         <BookCallButton
           text="Book a Discovery Call"
