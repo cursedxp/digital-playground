@@ -22,6 +22,7 @@ export const metadata: Metadata = {
   title: "Custom Development Solutions for Growing Businesses",
   description:
     "Eliminate bottlenecks and scale efficiently with custom automation, seamless integrations, and tailored web applications. Work directly with us—no account managers, no handoffs.",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=5",
 };
 
 export default function RootLayout({
