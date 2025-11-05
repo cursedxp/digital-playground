@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import ComplencyCurveMobile from "./ComplencyCurveMobile";
 import BookCallButton from "./BookCallButton";
 
-export default function ol() {
+export default function ComplencyCurve() {
   const svgRef = useRef<SVGSVGElement>(null);
   const pathRef = useRef<SVGPathElement>(null);
 
