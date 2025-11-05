@@ -1,49 +1,49 @@
 export default function ServiceOverview() {
   return (
     <section className="text-white flex flex-col items-center w-full">
-      <div className="flex flex-col justify-center items-center max-w-7xl">
-        <h2 className="text-5xl sm:text-7xl font-bold text-center mb-10 ">
-          Your Business, Elevated
+      <div className="flex flex-col justify-center items-center max-w-7xl px-8 sm:px-0">
+        <h2 className="text-7xl sm:text-7xl font-bold text-center mb-10 ">
+          Why Choose This Approach
         </h2>
-        <p className="text-center mb-10 max-w-3xl px-8 sm:px-0">
+        <p className="text-center mb-10 max-w-3xl ">
           A specialized development service delivering custom solutions that
-          eliminate friction and drive measurable results—without the overhead
-          of traditional agencies.
+          eliminate friction and drive measurable results—faster than hiring
+          a full-time developer. Start with a small task to test our collaboration.
         </p>
       </div>
       <div className="max-w-7xl pb-30 px-8 sm:px-0">
         <div className="grid lg:grid-cols-3 lg:pl-[50%] md:grid-cols-3 sm:grid-cols-3 gap-4">
           <div>
-            <h3 className="font-bold mb-2">Integrated Design & Development</h3>
+            <h3 className="font-bold mb-2">Design & Development, Unified</h3>
             <p className="text-sm">
-              We don&apos;t separate design from development. Every solution we
-              build combines technical implementation with user experience from
-              day one, resulting in tools that work beautifully and get adopted
-              by your team. Faster iterations, fewer revisions, seamless
-              execution.
+              You're not paying for a designer AND a developer who need to
+              coordinate. We handle both—eliminating handoff delays,
+              translation errors, and coordination overhead. What you see in the design
+              is what gets built. Faster iterations, zero miscommunication,
+              seamless execution.
             </p>
           </div>
 
           <div>
             <h3 className="font-bold mb-2">
-              Direct Communication, Zero Bureaucracy
+              Built Around Your Schedule
             </h3>
             <p className="text-sm">
-              We eliminate the markup and delays that come with account managers
-              and project coordinators. You work directly with senior-level
-              expertise, decisions happen fast, and our streamlined approach
-              delivers 30-50% cost savings compared to traditional agencies.
+              Async-first workflow means we never block your calendar. Direct
+              communication with the team handling your project—no account
+              managers, no status meetings. Review progress updates and
+              prototypes on your own time. Ship in weeks, not months.
             </p>
           </div>
 
           <div>
-            <h3 className="font-bold mb-2">Business Impact First</h3>
+            <h3 className="font-bold mb-2">Built for Real Business Outcomes</h3>
             <p className="text-sm">
-              We measure success by ROI, not billable hours. Every
+              We measure success by impact, not billable hours. Every
               recommendation considers your budget constraints, team size, and
               long-term maintainability. We build solutions that deliver
-              tangible value—time saved, errors eliminated, operations
-              scaled—without creating dependencies.
+              tangible results—eliminate manual errors, free your team from
+              repetitive work, scale operations without adding headcount.
             </p>
           </div>
         </div>

@@ -5,34 +5,54 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What services do you offer?",
+    question: "Can you integrate with our existing tools?",
     answer:
-      "We specialize in web development, mobile app development, and digital strategy. Our services include custom website development, e-commerce solutions, mobile applications, UI/UX design, and comprehensive digital transformation consulting.",
+      "Yes. Most integrations work with popular platforms like Stripe, HubSpot, Notion, Google Sheets, and Airtable through their APIs. If your tool has an API or webhook support, we can likely connect it. During discovery, we'll assess your specific stack and confirm compatibility.",
   },
   {
-    question: "How long does a typical project take?",
+    question: "Do I need to know exactly what I want before starting?",
     answer:
-      "Project timelines vary based on scope and complexity. A simple website might take 4-6 weeks, while a complex web application or mobile app could take 3-6 months. We'll provide a detailed timeline during our initial consultation.",
+      "No. Many clients come with a problem, not a solution. We start with a discovery call to understand your workflows and pain points, then recommend the right approach. You'll get a clear proposal with scope, timeline, and cost before any work begins.",
   },
   {
-    question: "What is your development process?",
+    question: "What's included in the final deliverable?",
     answer:
-      "We follow an agile methodology with clear milestones. The process includes discovery and planning, design and prototyping, development, testing, and deployment. You'll receive regular updates and have opportunities to provide feedback throughout.",
+      "Every project includes the working application (deployed and live), source code access, design files (Figma/Sketch), basic documentation, and a handoff session to train your team. You own everything—no vendor lock-in.",
   },
   {
-    question: "Do you provide ongoing support and maintenance?",
+    question: "How do you charge for projects?",
     answer:
-      "Yes, we offer comprehensive support and maintenance packages. This includes bug fixes, security updates, performance optimization, and feature enhancements to ensure your digital products continue to perform at their best.",
+      "Projects are priced based on scope and complexity. Task-based work (integrations, simple automations) starts at $2,400 with fixed pricing. Larger projects start at $8,000 and are quoted after discovery. You'll always know the full cost upfront—no hourly surprises.",
   },
   {
-    question: "What technologies do you work with?",
+    question: "What if we need changes after delivery?",
     answer:
-      "We work with modern technologies including React, Next.js, TypeScript, Node.js, and various CMS platforms. We select the best tech stack for each project based on your specific requirements and long-term goals.",
+      "Each task is delivered fully tested and working. If what we delivered doesn't work as specified, we fix it—that's our responsibility. If your needs evolve (new features, additional integrations, workflow changes), those are new tasks priced separately starting at $2,400. Want ongoing work? We can schedule recurring monthly tasks to continuously improve your systems.",
   },
   {
-    question: "How do you handle project communication?",
+    question: "What if a third-party tool changes its API?",
     answer:
-      "We maintain transparent communication through regular meetings, project management tools, and dedicated channels. You'll have a primary point of contact and access to our team throughout the project lifecycle.",
+      "If a tool we integrated makes breaking changes to their API, adapting the integration is a new task. We'll assess the scope and provide a quote—typically $1,200-$2,400 depending on complexity. This is rare but important to plan for with third-party integrations.",
+  },
+  {
+    question: "How is this different from hiring a developer?",
+    answer:
+      "Hiring takes 2-3 months and costs $80k-$120k/year plus benefits. We deliver in weeks, you pay only for what you need, and there's no onboarding time. Plus, you get both design and development expertise—most developers don't design, so you'd need to hire both.",
+  },
+  {
+    question: "Why not use Zapier or other no-code tools?",
+    answer:
+      "No-code tools work great for simple workflows. When you need custom business logic, complex data transformations, branded user interfaces, or real-time dashboards, you need actual code. We build what no-code tools can't.",
+  },
+  {
+    question: "How involved do we need to be during the project?",
+    answer:
+      "About 2-3 hours total—all scheduled at your convenience. Initial discovery call (1 hour), prototype feedback sessions (30-60 min), and final handoff (1 hour). Everything else is async: weekly video updates you watch on your schedule, Slack for quick questions, and Loom feedback when you have time. We build while you run your business.",
+  },
+  {
+    question: "Can you handle projects that typically require a team?",
+    answer:
+      "Yes. The pricing model ($2,400-$8,000 per deliverable) is designed for realistic scope boundaries. Complex projects are broken into manageable deliverables. The advantage of this approach is that you work directly with the developer building your solution, avoiding the coordination overhead and markup that comes with larger teams. If a project genuinely requires parallel workstreams or specialized expertise beyond full-stack and UX, this will be communicated transparently and vetted specialists can be brought in.",
   },
 ];
 
@@ -46,18 +66,27 @@ export default function FAQ() {
           {/* Left side - Title */}
           <div className="lg:col-span-4">
             <div className="sticky top-24">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+              <h2 className="text-7xl font-bold">
                 Frequently
                 <br />
                 Asked
                 <br />
                 Questions
               </h2>
-              <p className="text-white/70 text-lg leading-relaxed mt-6">
-                We&apos;re ready to assist you with any questions about our
-                services, pricing model, or business solutions. We aim to
-                respond within 24 hours on business days.
+              <p className="text-white/70 text-lg leading-relaxed mt-6 mb-8">
+                Real questions from businesses like yours. Can't find your
+                answer? Book a quick call and we'll walk you through exactly
+                how we can help.
               </p>
+              <a
+                href="#contact"
+                className="inline-block px-6 py-3 text-black text-sm font-semibold rounded-full transition-all hover:scale-105"
+                style={{ backgroundColor: "#FFE028" }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
+              >
+                Get Your Questions Answered
+              </a>
             </div>
           </div>
 
@@ -71,7 +100,7 @@ export default function FAQ() {
                   }
                   className="w-full text-left flex items-start justify-between gap-4 group"
                 >
-                  <span className="text-xl md:text-2xl font-semibold group-hover:text-yellow-200 transition-colors">
+                  <span className="text-xl md:text-2xl font-semibold transition-colors group-hover:opacity-80">
                     {faq.question}
                   </span>
                   <motion.span

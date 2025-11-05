@@ -1,58 +1,72 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const pricingOptions = [
   {
     type: "Task-Based",
     price: "$2,400",
+    timeline: "1-2 weeks",
     description:
-      "Pre-scoped, well-defined deliverables with fast turnaround. Perfect for multi-step automations and standard integrations.",
+      "Pre-scoped, well-defined deliverables with fast turnaround.",
+    highlight: "Start small. Test our collaboration with a single task before investing in a full project.",
+    badge: "Early Client Offer",
+    badgeText: "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
+    examples: "Stripe-to-HubSpot sync, Email automation workflow, API integration",
     features: [
-      "Clear scope and timeline",
-      "1-2 week delivery",
-      "Multi-step workflows",
-      "Standard integrations",
+      "Fixed scope and price",
+      "Delivered tested and working",
+      "Design + development included",
       "Documentation included",
+      "Perfect for testing collaboration",
     ],
   },
   {
     type: "Project-Based",
-    price: "From $8,000",
+    price: "$8,000",
+    timeline: "3 months",
     description:
-      "Full-scope custom applications and complex integrations. Includes discovery, design, development, and deployment.",
+      "Full-scope custom applications and complex integrations.",
+    highlight: null,
+    examples: "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
     features: [
       "Discovery & planning",
       "Custom design & UX",
       "Full-stack development",
-      "Testing & deployment",
-      "Training & support",
+      "Weekly progress updates",
+      "Handoff & training",
     ],
   },
   {
     type: "Custom",
     price: "Let's Talk",
+    timeline: "Varies",
     description:
-      "Simple integrations, basic automations, or unique requirements that need a tailored approach.",
+      "Complex multi-system integrations or unique requirements that need custom scoping.",
+    highlight: null,
+    examples: "Enterprise integrations, Legacy system modernization, Complex workflows",
     features: [
-      "Flexible pricing",
-      "Quick assessment",
+      "Custom assessment",
+      "Flexible approach",
       "Tailored solutions",
-      "No commitment required",
-      "Fast response time",
+      "Transparent quoting",
+      "No commitment to discuss",
     ],
   },
 ];
 
 export default function Pricing() {
+  const [hoveredBadge, setHoveredBadge] = useState<number | null>(null);
+
   return (
     <section className="bg-black text-white px-6 mb-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          {/* Title - First on mobile, Right on desktop */}
-          <div className="lg:col-span-4 lg:order-2">
+          {/* Title - First on mobile, Left on desktop */}
+          <div className="lg:col-span-4 lg:order-1">
             <div className="lg:sticky lg:top-24">
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold">
+              <h2 className="text-7xl font-bold">
                 Simple,
                 <br />
                 Transparent
@@ -66,15 +80,18 @@ export default function Pricing() {
               </p>
               <a
                 href="#contact"
-                className="inline-block mt-8 px-8 py-3 bg-white text-black text-base font-semibold rounded-full hover:bg-white/90 transition-all hover:scale-105"
+                className="inline-block mt-8 px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
+                style={{ backgroundColor: "#FFE028" }}
+                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
+                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
               >
                 Book a Call
               </a>
             </div>
           </div>
 
-          {/* Pricing Options - Second on mobile, Left on desktop */}
-          <div className="lg:col-span-8 lg:order-1 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Pricing Options - Second on mobile, Right on desktop */}
+          <div className="lg:col-span-8 lg:order-2 grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricingOptions.map((option, index) => (
               <motion.div
                 key={index}
@@ -82,23 +99,63 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative"
               >
-                <div className="mb-6">
+                {option.badge && (
+                  <div className="absolute -top-3 left-0 z-10">
+                    <div className="relative">
+                      <span
+                        className="px-4 py-1 text-xs font-semibold rounded-full text-black cursor-help transition-all hover:scale-105"
+                        style={{ backgroundColor: "#FFE028" }}
+                        onMouseEnter={() => setHoveredBadge(index)}
+                        onMouseLeave={() => setHoveredBadge(null)}
+                      >
+                        {option.badge}
+                      </span>
+                      {hoveredBadge === index && option.badgeText && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 5 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: 5 }}
+                          className="absolute top-full mt-2 left-0 w-64 p-3 rounded-lg shadow-xl z-20"
+                          style={{ backgroundColor: "rgba(255, 224, 40, 0.95)", border: "1px solid rgba(255, 224, 40, 1)" }}
+                        >
+                          <p className="text-xs leading-relaxed text-black font-medium">
+                            💡 {option.badgeText}
+                          </p>
+                        </motion.div>
+                      )}
+                    </div>
+                  </div>
+                )}
+                <div className={`mb-6 ${option.badge ? 'pt-4' : ''}`}>
                   <h3 className="text-2xl font-bold mb-2">{option.type}</h3>
-                  <div className="text-4xl font-bold mb-4">{option.price}</div>
-                  <p className="text-white/70 text-sm leading-relaxed">
+                  <div className="text-4xl font-bold mb-2">{option.price}</div>
+                  <div className="text-sm text-white/50 mb-4">Timeline: {option.timeline}</div>
+                  <p className="text-white/70 text-sm leading-relaxed mb-2">
                     {option.description}
                   </p>
+                  {option.highlight && (
+                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#FFE028" }}>
+                      {option.highlight}
+                    </p>
+                  )}
+                  <div className="text-xs text-white/50 mb-4">
+                    <span className="font-semibold text-white/60">Examples:</span> {option.examples}
+                  </div>
                 </div>
 
-                <ul className="space-y-3">
-                  {option.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm">
-                      <span className="text-white/40 flex-shrink-0">—</span>
-                      <span className="text-white/80">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="mb-3">
+                  <h4 className="text-sm font-semibold text-white/60 mb-3">What's Included:</h4>
+                  <ul className="space-y-3">
+                    {option.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm">
+                        <span className="flex-shrink-0" style={{ color: "#FFE028" }}>✓</span>
+                        <span className="text-white/80">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>

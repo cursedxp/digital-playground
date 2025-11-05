@@ -91,14 +91,12 @@ export default function ComplencyCurveMobile() {
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20 px-4">
       <div className="flex flex-col w-full max-w-md">
-        <h2 className="text-5xl font-bold mb-4">
-          The
-          <br /> Complency
-          <br /> Curve
+        <h2 className="text-7xl font-bold mb-4">
+          Why Growth
+          <br /> Stalls
         </h2>
         <p className="text-base mb-6">
-          Growth is easy until you take it for granted. We help growing
-          companies keep growing.
+          Growth eventually slows down. The question is: will you see it coming?
         </p>
       </div>
 
@@ -190,10 +188,16 @@ export default function ComplencyCurveMobile() {
           className="mb-6"
         >
           <div className="flex flex-col gap-2 mb-4">
-            <span className="text-sm" style={{ color: '#FFE028' }}>{steps[currentStep].id}</span>
-            <span className="font-semibold text-2xl">{steps[currentStep].title}</span>
+            <span className="text-sm" style={{ color: "#FFE028" }}>
+              {steps[currentStep].id}
+            </span>
+            <span className="font-semibold text-2xl">
+              {steps[currentStep].title}
+            </span>
           </div>
-          <p className="text-sm text-gray-300">{steps[currentStep].description}</p>
+          <p className="text-sm text-gray-300">
+            {steps[currentStep].description}
+          </p>
         </motion.div>
 
         {/* Navigation Controls */}
@@ -221,7 +225,9 @@ export default function ComplencyCurveMobile() {
                     ? "w-6"
                     : "bg-neutral-700 hover:bg-neutral-600"
                 }`}
-                style={index === currentStep ? { backgroundColor: '#FFE028' } : {}}
+                style={
+                  index === currentStep ? { backgroundColor: "#FFE028" } : {}
+                }
               />
             ))}
           </div>
@@ -235,6 +241,23 @@ export default function ComplencyCurveMobile() {
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="flex flex-col items-center w-full max-w-md mt-12 text-center">
+        <h3 className="text-xl font-bold mb-3">Where are you on this curve?</h3>
+        <p className="text-white/70 text-sm mb-6">
+          Growth phase: Automate before manual processes break. Maturity: Integrate and scale efficiently. Struggling: Let's rebuild.
+        </p>
+        <a
+          href="#contact"
+          className="inline-block px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
+          style={{ backgroundColor: "#FFE028" }}
+          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
+          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
+        >
+          Book a Discovery Call
+        </a>
       </div>
     </section>
   );

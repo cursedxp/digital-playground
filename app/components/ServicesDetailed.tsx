@@ -4,27 +4,27 @@ export default function ServicesDetailed() {
   const services = [
     {
       number: "01",
-      title: "Custom Web Applications",
+      title: "Drowning in manual data entry?",
       description:
-        "Tailored web solutions that address your specific business challenges. From internal dashboards to customer-facing platforms, we build applications that streamline operations and drive growth.",
+        "Automated integrations that sync your tools in real-time. Connect your CRM (HubSpot, Pipedrive, Salesforce), payment processor (Stripe, PayPal), spreadsheets (Google Sheets, Airtable), and email platform (Mailchimp, SendGrid)—eliminate copy-paste work forever.",
     },
     {
       number: "02",
-      title: "UX Design",
+      title: "Spreadsheets breaking down?",
       description:
-        "User-centered design that prioritizes clarity and efficiency. We create intuitive interfaces that your team will actually want to use, reducing training time and increasing adoption.",
+        "Custom dashboards that give your team real-time visibility. Built for your exact workflow, not generic templates. Includes data visualization, filtering, and export capabilities.",
     },
     {
       number: "03",
-      title: "Workflow Optimization",
+      title: "Generic tools not fitting your needs?",
       description:
-        "Analyze and improve your business processes through technology. We identify inefficiencies, eliminate bottlenecks, and implement solutions that streamline operations and reduce manual overhead.",
+        "Tailored applications designed around your business logic. Customer portals, internal admin tools, booking systems, inventory trackers—built exactly for your workflow with intuitive UX your team will actually use.",
     },
     {
       number: "04",
-      title: "System Integration",
+      title: "Disconnected systems causing chaos?",
       description:
-        "Connect your disconnected tools and platforms into a unified ecosystem. We build seamless integrations that enable automatic data flow and provide centralized visibility across your operations.",
+        "Unified workflows that create a single source of truth. Build custom APIs and integrations that make your tools work together seamlessly—no more data silos.",
     },
   ];
 
@@ -32,20 +32,10 @@ export default function ServicesDetailed() {
     <section className="text-white flex flex-col items-center w-full relative mb-20">
       <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1">
-          <h2 className="text-7xl font-bold">
-            What We
-            <br />
-            Build
-          </h2>
-          <div className="mt-8">
-            <BookCallButton />
-          </div>
-        </div>
-        <div className="flex-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
-              Specialized development services designed to eliminate operational
-              friction and accelerate business growth.
+              Concrete solutions that solve real problems. Each deliverable
+              includes design, development, and deployment—ready to use.
             </p>
             <div className="grid lg:grid-cols-3 gap-4 mt-8">
               {services.map((service) => (
@@ -55,6 +45,16 @@ export default function ServicesDetailed() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        <div className="flex-1 flex flex-col items-end">
+          <h2 className="text-7xl font-bold text-right">
+            What You
+            <br />
+            Get
+          </h2>
+          <div className="mt-8">
+            <BookCallButton />
           </div>
         </div>
       </div>

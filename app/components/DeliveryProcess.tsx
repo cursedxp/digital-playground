@@ -5,19 +5,19 @@ const phases = [
     number: "01",
     title: "Discover & Define",
     description:
-      "We start with a deep-dive consultation to understand your business challenges, workflows, and goals. Together, we identify automation opportunities and define clear success metrics—so you know exactly what ROI to expect.",
+      "Deep-dive consultation to understand your workflows and pain points. We identify what to build, define clear success metrics, and estimate ROI—so you know exactly what you're getting before we start.",
   },
   {
     number: "02",
     title: "Design & Build",
     description:
-      "Our integrated team designs intuitive user experiences and builds robust solutions in parallel. You'll see progress through regular updates and working prototypes—without endless meetings or status calls.",
+      "Design and development happen in parallel. You get working prototypes within days, production-ready solutions in weeks. Weekly video updates show real progress—no calendar-blocking status meetings.",
   },
   {
     number: "03",
     title: "Deploy & Optimize",
     description:
-      "We launch your solution, train your team, and monitor performance against our success metrics. Then we iterate based on real usage data and feedback to maximize value and efficiency.",
+      "Launch, train your team, and monitor real usage. Then iterate based on actual data and feedback. Continuous improvement until it works exactly how you need it to.",
   },
 ];
 
@@ -28,9 +28,10 @@ export default function DeliveryProcess() {
         <div className="flex-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
-              Our streamlined process delivers measurable results in weeks, not
-              months. No bureaucracy, no bloated teams—just focused expertise
-              getting you to value faster.
+              Async-first process designed for busy founders. We build while
+              you run your business. Weekly progress updates you review on your
+              time—no meetings disrupting your flow. Results in 1-2 weeks for
+              tasks, 3 months for full projects.
             </p>
             <div className="hidden md:grid grid-cols-3 gap-4 mt-8 text-sm">
               {phases.map((phase, index) => (
@@ -47,9 +48,7 @@ export default function DeliveryProcess() {
         </div>
         <div className="flex-1">
           <h2 className="text-right text-7xl font-bold">
-            Fast, Focused
-            <br />
-            Delivery That
+            How It
             <br />
             Works
           </h2>

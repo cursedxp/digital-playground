@@ -34,9 +34,8 @@ export default function Hero() {
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-gray-300 mb-10">
           Custom web applications, seamless integrations, and intelligent
-          workflows designed to transform your business operations. Specialized
-          development service helping SMBs scale efficiently without the
-          overhead of traditional enterprise solutions.
+          workflows designed to transform your business operations. For businesses
+          drowning in manual work, but not ready to hire a full development team.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

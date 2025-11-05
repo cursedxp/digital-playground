@@ -6,6 +6,27 @@ import { Facebook, Twitter, Mail, MapPin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="relative z-40 bg-black/80 backdrop-blur-sm">
+      {/* CTA Section */}
+      <div className="max-w-7xl mx-auto px-8 py-16 border-b border-white/10">
+        <div className="text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            Ready to Automate Your Workflow?
+          </h2>
+          <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+            Start with a discovery call to identify your bottlenecks, or jump in with a small task to test our collaboration.
+          </p>
+          <a
+            href="#contact"
+            className="inline-block px-8 py-4 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
+            style={{ backgroundColor: "#FFE028" }}
+            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
+            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
+          >
+            Book a Discovery Call
+          </a>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and About */}
@@ -85,6 +106,8 @@ export default function Footer() {
                   Am Kapellengraben 49
                   <br />
                   40670 Meerbusch, Germany
+                  <br />
+                  <span className="text-white/40 text-xs mt-1 block">CET Timezone (UTC+1)</span>
                 </span>
               </div>
             </div>

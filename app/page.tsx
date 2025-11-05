@@ -7,17 +7,19 @@ import Pricing from "./components/Pricing";
 import ServiceOverview from "./components/ServiceOverview";
 import ServicesDetailed from "./components/ServicesDetailed";
 import TechStack from "./components/TechStack";
+import WhoWeAre from "./components/WhoWeAre";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <ServiceOverview />
-      <ComplencyCurve />
       <ServicesDetailed />
+      <ComplencyCurve />
       <DeliveryProcess />
-      <TechStack />
       <Pricing />
+      <TechStack />
+      <WhoWeAre />
       <FAQ />
       <Footer />
     </>
