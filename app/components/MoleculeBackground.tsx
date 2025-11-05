@@ -125,7 +125,7 @@ export default function MoleculeBackground({
       mesh!: THREE.Points;
       radius = 2.8;
       // Reduced detail for better performance - responsive to screen size
-      detail = typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 25;
+      detail = typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 50;
       particleSizeMin = 0.01;
       particleSizeMax = 0.04;
 
