@@ -135,7 +135,7 @@ export default function ComplencyCurveMobile() {
             whileInView={{ pathLength: 1, opacity: 1 }}
             viewport={{
               once: true,
-              amount: 0.5,
+              amount: 0.3,
             }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           />
@@ -157,7 +157,7 @@ export default function ComplencyCurveMobile() {
               whileInView={{ opacity: 1 }}
               viewport={{
                 once: false,
-                amount: 0.5,
+                amount: 0.3,
               }}
               transition={{
                 delay: 2,
