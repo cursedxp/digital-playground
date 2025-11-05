@@ -60,7 +60,7 @@ export default function ComplencyCurve() {
       </div>
 
       {/* Desktop Version */}
-      <section className="hidden md:flex text-white flex-col items-center w-full relative mb-20">
+      <section className="hidden md:flex text-white flex-col items-center w-full relative mb-50">
         <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
           <div className="flex-1">
             <motion.h2
@@ -84,8 +84,8 @@ export default function ComplencyCurve() {
                 <p>
                   Every growing business hits the same bottleneck: workflows
                   that worked for 10 people break at 50. Manual processes that
-                  were &quot;fine for now&quot; become full-time jobs. Systems that
-                  don&apos;t talk to each other create chaos.
+                  were &quot;fine for now&quot; become full-time jobs. Systems
+                  that don&apos;t talk to each other create chaos.
                 </p>
                 <p>
                   Most companies react by hiring more people or buying more

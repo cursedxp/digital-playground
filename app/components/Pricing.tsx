@@ -12,10 +12,13 @@ const pricingOptions = [
     timeline: "1-2 weeks per task",
     description:
       "Monthly subscription for ongoing development tasks. Cancel anytime.",
-    highlight: "Start your first task, continue monthly if you need ongoing work. No long-term commitment required.",
+    highlight:
+      "Start your first task, continue monthly if you need ongoing work. No long-term commitment required.",
     badge: "Early Client Offer",
-    badgeText: "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
-    examples: "Stripe-to-HubSpot sync, Email automation workflow, API integration",
+    badgeText:
+      "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
+    examples:
+      "Stripe-to-HubSpot sync, Email automation workflow, API integration",
     features: [
       "One task per month",
       "Delivered tested and working",
@@ -32,7 +35,8 @@ const pricingOptions = [
     description:
       "Quarterly subscription for full-scope custom applications and ongoing development.",
     highlight: null,
-    examples: "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
+    examples:
+      "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
     features: [
       "Discovery & planning",
       "Custom design & UX",
@@ -49,7 +53,8 @@ const pricingOptions = [
     description:
       "Complex projects with custom requirements. One-time payment via custom link.",
     highlight: null,
-    examples: "Enterprise integrations, Legacy system modernization, Complex workflows",
+    examples:
+      "Enterprise integrations, Legacy system modernization, Complex workflows",
     features: [
       "Custom assessment",
       "Flexible approach",
@@ -64,7 +69,7 @@ export default function Pricing() {
   const [hoveredBadge, setHoveredBadge] = useState<number | null>(null);
 
   return (
-    <section id="pricing" className="bg-black text-white px-6 mb-20">
+    <section id="pricing" className="bg-black text-white px-6 mb-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Title - First on mobile, Left on desktop */}
@@ -120,7 +125,10 @@ export default function Pricing() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 5 }}
                           className="absolute top-full mt-2 left-0 w-64 p-3 rounded-lg shadow-xl z-20"
-                          style={{ backgroundColor: "rgba(255, 224, 40, 0.95)", border: "1px solid rgba(255, 224, 40, 1)" }}
+                          style={{
+                            backgroundColor: "rgba(255, 224, 40, 0.95)",
+                            border: "1px solid rgba(255, 224, 40, 1)",
+                          }}
                         >
                           <p className="text-xs leading-relaxed text-black font-medium">
                             💡 {option.badgeText}
@@ -130,34 +138,51 @@ export default function Pricing() {
                     </div>
                   </div>
                 )}
-                <div className={`mb-6 ${option.badge ? 'pt-4' : ''}`}>
+                <div className={`mb-6 ${option.badge ? "pt-4" : ""}`}>
                   <h3 className="text-2xl font-bold mb-2">{option.type}</h3>
                   <div className="text-4xl font-bold mb-2">
                     {option.price}
                     {option.priceDetail && (
-                      <span className="text-lg text-white/60">{option.priceDetail}</span>
+                      <span className="text-lg text-white/60">
+                        {option.priceDetail}
+                      </span>
                     )}
                   </div>
-                  <div className="text-sm text-white/50 mb-4">Timeline: {option.timeline}</div>
+                  <div className="text-sm text-white/50 mb-4">
+                    Timeline: {option.timeline}
+                  </div>
                   <p className="text-white/70 text-sm leading-relaxed mb-2">
                     {option.description}
                   </p>
                   {option.highlight && (
-                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#FFE028" }}>
+                    <p
+                      className="text-sm leading-relaxed mb-4"
+                      style={{ color: "#FFE028" }}
+                    >
                       {option.highlight}
                     </p>
                   )}
                   <div className="text-xs text-white/50 mb-4">
-                    <span className="font-semibold text-white/60">Examples:</span> {option.examples}
+                    <span className="font-semibold text-white/60">
+                      Examples:
+                    </span>{" "}
+                    {option.examples}
                   </div>
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-white/60 mb-3">What&apos;s Included:</h4>
+                  <h4 className="text-sm font-semibold text-white/60 mb-3">
+                    What&apos;s Included:
+                  </h4>
                   <ul className="space-y-3">
                     {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm">
-                        <span className="flex-shrink-0" style={{ color: "#FFE028" }}>✓</span>
+                        <span
+                          className="flex-shrink-0"
+                          style={{ color: "#FFE028" }}
+                        >
+                          ✓
+                        </span>
                         <span className="text-white/80">{feature}</span>
                       </li>
                     ))}

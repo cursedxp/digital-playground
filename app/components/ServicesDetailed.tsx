@@ -32,7 +32,10 @@ export default function ServicesDetailed() {
   ];
 
   return (
-    <section id="services" className="text-white flex flex-col items-center w-full relative mb-20">
+    <section
+      id="services"
+      className="text-white flex flex-col items-center w-full relative mb-50"
+    >
       <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
