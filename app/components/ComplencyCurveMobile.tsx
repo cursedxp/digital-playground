@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BookCallButton from "./BookCallButton";
 
@@ -85,9 +85,9 @@ export default function ComplencyCurveMobile() {
   };
 
   // Initialize position on mount
-  useState(() => {
+  useEffect(() => {
     setTimeout(() => moveToPosition(steps[0].position), 100);
-  });
+  }, []);
 
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20 px-4">
