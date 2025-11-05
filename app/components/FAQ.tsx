@@ -86,8 +86,8 @@ export default function FAQ() {
                 Questions
               </motion.h2>
               <p className="text-white/70 text-lg leading-relaxed mt-6 mb-8">
-                Real questions from businesses like yours. Can't find your
-                answer? Book a quick call and we'll walk you through exactly
+                Real questions from businesses like yours. Can&apos;t find your
+                answer? Book a quick call and we&apos;ll walk you through exactly
                 how we can help.
               </p>
               <BookCallButton

@@ -315,6 +315,7 @@ export default function MoleculeBackground({
 
     const world = new World(containerRef.current);
     // Store world instance for visibility control
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (containerRef.current as any).__world__ = world;
 
     // Start animation only if visible
@@ -324,8 +325,10 @@ export default function MoleculeBackground({
 
     return () => {
       observer.disconnect();
+      const currentRef = containerRef.current;
       world.destroy();
-      delete (containerRef.current as any)?.__world__;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      if (currentRef) delete (currentRef as any).__world__;
     };
   }, []);
 
@@ -333,6 +336,7 @@ export default function MoleculeBackground({
   useEffect(() => {
     if (!containerRef.current) return;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const world = (containerRef.current as any).__world__;
     if (world) {
       if (isVisible) {

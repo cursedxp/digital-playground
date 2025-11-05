@@ -26,7 +26,7 @@ export default function ServiceOverview() {
           <div>
             <h3 className="font-bold mb-2">Design & Development, Unified</h3>
             <p className="text-sm">
-              You're not paying for separate design and development teams that need to
+              You&apos;re not paying for separate design and development teams that need to
               coordinate. We handle both—eliminating handoff delays,
               translation errors, and coordination overhead. What you see in the design
               is what gets built. Faster iterations, zero miscommunication,

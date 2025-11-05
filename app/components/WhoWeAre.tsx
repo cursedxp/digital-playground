@@ -26,7 +26,7 @@ export default function WhoWeAre() {
               full-stack web applications and UX design for B2B companies.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
-              Unlike traditional agencies, there's no communication overhead or
+              Unlike traditional agencies, there&apos;s no communication overhead or
               delegation across multiple team members. You work directly with us—everything
               from UX design to production deployment, with no handoffs or coordination delays.
             </p>
@@ -36,7 +36,7 @@ export default function WhoWeAre() {
               context, and no unnecessary meetings.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
-              Built for growing businesses that need custom software but aren't ready
+              Built for growing businesses that need custom software but aren&apos;t ready
               to hire a full development team. You get the expertise, speed, and
               flexibility you need—without the overhead, bureaucracy, or long-term
               commitments of traditional solutions.
