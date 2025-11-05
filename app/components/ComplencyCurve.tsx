@@ -55,12 +55,12 @@ export default function ComplencyCurve() {
   return (
     <>
       {/* Mobile Version */}
-      <div className="block lg:hidden">
+      <div className="block md:hidden">
         <ComplencyCurveMobile />
       </div>
 
       {/* Desktop Version */}
-      <section className="hidden lg:flex text-white flex-col items-center w-full relative mb-20">
+      <section className="hidden md:flex text-white flex-col items-center w-full relative mb-20">
         <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
           <div className="flex-1">
             <motion.h2
