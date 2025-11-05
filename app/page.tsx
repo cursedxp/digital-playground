@@ -14,13 +14,23 @@ export default function Home() {
     <>
       <Hero />
       <ServiceOverview />
-      <ServicesDetailed />
+      <div id="services">
+        <ServicesDetailed />
+      </div>
       <ComplencyCurve />
-      <DeliveryProcess />
-      <Pricing />
+      <div id="how-it-works">
+        <DeliveryProcess />
+      </div>
+      <div id="pricing">
+        <Pricing />
+      </div>
       <TechStack />
-      <WhoWeAre />
-      <FAQ />
+      <div id="about">
+        <WhoWeAre />
+      </div>
+      <div id="faq">
+        <FAQ />
+      </div>
       <Footer />
     </>
   );
