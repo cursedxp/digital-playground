@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BookCallButton from "./BookCallButton";
 
@@ -45,7 +45,7 @@ export default function ComplencyCurveMobile() {
   const y = useSpring(useMotionValue(350), { stiffness: 100, damping: 20 });
   const rotate = useSpring(useMotionValue(0), { stiffness: 100, damping: 20 });
 
-  const moveToPosition = (normalizedX: number) => {
+  const moveToPosition = useCallback((normalizedX: number) => {
     if (!pathRef.current) return;
 
     const pathLength = pathRef.current.getTotalLength();
@@ -70,7 +70,7 @@ export default function ComplencyCurveMobile() {
     x.set(point.x);
     y.set(point.y);
     rotate.set(angle);
-  };
+  }, [x, y, rotate]);
 
   const handleNext = () => {
     const nextStep = Math.min(currentStep + 1, steps.length - 1);
@@ -87,7 +87,7 @@ export default function ComplencyCurveMobile() {
   // Initialize position on mount
   useEffect(() => {
     setTimeout(() => moveToPosition(steps[0].position), 100);
-  }, []);
+  }, [moveToPosition]);
 
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20 px-4">
