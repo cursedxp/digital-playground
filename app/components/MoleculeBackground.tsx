@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
 export default function MoleculeBackground({
@@ -9,9 +9,22 @@ export default function MoleculeBackground({
   className?: string;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     if (!containerRef.current) return;
+
+    // Intersection Observer for visibility
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(containerRef.current);
 
     class World {
       renderer!: THREE.WebGLRenderer;
@@ -19,15 +32,18 @@ export default function MoleculeBackground({
       camera!: THREE.PerspectiveCamera;
       molecule!: Molecule;
       container: HTMLDivElement;
+      animationId: number | null = null;
+      isAnimating = false;
+      resizeHandler: () => void;
 
       constructor(container: HTMLDivElement) {
         this.container = container;
+        this.resizeHandler = this.resize.bind(this);
         this.build();
 
-        window.addEventListener("resize", this.resize.bind(this));
+        window.addEventListener("resize", this.resizeHandler);
 
         this.animate = this.animate.bind(this);
-        this.animate();
       }
 
       build() {
@@ -45,9 +61,11 @@ export default function MoleculeBackground({
 
         this.renderer = new THREE.WebGLRenderer({
           alpha: true,
-          antialias: true,
+          antialias: false, // Disable for better performance
+          powerPreference: "high-performance",
         });
-        this.renderer.setPixelRatio(window.devicePixelRatio);
+        // Limit pixel ratio for better performance
+        this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         this.renderer.setSize(width, height);
         this.container.appendChild(this.renderer.domElement);
 
@@ -63,8 +81,25 @@ export default function MoleculeBackground({
         this.renderer.setSize(w, h);
       }
 
+      start() {
+        if (!this.isAnimating) {
+          this.isAnimating = true;
+          this.animate();
+        }
+      }
+
+      stop() {
+        if (this.animationId !== null) {
+          cancelAnimationFrame(this.animationId);
+          this.animationId = null;
+          this.isAnimating = false;
+        }
+      }
+
       animate() {
-        requestAnimationFrame(this.animate);
+        if (!this.isAnimating) return;
+
+        this.animationId = requestAnimationFrame(this.animate);
 
         const time = performance.now() * 0.001;
 
@@ -74,8 +109,12 @@ export default function MoleculeBackground({
       }
 
       destroy() {
-        window.removeEventListener("resize", this.resize.bind(this));
-        this.container.removeChild(this.renderer.domElement);
+        this.stop();
+        window.removeEventListener("resize", this.resizeHandler);
+        if (this.container.contains(this.renderer.domElement)) {
+          this.container.removeChild(this.renderer.domElement);
+        }
+        this.molecule.dispose();
         this.renderer.dispose();
       }
     }
@@ -85,7 +124,8 @@ export default function MoleculeBackground({
       geometry!: THREE.IcosahedronGeometry;
       mesh!: THREE.Points;
       radius = 2.8;
-      detail = 80;
+      // Reduced detail for better performance - responsive to screen size
+      detail = typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 25;
       particleSizeMin = 0.01;
       particleSizeMax = 0.04;
 
@@ -182,6 +222,14 @@ export default function MoleculeBackground({
         if (this.material.userData.shader)
           this.material.userData.shader.uniforms.time.value = time;
       }
+
+      dispose() {
+        this.geometry.dispose();
+        this.material.dispose();
+        if (this.material.map) {
+          this.material.map.dispose();
+        }
+      }
     }
 
     const noiseShader = `
@@ -266,11 +314,34 @@ export default function MoleculeBackground({
     `;
 
     const world = new World(containerRef.current);
+    // Store world instance for visibility control
+    (containerRef.current as any).__world__ = world;
+
+    // Start animation only if visible
+    if (isVisible) {
+      world.start();
+    }
 
     return () => {
+      observer.disconnect();
       world.destroy();
+      delete (containerRef.current as any)?.__world__;
     };
   }, []);
+
+  // Control animation based on visibility
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const world = (containerRef.current as any).__world__;
+    if (world) {
+      if (isVisible) {
+        world.start();
+      } else {
+        world.stop();
+      }
+    }
+  }, [isVisible]);
 
   return (
     <div

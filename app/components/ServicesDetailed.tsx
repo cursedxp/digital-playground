@@ -31,7 +31,7 @@ export default function ServicesDetailed() {
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20">
       <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:px-0">
-        <div className="flex-1">
+        <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
               Concrete solutions that solve real problems. Each deliverable
@@ -47,7 +47,7 @@ export default function ServicesDetailed() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex flex-col items-end">
+        <div className="flex-1 flex flex-col items-end order-1 sm:order-2 mb-8 sm:mb-0">
           <h2 className="text-7xl font-bold text-right">
             What You
             <br />

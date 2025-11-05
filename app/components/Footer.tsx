@@ -111,9 +111,7 @@ export default function Footer() {
               <div className="flex items-start gap-2 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5" />
                 <span>
-                  Am Kapellengraben 49
-                  <br />
-                  40670 Meerbusch, Germany
+                  Meerbusch, Germany
                   <br />
                   <span className="text-white/40 text-xs mt-1 block">CET Timezone (UTC+1)</span>
                 </span>
