@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const phases = [
   {
     number: "01",
@@ -23,7 +25,7 @@ const phases = [
 
 export default function DeliveryProcess() {
   return (
-    <section className="text-white flex flex-col items-center w-full relative mb-20">
+    <section id="how-it-works" className="text-white flex flex-col items-center w-full relative mb-20">
       <div className="flex max-w-7xl w-full flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1">
           <div className="flex flex-col">
@@ -36,7 +38,7 @@ export default function DeliveryProcess() {
             <div className="hidden md:grid grid-cols-3 gap-4 mt-8 text-sm">
               {phases.map((phase, index) => (
                 <div key={index} className="flex flex-col gap-2">
-                  <div className="text-6xl md:text-7xl font-bold text-white/10 mb-2">
+                  <div className="text-6xl md:text-7xl font-bold mb-2" style={{ color: '#FFE028' }}>
                     {phase.number}
                   </div>
                   <h3 className="font-semibold text-base">{phase.title}</h3>
@@ -47,17 +49,23 @@ export default function DeliveryProcess() {
           </div>
         </div>
         <div className="flex-1">
-          <h2 className="text-right text-7xl font-bold">
+          <motion.h2
+            className="text-right text-7xl font-bold"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             How It
             <br />
             Works
-          </h2>
+          </motion.h2>
         </div>
       </div>
       <div className="grid md:hidden px-8 gap-4 mt-8 text-sm max-w-7xl w-full">
         {phases.map((phase, index) => (
           <div key={index} className="flex flex-col gap-2">
-            <div className="text-6xl md:text-7xl font-bold text-white/10 mb-2">
+            <div className="text-6xl md:text-7xl font-bold mb-2" style={{ color: '#FFE028' }}>
               {phase.number}
             </div>
             <h3 className="font-semibold text-base">{phase.title}</h3>

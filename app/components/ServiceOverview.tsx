@@ -1,10 +1,20 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function ServiceOverview() {
   return (
-    <section className="text-white flex flex-col items-center w-full">
+    <section className="text-white flex flex-col items-center w-full mb-20">
       <div className="flex flex-col justify-center items-center max-w-7xl px-8 sm:px-0">
-        <h2 className="text-7xl sm:text-7xl font-bold text-center mb-10 ">
+        <motion.h2
+          className="text-7xl sm:text-7xl font-bold text-center mb-10"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           Why Choose This Approach
-        </h2>
+        </motion.h2>
         <p className="text-center mb-10 max-w-3xl ">
           A specialized development service delivering custom solutions that
           eliminate friction and drive measurable results—faster than hiring

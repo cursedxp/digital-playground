@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function TechStack() {
@@ -57,7 +60,15 @@ export default function TechStack() {
           </div>
         </div>
         <div className="flex-1">
-          <h2 className="text-7xl font-bold text-right">Tech Stack</h2>
+          <motion.h2
+            className="text-7xl font-bold text-right"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Tech Stack
+          </motion.h2>
         </div>
       </div>
 

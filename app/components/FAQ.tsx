@@ -66,19 +66,25 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="bg-black text-white px-6 mb-10">
+    <section id="faq" className="bg-black text-white px-6 mb-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left side - Title */}
           <div className="lg:col-span-4">
             <div className="sticky top-24">
-              <h2 className="text-7xl font-bold">
+              <motion.h2
+                className="text-7xl font-bold"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
                 Frequently
                 <br />
                 Asked
                 <br />
                 Questions
-              </h2>
+              </motion.h2>
               <p className="text-white/70 text-lg leading-relaxed mt-6 mb-8">
                 Real questions from businesses like yours. Can't find your
                 answer? Book a quick call and we'll walk you through exactly

@@ -64,19 +64,25 @@ export default function Pricing() {
   const [hoveredBadge, setHoveredBadge] = useState<number | null>(null);
 
   return (
-    <section className="bg-black text-white px-6 mb-20">
+    <section id="pricing" className="bg-black text-white px-6 mb-20">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Title - First on mobile, Left on desktop */}
           <div className="lg:col-span-4 lg:order-1">
             <div className="lg:sticky lg:top-24">
-              <h2 className="text-7xl font-bold">
+              <motion.h2
+                className="text-7xl font-bold"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+              >
                 Simple,
                 <br />
                 Transparent
                 <br />
                 Pricing
-              </h2>
+              </motion.h2>
               <p className="text-white/70 text-lg leading-relaxed mt-6">
                 No hidden fees, no surprises. Choose the engagement model that
                 fits your needs and budget. All options include our commitment

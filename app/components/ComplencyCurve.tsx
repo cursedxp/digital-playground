@@ -63,10 +63,16 @@ export default function ol() {
       <section className="hidden md:flex text-white flex-col items-center w-full relative mb-20">
         <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
           <div className="flex-1">
-            <h2 className="text-7xl font-bold">
+            <motion.h2
+              className="text-7xl font-bold"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               Why Growth
               <br /> Stalls
-            </h2>
+            </motion.h2>
           </div>
           <div className="flex-1">
             <div className="flex flex-col">

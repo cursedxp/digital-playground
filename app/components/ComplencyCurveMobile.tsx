@@ -92,10 +92,16 @@ export default function ComplencyCurveMobile() {
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20 px-4">
       <div className="flex flex-col w-full max-w-md">
-        <h2 className="text-7xl font-bold mb-4">
+        <motion.h2
+          className="text-7xl font-bold mb-4"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           Why Growth
           <br /> Stalls
-        </h2>
+        </motion.h2>
         <p className="text-base mb-6">
           Growth eventually slows down. The question is: will you see it coming?
         </p>
