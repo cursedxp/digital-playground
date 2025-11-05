@@ -16,7 +16,7 @@ export default function ServiceOverview() {
           <div>
             <h3 className="font-bold mb-2">Design & Development, Unified</h3>
             <p className="text-sm">
-              You're not paying for a designer AND a developer who need to
+              You're not paying for separate design and development teams that need to
               coordinate. We handle both—eliminating handoff delays,
               translation errors, and coordination overhead. What you see in the design
               is what gets built. Faster iterations, zero miscommunication,
@@ -30,8 +30,7 @@ export default function ServiceOverview() {
             </h3>
             <p className="text-sm">
               Async-first workflow means we never block your calendar. Direct
-              communication with the team handling your project—no account
-              managers, no status meetings. Review progress updates and
+              communication—no account managers, no status meetings. Review progress updates and
               prototypes on your own time. Ship in weeks, not months.
             </p>
           </div>
@@ -39,10 +38,10 @@ export default function ServiceOverview() {
           <div>
             <h3 className="font-bold mb-2">Built for Real Business Outcomes</h3>
             <p className="text-sm">
-              We measure success by impact, not billable hours. Every
-              recommendation considers your budget constraints, team size, and
-              long-term maintainability. We build solutions that deliver
-              tangible results—eliminate manual errors, free your team from
+              Success is measured by impact, not billable hours. Every
+              recommendation considers your budget constraints, current operations, and
+              long-term maintainability. Solutions deliver
+              tangible results—eliminate manual errors, free your people from
               repetitive work, scale operations without adding headcount.
             </p>
           </div>

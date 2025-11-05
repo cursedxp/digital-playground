@@ -17,13 +17,13 @@ export default function WhoWeAre() {
             </p>
             <p className="text-base text-white/70 leading-relaxed">
               Unlike traditional agencies, there's no communication overhead or
-              delegation to multiple team members. You work directly with the developer
-              who handles everything from UX design to production deployment.
+              delegation across multiple team members. You work directly with us—everything
+              from UX design to production deployment, with no handoffs or coordination delays.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
               This approach means faster decision-making and iterations, consistent
               quality across all project phases, deep understanding of your business
-              context, and no unnecessary meetings or coordination delays.
+              context, and no unnecessary meetings.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
               Built for growing businesses that need custom software but aren't ready

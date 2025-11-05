@@ -12,13 +12,13 @@ export default function ServicesDetailed() {
       number: "02",
       title: "Spreadsheets breaking down?",
       description:
-        "Custom dashboards that give your team real-time visibility. Built for your exact workflow, not generic templates. Includes data visualization, filtering, and export capabilities.",
+        "Custom dashboards that give you real-time visibility. Built for your exact workflow, not generic templates. Includes data visualization, filtering, and export capabilities.",
     },
     {
       number: "03",
       title: "Generic tools not fitting your needs?",
       description:
-        "Tailored applications designed around your business logic. Customer portals, internal admin tools, booking systems, inventory trackers—built exactly for your workflow with intuitive UX your team will actually use.",
+        "Tailored applications designed around your business logic. Customer portals, internal admin tools, booking systems, inventory trackers—built exactly for your workflow with intuitive UX that people will actually use.",
     },
     {
       number: "04",

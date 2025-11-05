@@ -3,6 +3,7 @@
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import BookCallButton from "./BookCallButton";
 
 const steps = [
   {
@@ -249,15 +250,10 @@ export default function ComplencyCurveMobile() {
         <p className="text-white/70 text-sm mb-6">
           Growth phase: Automate before manual processes break. Maturity: Integrate and scale efficiently. Struggling: Let's rebuild.
         </p>
-        <a
-          href="#contact"
+        <BookCallButton
+          text="Book a Discovery Call"
           className="inline-block px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
-          style={{ backgroundColor: "#FFE028" }}
-          onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
-          onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
-        >
-          Book a Discovery Call
-        </a>
+        />
       </div>
     </section>
   );

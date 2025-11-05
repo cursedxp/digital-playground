@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import BookCallButton from "./BookCallButton";
 
 const faqs = [
   {
@@ -17,22 +18,17 @@ const faqs = [
   {
     question: "What's included in the final deliverable?",
     answer:
-      "Every project includes the working application (deployed and live), source code access, design files (Figma/Sketch), basic documentation, and a handoff session to train your team. You own everything—no vendor lock-in.",
+      "Every project includes the working application (deployed and live), source code access, design files (Figma/Sketch), basic documentation, and a handoff session for training. You own everything—no vendor lock-in.",
   },
   {
     question: "How do you charge for projects?",
     answer:
-      "Projects are priced based on scope and complexity. Task-based work (integrations, simple automations) starts at $2,400 with fixed pricing. Larger projects start at $8,000 and are quoted after discovery. You'll always know the full cost upfront—no hourly surprises.",
+      "Task-Based: $2,400/month subscription for ongoing development tasks. Project-Based: $8,000/quarter subscription for full-scope custom applications. Custom: Quoted after discovery with one-time payment. All pricing is transparent—you'll always know the full cost upfront, no hourly surprises.",
   },
   {
     question: "What if we need changes after delivery?",
     answer:
       "Each task is delivered fully tested and working. If what we delivered doesn't work as specified, we fix it—that's our responsibility. If your needs evolve (new features, additional integrations, workflow changes), those are new tasks priced separately starting at $2,400. Want ongoing work? We can schedule recurring monthly tasks to continuously improve your systems.",
-  },
-  {
-    question: "What if a third-party tool changes its API?",
-    answer:
-      "If a tool we integrated makes breaking changes to their API, adapting the integration is a new task. We'll assess the scope and provide a quote—typically $1,200-$2,400 depending on complexity. This is rare but important to plan for with third-party integrations.",
   },
   {
     question: "How is this different from hiring a developer?",
@@ -52,7 +48,17 @@ const faqs = [
   {
     question: "Can you handle projects that typically require a team?",
     answer:
-      "Yes. The pricing model ($2,400-$8,000 per deliverable) is designed for realistic scope boundaries. Complex projects are broken into manageable deliverables. The advantage of this approach is that you work directly with the developer building your solution, avoiding the coordination overhead and markup that comes with larger teams. If a project genuinely requires parallel workstreams or specialized expertise beyond full-stack and UX, this will be communicated transparently and vetted specialists can be brought in.",
+      "Yes. The pricing model ($2,400-$8,000 per deliverable) is designed for realistic scope boundaries. Complex projects are broken into manageable deliverables. The advantage of this approach is direct communication with no coordination overhead or agency markup. If a project genuinely requires parallel workstreams or specialized expertise beyond full-stack and UX, this will be communicated transparently and vetted specialists can be brought in.",
+  },
+  {
+    question: "How does the subscription billing work?",
+    answer:
+      "Task-Based: $2,400/month subscription starts when you purchase your first task. After delivery (1-2 weeks), the subscription continues automatically for ongoing monthly tasks. Cancel anytime with zero penalties. Project-Based: $8,000/quarter subscription for full-scope projects, delivered over 3 months. Cancel after each quarter if needed. Stripe handles all billing and sends automatic payment reminders before each renewal.",
+  },
+  {
+    question: "What if I don't need a task every month?",
+    answer:
+      "You can cancel your subscription anytime—there are no penalties or long-term contracts. Many clients subscribe for a few months while building features, cancel during slow periods, and restart when new needs arise. The subscription model is designed for flexibility, not lock-in.",
   },
 ];
 
@@ -78,15 +84,10 @@ export default function FAQ() {
                 answer? Book a quick call and we'll walk you through exactly
                 how we can help.
               </p>
-              <a
-                href="#contact"
+              <BookCallButton
+                text="Get Your Questions Answered"
                 className="inline-block px-6 py-3 text-black text-sm font-semibold rounded-full transition-all hover:scale-105"
-                style={{ backgroundColor: "#FFE028" }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
-              >
-                Get Your Questions Answered
-              </a>
+              />
             </div>
           </div>
 

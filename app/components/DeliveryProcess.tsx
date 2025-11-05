@@ -17,7 +17,7 @@ const phases = [
     number: "03",
     title: "Deploy & Optimize",
     description:
-      "Launch, train your team, and monitor real usage. Then iterate based on actual data and feedback. Continuous improvement until it works exactly how you need it to.",
+      "Launch, provide training, and monitor real usage. Then iterate based on actual data and feedback. Continuous improvement until it works exactly how you need it to.",
   },
 ];
 

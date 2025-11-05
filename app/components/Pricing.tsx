@@ -2,32 +2,35 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import BookCallButton from "./BookCallButton";
 
 const pricingOptions = [
   {
     type: "Task-Based",
     price: "$2,400",
-    timeline: "1-2 weeks",
+    priceDetail: "/month",
+    timeline: "1-2 weeks per task",
     description:
-      "Pre-scoped, well-defined deliverables with fast turnaround.",
-    highlight: "Start small. Test our collaboration with a single task before investing in a full project.",
+      "Monthly subscription for ongoing development tasks. Cancel anytime.",
+    highlight: "Start your first task, continue monthly if you need ongoing work. No long-term commitment required.",
     badge: "Early Client Offer",
     badgeText: "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
     examples: "Stripe-to-HubSpot sync, Email automation workflow, API integration",
     features: [
-      "Fixed scope and price",
+      "One task per month",
       "Delivered tested and working",
       "Design + development included",
       "Documentation included",
-      "Perfect for testing collaboration",
+      "Cancel anytime, no penalties",
     ],
   },
   {
     type: "Project-Based",
     price: "$8,000",
-    timeline: "3 months",
+    priceDetail: "/quarter",
+    timeline: "3 months per cycle",
     description:
-      "Full-scope custom applications and complex integrations.",
+      "Quarterly subscription for full-scope custom applications and ongoing development.",
     highlight: null,
     examples: "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
     features: [
@@ -35,15 +38,16 @@ const pricingOptions = [
       "Custom design & UX",
       "Full-stack development",
       "Weekly progress updates",
-      "Handoff & training",
+      "Cancel after each quarter",
     ],
   },
   {
     type: "Custom",
     price: "Let's Talk",
+    priceDetail: null,
     timeline: "Varies",
     description:
-      "Complex multi-system integrations or unique requirements that need custom scoping.",
+      "Complex projects with custom requirements. One-time payment via custom link.",
     highlight: null,
     examples: "Enterprise integrations, Legacy system modernization, Complex workflows",
     features: [
@@ -51,7 +55,7 @@ const pricingOptions = [
       "Flexible approach",
       "Tailored solutions",
       "Transparent quoting",
-      "No commitment to discuss",
+      "One-time payment (no subscription)",
     ],
   },
 ];
@@ -78,15 +82,7 @@ export default function Pricing() {
                 fits your needs and budget. All options include our commitment
                 to quality and clear communication.
               </p>
-              <a
-                href="#contact"
-                className="inline-block mt-8 px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
-                style={{ backgroundColor: "#FFE028" }}
-                onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
-                onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
-              >
-                Book a Call
-              </a>
+              <BookCallButton className="inline-block mt-8 px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105" />
             </div>
           </div>
 
@@ -130,7 +126,12 @@ export default function Pricing() {
                 )}
                 <div className={`mb-6 ${option.badge ? 'pt-4' : ''}`}>
                   <h3 className="text-2xl font-bold mb-2">{option.type}</h3>
-                  <div className="text-4xl font-bold mb-2">{option.price}</div>
+                  <div className="text-4xl font-bold mb-2">
+                    {option.price}
+                    {option.priceDetail && (
+                      <span className="text-lg text-white/60">{option.priceDetail}</span>
+                    )}
+                  </div>
                   <div className="text-sm text-white/50 mb-4">Timeline: {option.timeline}</div>
                   <p className="text-white/70 text-sm leading-relaxed mb-2">
                     {option.description}

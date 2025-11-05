@@ -33,9 +33,9 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-gray-300 mb-10">
-          Custom web applications, seamless integrations, and intelligent
-          workflows designed to transform your business operations. For businesses
-          drowning in manual work, but not ready to hire a full development team.
+          Monthly development subscription for growing businesses. Custom web applications,
+          seamless integrations, and intelligent workflows—delivered continuously.
+          Cancel anytime, no long-term contracts.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

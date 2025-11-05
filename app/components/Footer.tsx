@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Facebook, Twitter, Mail, MapPin } from "lucide-react";
+import BookCallButton from "./BookCallButton";
 
 export default function Footer() {
   return (
@@ -15,15 +16,10 @@ export default function Footer() {
           <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
             Start with a discovery call to identify your bottlenecks, or jump in with a small task to test our collaboration.
           </p>
-          <a
-            href="#contact"
+          <BookCallButton
+            text="Book a Discovery Call"
             className="inline-block px-8 py-4 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
-            style={{ backgroundColor: "#FFE028" }}
-            onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = "#FFE850")}
-            onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "#FFE028")}
-          >
-            Book a Discovery Call
-          </a>
+          />
         </div>
       </div>
 
@@ -51,10 +47,28 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <nav className="flex flex-col gap-2">
               <a
+                href="#services"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                Services
+              </a>
+              <a
+                href="#how-it-works"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                How It Works
+              </a>
+              <a
                 href="#pricing"
                 className="text-white/60 hover:text-white transition-colors text-sm"
               >
                 Pricing
+              </a>
+              <a
+                href="#about"
+                className="text-white/60 hover:text-white transition-colors text-sm"
+              >
+                About
               </a>
               <a
                 href="#faq"
@@ -63,16 +77,10 @@ export default function Footer() {
                 FAQ
               </a>
               <a
-                href="#insights"
+                href="/terms"
                 className="text-white/60 hover:text-white transition-colors text-sm"
               >
-                Insights
-              </a>
-              <a
-                href="#about"
-                className="text-white/60 hover:text-white transition-colors text-sm"
-              >
-                About
+                Terms of Service
               </a>
               <a
                 href="/impressum"
@@ -94,7 +102,7 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hi@digitalplayground.com"
+                href="mailto:hi@digitalplayground.io"
                 className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
