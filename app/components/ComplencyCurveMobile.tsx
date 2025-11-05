@@ -132,11 +132,7 @@ export default function ComplencyCurveMobile() {
             fill="none"
             className="stroke-neutral-800"
             initial={{ pathLength: 0, opacity: 0 }}
-            whileInView={{ pathLength: 1, opacity: 1 }}
-            viewport={{
-              once: true,
-              amount: 0.5,
-            }}
+            animate={{ pathLength: 1, opacity: 1 }}
             transition={{ duration: 1.5, ease: "easeInOut" }}
           />
 
@@ -154,11 +150,7 @@ export default function ComplencyCurveMobile() {
                 translateY: "-50%",
               }}
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{
-                once: false,
-                amount: 0.5,
-              }}
+              animate={{ opacity: 1 }}
               transition={{
                 delay: 2,
                 duration: 0.3,
@@ -174,7 +166,7 @@ export default function ComplencyCurveMobile() {
               fill="#FFE028"
               transform="rotate(45 600 175)"
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
               transition={{
                 delay: 1.5,
                 duration: 0.3,
