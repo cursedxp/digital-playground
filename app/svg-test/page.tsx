@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import ComplencyCurveMobile from "../components/ComplencyCurveMobile";
 
 export default function SvgTest() {
   return (
@@ -82,6 +83,11 @@ export default function SvgTest() {
             />
           </g>
         </svg>
+      </div>
+
+      <div className="w-full max-w-2xl border border-white/20 p-8 rounded-lg mt-8">
+        <h2 className="text-2xl mb-4">ComplencyCurveMobile Component</h2>
+        <ComplencyCurveMobile />
       </div>
     </div>
   );
