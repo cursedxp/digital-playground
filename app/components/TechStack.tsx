@@ -21,6 +21,7 @@ export default function TechStack() {
     },
     { name: "Node.js", logo: "/logos/nodejs.svg", width: 60, height: 40 },
     { name: "MongoDB", logo: "/logos/mongodb.svg", width: 60, height: 40 },
+    { name: "PostgreSQL", logo: "/logos/postgresql.svg", width: 60, height: 40 },
     { name: "Vercel", logo: "/logos/vercel.svg", width: 60, height: 40 },
     { name: "Figma", logo: "/logos/figma.svg", width: 60, height: 40 },
     { name: "Framer", logo: "/logos/framer.svg", width: 60, height: 40 },

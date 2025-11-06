@@ -14,9 +14,9 @@ const pricingOptions = [
       "Monthly subscription for development tasks. Cancel anytime.",
     highlight:
       "Start with one task, keep going if you like it. No commitment.",
-    badge: "Early Client Offer",
+    badge: "Founding Member Program",
     badgeText:
-      "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
+      "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
     examples:
       "Stripe-to-HubSpot sync, Email automation workflow, API integration",
     features: [

@@ -19,7 +19,7 @@ function ToastContent({ onClose }: { onClose: () => void }) {
         }}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-black font-bold text-md">Early Client Offer</h3>
+          <h3 className="text-black font-bold text-md">Founding Member Program</h3>
           <button
             onClick={(e) => {
               e.stopPropagation();
@@ -35,8 +35,7 @@ function ToastContent({ onClose }: { onClose: () => void }) {
         {isExpanded && (
           <div className="mt-4 space-y-4">
             <p className="text-black/80 text-sm leading-relaxed">
-              First 3 clients get 20% off + featured case study in exchange for
-              detailed testimonial
+              Join our first 3 founding members - priority scheduling, co-creation process, featured case study
             </p>
             <a
               href="https://cal.com"
