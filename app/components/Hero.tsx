@@ -34,10 +34,9 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-gray-300 mb-10">
-          Monthly development subscription for growing businesses. Custom web
-          applications, seamless integrations, and intelligent
-          workflows—delivered continuously. Cancel anytime, no long-term
-          contracts.
+          A monthly development subscription for growing businesses. We build
+          custom web apps, connect your tools, and automate your workflows.
+          Cancel anytime—no long-term contracts.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

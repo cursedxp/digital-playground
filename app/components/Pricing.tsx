@@ -11,9 +11,9 @@ const pricingOptions = [
     priceDetail: "/month",
     timeline: "1-2 weeks per task",
     description:
-      "Monthly subscription for ongoing development tasks. Cancel anytime.",
+      "Monthly subscription for development tasks. Cancel anytime.",
     highlight:
-      "Start your first task, continue monthly if you need ongoing work. No long-term commitment required.",
+      "Start with one task, keep going if you like it. No commitment.",
     badge: "Early Client Offer",
     badgeText:
       "First 3 clients get 20% off + featured case study in exchange for detailed testimonial",
@@ -33,7 +33,7 @@ const pricingOptions = [
     priceDetail: "/quarter",
     timeline: "3 months per cycle",
     description:
-      "Quarterly subscription for full-scope custom applications and ongoing development.",
+      "Quarterly subscription for full custom applications.",
     highlight: null,
     examples:
       "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
@@ -51,7 +51,7 @@ const pricingOptions = [
     priceDetail: null,
     timeline: "Varies",
     description:
-      "Complex projects with custom requirements. One-time payment via custom link.",
+      "Complex projects with custom needs. One-time payment.",
     highlight: null,
     examples:
       "Enterprise integrations, Legacy system modernization, Complex workflows",
@@ -89,9 +89,9 @@ export default function Pricing() {
                 Pricing
               </motion.h2>
               <p className="text-white/70 text-lg leading-relaxed mt-6">
-                No hidden fees, no surprises. Choose the engagement model that
-                fits your needs and budget. All options include our commitment
-                to quality and clear communication.
+                No hidden fees, no surprises. Pick what works for your budget
+                and timeline. Everything includes design, development, and
+                deployment.
               </p>
               <BookCallButton className="inline-block mt-8 px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105" />
             </div>

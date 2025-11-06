@@ -9,25 +9,25 @@ export default function ServicesDetailed() {
       number: "01",
       title: "Drowning in manual data entry?",
       description:
-        "Automated integrations that sync your tools in real-time. Connect your CRM (HubSpot, Pipedrive, Salesforce), payment processor (Stripe, PayPal), spreadsheets (Google Sheets, Airtable), and email platform (Mailchimp, SendGrid)—eliminate copy-paste work forever.",
+        "We connect your tools so they sync automatically. Your CRM talks to Stripe, payments flow to Google Sheets, emails trigger in Mailchimp. No more copy-paste.",
     },
     {
       number: "02",
       title: "Spreadsheets breaking down?",
       description:
-        "Custom dashboards that give you real-time visibility. Built for your exact workflow, not generic templates. Includes data visualization, filtering, and export capabilities.",
+        "We build custom dashboards that show what you need, when you need it. Real-time data, clean visualizations, built for how you actually work.",
     },
     {
       number: "03",
       title: "Generic tools not fitting your needs?",
       description:
-        "Tailored applications designed around your business logic. Customer portals, internal admin tools, booking systems, inventory trackers—built exactly for your workflow with intuitive UX that people will actually use.",
+        "We build software that fits your business exactly. Customer portals, admin tools, booking systems—designed around how you work, not how some SaaS thinks you should.",
     },
     {
       number: "04",
       title: "Disconnected systems causing chaos?",
       description:
-        "Unified workflows that create a single source of truth. Build custom APIs and integrations that make your tools work together seamlessly—no more data silos.",
+        "We connect everything into one unified system. Custom APIs that make your tools talk to each other. One source of truth, no more hunting for the right data.",
     },
   ];
 
@@ -40,8 +40,8 @@ export default function ServicesDetailed() {
         <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
             <p className="text-xl mt-4 max-w-sm">
-              Concrete solutions that solve real problems. Each deliverable
-              includes design, development, and deployment—ready to use.
+              Real solutions to real problems. Everything we deliver is
+              designed, built, and deployed—ready to use immediately.
             </p>
             <div className="grid lg:grid-cols-3 gap-4 mt-8">
               {services.map((service) => (

@@ -26,45 +26,43 @@ export default function WhoWeAre() {
           <div className="flex flex-col gap-6">
             <p className="text-xl leading-relaxed">
               A boutique development studio based in Germany, specializing in
-              full-stack web applications and UX design for B2B companies.
+              full-stack web applications and UX design for growing businesses.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
-              Unlike traditional agencies, there&apos;s no communication
-              overhead or delegation across multiple team members. You work
-              directly with us—everything from UX design to production
-              deployment, with no handoffs or coordination delays.
+              You work directly with us. No account managers, no project
+              coordinators, no handoffs. We design it, we build it, we deploy
+              it.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
-              This approach means faster decision-making and iterations,
-              consistent quality across all project phases, deep understanding
-              of your business context, and no unnecessary meetings.
+              This means faster decisions, consistent quality, and no
+              unnecessary meetings. We actually understand your business instead
+              of playing telephone through project managers.
             </p>
             <p className="text-base text-white/70 leading-relaxed">
-              Built for growing businesses that need custom software but
-              aren&apos;t ready to hire a full development team. You get the
-              expertise, speed, and flexibility you need—without the overhead,
-              bureaucracy, or long-term commitments of traditional solutions.
+              Perfect for growing businesses that need custom software but
+              aren&apos;t ready to hire a full team. You get expert work,
+              fast—without the overhead or long contracts.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
               <div>
                 <h3 className="font-semibold mb-2">Based in Germany</h3>
                 <p className="text-sm text-white/60">
-                  EU-based operation. CET timezone (compatible with EU/US
-                  business hours). GDPR-compliant data handling.
+                  EU-based. CET timezone works with EU/US hours.
+                  GDPR-compliant.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Async-First Workflow</h3>
                 <p className="text-sm text-white/60">
-                  No mandatory meetings. Weekly video updates you watch on your
-                  schedule. Typical response time: within 48 hours.
+                  No mandatory meetings. Weekly video updates on your schedule.
+                  We reply within 48 hours.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold mb-2">Full Ownership</h3>
                 <p className="text-sm text-white/60">
-                  Every solution is delivered tested and working. You own the
-                  code, designs, and documentation. No vendor lock-in.
+                  Delivered tested and working. You own the code, designs, and
+                  docs. No lock-in.
                 </p>
               </div>
             </div>

@@ -7,19 +7,19 @@ const phases = [
     number: "01",
     title: "Discover & Define",
     description:
-      "Deep-dive consultation to understand your workflows and pain points. We identify what to build, define clear success metrics, and estimate ROI—so you know exactly what you're getting before we start.",
+      "We talk through your workflow and pain points. Figure out what to build, how success looks, and what it'll cost—so you know exactly what you're getting upfront.",
   },
   {
     number: "02",
     title: "Design & Build",
     description:
-      "Design and development happen in parallel. You get working prototypes within days, production-ready solutions in weeks. Weekly video updates show real progress—no calendar-blocking status meetings.",
+      "Design and development happen in parallel. You get working prototypes within a week, production-ready tasks in 1-2 weeks. Weekly video updates show real progress—no calendar-blocking status meetings.",
   },
   {
     number: "03",
     title: "Deploy & Optimize",
     description:
-      "Launch, provide training, and monitor real usage. Then iterate based on actual data and feedback. Continuous improvement until it works exactly how you need it to.",
+      "Launch it, show you how it works, then watch how people use it. Make adjustments based on real feedback until it's exactly what you need.",
   },
 ];
 
@@ -33,10 +33,9 @@ export default function DeliveryProcess() {
         <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
             <p className="text-xl mt-6 max-w-sm">
-              Async-first process designed for busy founders. We build while you
-              run your business. Weekly progress updates you review on your
-              time—no meetings disrupting your flow. Results in 1-2 weeks for
-              tasks, 3 months for full projects.
+              Built for busy founders. We build while you run your business.
+              Review progress updates when it suits you—no meetings. Prototypes
+              in a week, tasks in 1-2 weeks, full projects in 3 months.
             </p>
             <div className="hidden md:grid grid-cols-3 gap-4 mt-8 text-sm">
               {phases.map((phase, index) => (

@@ -16,10 +16,9 @@ export default function ServiceOverview() {
           Why Choose This Approach
         </motion.h2>
         <p className="text-left sm:text-center mb-10 max-w-3xl text-xl ">
-          A specialized development service delivering custom solutions that
-          eliminate friction and drive measurable results—faster than hiring a
-          full-time developer. Start with a small task to test our
-          collaboration.
+          Get custom software that solves real problems—faster and cheaper than
+          hiring a full-time developer. Start with a small task to see how we
+          work.
         </p>
       </div>
       <div className="max-w-7xl px-8 sm:px-0">
@@ -27,32 +26,27 @@ export default function ServiceOverview() {
           <div>
             <h3 className="font-bold mb-2">Design & Development, Unified</h3>
             <p className="text-sm">
-              You&apos;re not paying for separate design and development teams
-              that need to coordinate. We handle both—eliminating handoff
-              delays, translation errors, and coordination overhead. What you
-              see in the design is what gets built. Faster iterations, zero
-              miscommunication, seamless execution.
+              We handle both design and development. No separate teams, no
+              handoffs, no miscommunication. What you see in the design is
+              exactly what gets built.
             </p>
           </div>
 
           <div>
             <h3 className="font-bold mb-2">Built Around Your Schedule</h3>
             <p className="text-sm">
-              Async-first workflow means we never block your calendar. Direct
-              communication—no account managers, no status meetings. Review
-              progress updates and prototypes on your own time. Ship in weeks,
-              not months.
+              We work async so your calendar stays clear. Talk directly to us—no
+              account managers or status meetings. Review progress when it suits
+              you. Ship in weeks, not months.
             </p>
           </div>
 
           <div>
-            <h3 className="font-bold mb-2">Built for Real Business Outcomes</h3>
+            <h3 className="font-bold mb-2">Built for Real Results</h3>
             <p className="text-sm">
-              Success is measured by impact, not billable hours. Every
-              recommendation considers your budget constraints, current
-              operations, and long-term maintainability. Solutions deliver
-              tangible results—eliminate manual errors, free your people from
-              repetitive work, scale operations without adding headcount.
+              We care about impact, not hours billed. Every solution fits your
+              budget and works long-term. Automate manual work, eliminate
+              errors, scale without hiring more people.
             </p>
           </div>
         </div>
