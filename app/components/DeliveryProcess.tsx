@@ -27,12 +27,12 @@ export default function DeliveryProcess() {
   return (
     <section
       id="how-it-works"
-      className="text-white flex flex-col items-center w-full relative mb-50"
+      className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50"
     >
       <div className="flex max-w-7xl w-full flex-col sm:flex-row px-8 sm:px-0">
-        <div className="flex-1">
+        <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
-            <p className="text-xl mt-4 max-w-sm">
+            <p className="text-xl mt-6 max-w-sm">
               Async-first process designed for busy founders. We build while you
               run your business. Weekly progress updates you review on your
               time—no meetings disrupting your flow. Results in 1-2 weeks for
@@ -54,9 +54,9 @@ export default function DeliveryProcess() {
             </div>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 order-1 sm:order-2">
           <motion.h2
-            className="text-right text-7xl font-bold"
+            className="text-right text-7xl font-bold "
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}

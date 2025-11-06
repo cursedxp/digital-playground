@@ -60,7 +60,7 @@ export default function ComplencyCurve() {
       </div>
 
       {/* Desktop Version */}
-      <section className="hidden md:flex text-white flex-col items-center w-full relative mb-50">
+      <section className="hidden md:flex text-white flex-col items-center w-full relative mb-20 sm:mb-50 ">
         <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:p-0">
           <div className="flex-1">
             <motion.h2

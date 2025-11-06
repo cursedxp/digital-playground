@@ -6,7 +6,7 @@ export default function WhoWeAre() {
   return (
     <section
       id="about"
-      className="text-white flex flex-col items-center w-full relative mb-50"
+      className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50"
     >
       <div className="flex max-w-7xl w-full flex-col sm:flex-row px-8 sm:px-0">
         <div className="flex-1">

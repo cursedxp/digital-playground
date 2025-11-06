@@ -33,11 +33,11 @@ export default function TechStack() {
   ];
 
   return (
-    <section className="text-white flex flex-col items-center w-full relative mb-50">
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
       <div className="flex max-w-7xl w-full mb-8 flex-col sm:flex-row px-8 sm:px-0">
-        <div className="flex-1">
+        <div className="flex-1 order-2 sm:order-1">
           <div className="flex flex-col">
-            <p className="text-xl mt-4 max-w-sm">
+            <p className="text-xl mt-6 max-w-sm">
               We work with modern, proven technologies to build scalable and
               maintainable solutions.
             </p>
@@ -59,7 +59,7 @@ export default function TechStack() {
             </div>
           </div>
         </div>
-        <div className="flex-1">
+        <div className="flex-1 order-1 sm:order-2">
           <motion.h2
             className="text-7xl font-bold text-right"
             initial={{ opacity: 0, y: 20 }}
