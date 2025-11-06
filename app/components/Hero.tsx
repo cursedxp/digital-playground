@@ -17,8 +17,9 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
-          Smart Solutions <span className="font-serif text-8xl ">Growing </span>
-          <span className="relative inline-block font-serif text-8xl font-extralight tracking-tight">
+          Smart Solutions{" "}
+          <span className="font-serif text-7xl sm:text-8xl ">Growing </span>
+          <span className="relative inline-block font-serif text-7xl sm:text-8xl font-extralight tracking-tight">
             <span className="relative z-10">Businesses</span>
             <span
               className="absolute inset-0 -inset-x-2"
