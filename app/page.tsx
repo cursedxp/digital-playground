@@ -7,6 +7,7 @@ import Pricing from "./components/Pricing";
 import ServiceOverview from "./components/ServiceOverview";
 import ServicesDetailed from "./components/ServicesDetailed";
 import TechStack from "./components/TechStack";
+import Toast from "./components/Toast";
 import WhoWeAre from "./components/WhoWeAre";
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <WhoWeAre />
       <FAQ />
       <Footer />
+      <Toast />
     </>
   );
 }
