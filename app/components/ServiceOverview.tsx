@@ -15,7 +15,7 @@ export default function ServiceOverview() {
         >
           Why Choose This Approach
         </motion.h2>
-        <p className="text-center mb-10 max-w-3xl ">
+        <p className="text-left sm:text-center mb-10 max-w-3xl text-xl ">
           A specialized development service delivering custom solutions that
           eliminate friction and drive measurable results—faster than hiring a
           full-time developer. Start with a small task to test our
