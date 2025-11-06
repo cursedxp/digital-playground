@@ -93,7 +93,7 @@ export default function ComplencyCurveMobile() {
   }, [moveToPosition]);
 
   return (
-    <section className="text-white flex flex-col items-center w-full relative px-8 mb-20 px-4">
+    <section className="text-white flex flex-col items-center w-full relative px-8 mb-20">
       <div className="flex flex-col w-full max-w-md">
         <motion.h2
           className="text-7xl font-bold mb-4"
