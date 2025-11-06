@@ -5,7 +5,7 @@ import TransitionComp from "@/app/components/TransitionComp";
 
 export default function Hero() {
   return (
-    <div className="relative flex items-center justify-center min-h-screen overflow-hidden">
+    <div className="relative flex items-center justify-center min-h-screen overflow-hidden mb-20 sm:mb-30">
       {/* <BackgroundVideo /> */}
       {/* <Overlay /> */}
       <TransitionComp className="bottom-0 left-0 w-full h-48" />
@@ -33,9 +33,10 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-gray-300 mb-10">
-          Monthly development subscription for growing businesses. Custom web applications,
-          seamless integrations, and intelligent workflows—delivered continuously.
-          Cancel anytime, no long-term contracts.
+          Monthly development subscription for growing businesses. Custom web
+          applications, seamless integrations, and intelligent
+          workflows—delivered continuously. Cancel anytime, no long-term
+          contracts.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

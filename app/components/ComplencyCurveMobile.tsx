@@ -45,32 +45,35 @@ export default function ComplencyCurveMobile() {
   const y = useSpring(useMotionValue(350), { stiffness: 100, damping: 20 });
   const rotate = useSpring(useMotionValue(0), { stiffness: 100, damping: 20 });
 
-  const moveToPosition = useCallback((normalizedX: number) => {
-    if (!pathRef.current) return;
+  const moveToPosition = useCallback(
+    (normalizedX: number) => {
+      if (!pathRef.current) return;
 
-    const pathLength = pathRef.current.getTotalLength();
-    const shapeHalfWidth = 100;
+      const pathLength = pathRef.current.getTotalLength();
+      const shapeHalfWidth = 100;
 
-    const minLength = shapeHalfWidth;
-    const maxLength = pathLength - shapeHalfWidth;
-    const targetLength = minLength + normalizedX * (maxLength - minLength);
-    const clampedLength = Math.max(
-      minLength,
-      Math.min(maxLength, targetLength)
-    );
+      const minLength = shapeHalfWidth;
+      const maxLength = pathLength - shapeHalfWidth;
+      const targetLength = minLength + normalizedX * (maxLength - minLength);
+      const clampedLength = Math.max(
+        minLength,
+        Math.min(maxLength, targetLength)
+      );
 
-    const point = pathRef.current.getPointAtLength(clampedLength);
-    const nextLength = Math.min(clampedLength + 1, pathLength);
-    const nextPoint = pathRef.current.getPointAtLength(nextLength);
+      const point = pathRef.current.getPointAtLength(clampedLength);
+      const nextLength = Math.min(clampedLength + 1, pathLength);
+      const nextPoint = pathRef.current.getPointAtLength(nextLength);
 
-    const angle =
-      Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) *
-      (180 / Math.PI);
+      const angle =
+        Math.atan2(nextPoint.y - point.y, nextPoint.x - point.x) *
+        (180 / Math.PI);
 
-    x.set(point.x);
-    y.set(point.y);
-    rotate.set(angle);
-  }, [x, y, rotate]);
+      x.set(point.x);
+      y.set(point.y);
+      rotate.set(angle);
+    },
+    [x, y, rotate]
+  );
 
   const handleNext = () => {
     const nextStep = Math.min(currentStep + 1, steps.length - 1);
@@ -90,7 +93,7 @@ export default function ComplencyCurveMobile() {
   }, [moveToPosition]);
 
   return (
-    <section className="text-white flex flex-col items-center w-full relative mb-20 px-4">
+    <section className="text-white flex flex-col items-center w-full relative px-8 mb-20 px-4">
       <div className="flex flex-col w-full max-w-md">
         <motion.h2
           className="text-7xl font-bold mb-4"
@@ -246,7 +249,8 @@ export default function ComplencyCurveMobile() {
       <div className="flex flex-col items-center w-full max-w-md mt-12 text-center">
         <h3 className="text-xl font-bold mb-3">Where are you on this curve?</h3>
         <p className="text-white/70 text-sm mb-6">
-          Growth phase: Automate before manual processes break. Maturity: Integrate and scale efficiently. Struggling: Let&apos;s rebuild.
+          Growth phase: Automate before manual processes break. Maturity:
+          Integrate and scale efficiently. Struggling: Let&apos;s rebuild.
         </p>
         <BookCallButton
           text="Book a Discovery Call"
