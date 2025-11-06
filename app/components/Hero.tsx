@@ -5,7 +5,7 @@ import TransitionComp from "@/app/components/TransitionComp";
 
 export default function Hero() {
   return (
-    <div className="relative flex items-center justify-center min-h-screen overflow-hidden mb-20 sm:mb-30">
+    <div className="relative flex items-center justify-center min-h-screen overflow-hidden  my-20 sm:mb-30 sm:mt-0">
       {/* <BackgroundVideo /> */}
       {/* <Overlay /> */}
       <TransitionComp className="bottom-0 left-0 w-full h-48" />
