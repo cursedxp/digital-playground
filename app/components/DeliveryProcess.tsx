@@ -47,7 +47,7 @@ export default function DeliveryProcess() {
                     {phase.number}
                   </div>
                   <h3 className="font-semibold text-base">{phase.title}</h3>
-                  <p className="text-white/70">{phase.description}</p>
+                  <p className="text-white">{phase.description}</p>
                 </div>
               ))}
             </div>
