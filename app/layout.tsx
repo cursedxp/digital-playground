@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import {
   OrganizationSchema,
   ServiceSchema,
@@ -122,6 +123,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable}  antialiased bg-black sm:px-8 md:px-8 `}
       >
+        <GoogleAnalytics />
         <Navigation />
         {children}
       </body>
