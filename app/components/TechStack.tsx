@@ -21,7 +21,12 @@ export default function TechStack() {
     },
     { name: "Node.js", logo: "/logos/nodejs.svg", width: 60, height: 40 },
     { name: "MongoDB", logo: "/logos/mongodb.svg", width: 60, height: 40 },
-    { name: "PostgreSQL", logo: "/logos/postgresql.svg", width: 60, height: 40 },
+    {
+      name: "PostgreSQL",
+      logo: "/logos/postgresql.svg",
+      width: 60,
+      height: 40,
+    },
     { name: "Vercel", logo: "/logos/vercel.svg", width: 60, height: 40 },
     { name: "Figma", logo: "/logos/figma.svg", width: 60, height: 40 },
     { name: "Framer", logo: "/logos/framer.svg", width: 60, height: 40 },
@@ -71,6 +76,55 @@ export default function TechStack() {
             Tech Stack
           </motion.h2>
         </div>
+      </div>
+
+      <div className="flex max-w-7xl w-full mb-12 flex-col sm:flex-row px-8 sm:px-0">
+        <div className="w-full sm:w-[70%] order-2 sm:order-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-base font-bold mb-4">Frontend</h3>
+              <ul className="space-y-2 text-white text-sm">
+                <li>• React & Next.js</li>
+                <li>• TypeScript</li>
+                <li>• Tailwind CSS</li>
+                <li>• Framer Motion</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-base font-bold mb-4">Backend & Database</h3>
+              <ul className="space-y-2 text-white text-sm">
+                <li>• Node.js</li>
+                <li>• PostgreSQL</li>
+                <li>• MongoDB</li>
+                <li>• RESTful & GraphQL APIs</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-base font-bold mb-4">Design & UX</h3>
+              <ul className="space-y-2 text-white text-sm">
+                <li>• Figma</li>
+                <li>• Framer</li>
+                <li>• Responsive design</li>
+                <li>• Component systems</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-base font-bold mb-4">Integrations</h3>
+              <ul className="space-y-2 text-white text-sm">
+                <li>• Stripe & PayPal</li>
+                <li>• HubSpot & Notion</li>
+                <li>• OpenAI & Claude</li>
+                <li>• Custom APIs</li>
+              </ul>
+            </div>
+          </div>
+          <p className="text-sm text-white mt-8 max-w-2xl">
+            Your team can maintain everything we build. We use industry-standard
+            technologies with strong community support and extensive
+            documentation.
+          </p>
+        </div>
+        <div className="w-full sm:w-[30%] order-1 sm:order-2"></div>
       </div>
 
       <div className="max-w-7xl w-full overflow-hidden">

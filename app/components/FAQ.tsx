@@ -43,7 +43,7 @@ const faqs = [
   {
     question: "How involved do we need to be during the project?",
     answer:
-      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else is async—weekly video updates you watch when you want, Slack for questions. We build while you run your business.",
+      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else is async—weekly updates on what shipped and what's next. No meetings unless you want them.",
   },
   {
     question: "Can you handle projects that typically require a team?",
@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "How does the subscription billing work?",
     answer:
-      "Task-Based: $2,400/month starts when you buy your first task. After we deliver (1-2 weeks), it auto-renews monthly. Cancel anytime, no penalties. Project-Based: $8,000/quarter for 3 months, cancel after if you want. Stripe handles billing and reminds you before each renewal.",
+      "Task-Based: $2,400/month starts when you buy your first task. After we deliver (timeline depends on scope), it auto-renews monthly. Cancel anytime, no penalties. Project-Based: $8,000/quarter for 3 months, cancel after if you want. Stripe handles billing and reminds you before each renewal.",
   },
   {
     question: "What if I don't need a task every month?",

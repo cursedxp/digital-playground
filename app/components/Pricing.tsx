@@ -9,7 +9,7 @@ const pricingOptions = [
     type: "Task-Based",
     price: "$2,400",
     priceDetail: "/month",
-    timeline: "1-2 weeks per task",
+    timeline: "Depends on scope",
     description: "Monthly subscription for development tasks. Cancel anytime.",
     highlight: "Start with one task, keep going if you like it. No commitment.",
     badge: "Founding Member Program",
