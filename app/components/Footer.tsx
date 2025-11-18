@@ -15,10 +15,10 @@ export default function Footer() {
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <div className="relative flex items-center justify-center">
-                <div className="w-10 h-10 rounded-full border-2 border-white" />
-                <div className="absolute w-6 h-6 rounded-full bg-white" />
+                <div className="w-8 h-8 rounded-full border-2 border-white" />
+                <div className="absolute w-4 h-4 rounded-full bg-white" />
               </div>
-              <div className="flex flex-col text-white text-sm font-semibold leading-tight">
+              <div className="flex flex-col text-white text-base font-semibold leading-tight">
                 <span>Optimotion</span>
               </div>
             </Link>

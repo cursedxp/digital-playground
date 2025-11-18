@@ -22,7 +22,7 @@ export default function Navigation() {
               <div className="absolute w-4 h-4 rounded-full bg-white" />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-white text-sm font-bold">Optimotion</span>
+              <span className="text-white text-base font-bold">Optimotion</span>
             </div>
           </Link>
 
