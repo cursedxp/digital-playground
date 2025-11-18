@@ -22,8 +22,7 @@ export default function Navigation() {
               <div className="absolute w-4 h-4 rounded-full bg-white" />
             </div>
             <div className="flex flex-col leading-tight">
-              <span className="text-white text-sm font-bold">Digital</span>
-              <span className="text-white text-sm font-bold">Playground</span>
+              <span className="text-white text-sm font-bold">Optimotion</span>
             </div>
           </Link>
 

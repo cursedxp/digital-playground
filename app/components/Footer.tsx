@@ -33,11 +33,10 @@ export default function Footer() {
                 <div className="absolute w-6 h-6 rounded-full bg-white" />
               </div>
               <div className="flex flex-col text-white text-sm font-semibold leading-tight">
-                <span>Digital</span>
-                <span>Playground</span>
+                <span>Optimotion</span>
               </div>
             </Link>
-            <p className="text-white/60 text-sm">
+            <p className="text-white text-sm">
               Smart Solutions for Growing Businesses
             </p>
           </div>
@@ -48,49 +47,49 @@ export default function Footer() {
             <nav className="flex flex-col gap-2">
               <a
                 href="#services"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 Services
               </a>
               <a
                 href="#how-it-works"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 How It Works
               </a>
               <a
                 href="#pricing"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 Pricing
               </a>
               <a
                 href="#about"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 About
               </a>
               <a
                 href="#faq"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 FAQ
               </a>
               <a
                 href="/terms"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 Terms of Service
               </a>
               <a
                 href="/impressum"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 Impressum
               </a>
               <a
                 href="/privacy"
-                className="text-white/60 hover:text-white transition-colors text-sm"
+                className="text-white hover:text-white/80 transition-colors text-sm"
               >
                 Privacy Policy
               </a>
@@ -102,18 +101,18 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact</h3>
             <div className="flex flex-col gap-3">
               <a
-                href="mailto:hi@digitalplayground.io"
-                className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+                href="mailto:hi@optimotion.dev"
+                className="flex items-center gap-2 text-white hover:text-white/80 transition-colors text-sm"
               >
                 <Mail className="w-4 h-4" />
-                <span>hi@digitalplayground.io</span>
+                <span>hi@optimotion.dev</span>
               </a>
-              <div className="flex items-start gap-2 text-white/60 text-sm">
+              <div className="flex items-start gap-2 text-white text-sm">
                 <MapPin className="w-4 h-4 mt-0.5" />
                 <span>
                   Meerbusch, Germany
                   <br />
-                  <span className="text-white/40 text-xs mt-1 block">CET Timezone (UTC+1)</span>
+                  <span className="text-white/70 text-xs mt-1 block">CET Timezone (UTC+1)</span>
                 </span>
               </div>
             </div>
@@ -143,9 +142,8 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 pt-8">
-          <p className="text-white/40 text-sm text-center">
-            © {new Date().getFullYear()} Digital Playground. All rights
-            reserved.
+          <p className="text-white text-sm text-center">
+            © {new Date().getFullYear()} Digital Playground. All rights reserved.
           </p>
         </div>
       </div>
