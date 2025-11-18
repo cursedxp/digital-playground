@@ -28,36 +28,36 @@ export default function Navigation() {
 
           {/* Center - Navigation Links (Desktop) */}
           <div className="hidden md:flex items-center gap-8">
-            <a
+            <Link
               href="/#services"
               className="text-white/80 hover:text-white transition-colors"
             >
               Services
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#how-it-works"
               className="text-white/80 hover:text-white transition-colors"
             >
               How It Works
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#pricing"
               className="text-white/80 hover:text-white transition-colors"
             >
               Pricing
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#about"
               className="text-white/80 hover:text-white transition-colors"
             >
               About
-            </a>
-            <a
+            </Link>
+            <Link
               href="/#faq"
               className="text-white/80 hover:text-white transition-colors"
             >
               FAQ
-            </a>
+            </Link>
           </div>
 
           {/* Right side - CTA Button (Desktop) + Mobile Menu Toggle */}
@@ -85,41 +85,41 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-white/10">
             <div className="flex flex-col gap-4 pt-4">
-              <a
+              <Link
                 href="/#services"
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#how-it-works"
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 How It Works
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#pricing"
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Pricing
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#about"
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/#faq"
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 FAQ
-              </a>
+              </Link>
               <div className="pt-2">
                 <BookCallButton />
               </div>
