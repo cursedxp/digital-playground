@@ -1,4 +1,6 @@
+import CaseStudyShowcase from "./components/CaseStudyShowcase";
 import ComplencyCurve from "./components/ComplencyCurve";
+import CTA from "./components/CTA";
 import DeliveryProcess from "./components/DeliveryProcess";
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
@@ -21,7 +23,9 @@ export default function Home() {
       <Pricing />
       <TechStack />
       <WhoWeAre />
+      <CaseStudyShowcase />
       <FAQ />
+      <CTA />
       <Footer />
       <Toast />
     </>
