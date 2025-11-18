@@ -10,7 +10,7 @@ interface CaseStudySidebarProps {
  */
 export function CaseStudySidebar({ frontmatter }: CaseStudySidebarProps) {
   return (
-    <div className="lg:col-span-3">
+    <div className="hidden lg:block lg:col-span-3">
       <div className="lg:sticky lg:top-24">
         {/* About */}
         <div className="mb-8">
