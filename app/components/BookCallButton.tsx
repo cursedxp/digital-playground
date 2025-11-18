@@ -11,7 +11,7 @@ export default function BookCallButton({
 }: BookCallButtonProps) {
   return (
     <a
-      href="https://cal.com"
+      href="https://cal.com/optimotion.dev/60-min-meeting"
       target="_blank"
       rel="noopener noreferrer"
       className={className}

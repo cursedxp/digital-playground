@@ -38,7 +38,7 @@ function ToastContent({ onClose }: { onClose: () => void }) {
               Join our first 3 founding members - priority scheduling, co-creation process, featured case study
             </p>
             <a
-              href="https://cal.com"
+              href="https://cal.com/optimotion.dev/60-min-meeting"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2 bg-black text-white text-sm font-semibold rounded-full transition-all hover:scale-105 cursor-pointer"
