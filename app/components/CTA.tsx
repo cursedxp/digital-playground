@@ -9,7 +9,7 @@ export default function CTA() {
         <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
           Ready to Automate Your Workflow?
         </h2>
-        <p className="text-white/70 text-lg mb-8 max-w-2xl mx-auto">
+        <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
           Start with a discovery call to identify your bottlenecks, or jump in
           with a small task to test our collaboration.
         </p>

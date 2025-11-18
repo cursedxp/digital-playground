@@ -33,7 +33,7 @@ export default function Hero() {
             />
           </span>
         </h1>
-        <p className="text-lg sm:text-xl max-w-4xl text-gray-300 mb-10">
+        <p className="text-lg sm:text-xl max-w-4xl text-white mb-10">
           A monthly development subscription for growing businesses. We build
           custom web apps, connect your tools, and automate your workflows.
           Cancel anytime—no long-term contracts.

@@ -10,10 +10,8 @@ const pricingOptions = [
     price: "$2,400",
     priceDetail: "/month",
     timeline: "1-2 weeks per task",
-    description:
-      "Monthly subscription for development tasks. Cancel anytime.",
-    highlight:
-      "Start with one task, keep going if you like it. No commitment.",
+    description: "Monthly subscription for development tasks. Cancel anytime.",
+    highlight: "Start with one task, keep going if you like it. No commitment.",
     badge: "Founding Member Program",
     badgeText:
       "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
@@ -32,8 +30,7 @@ const pricingOptions = [
     price: "$8,000",
     priceDetail: "/quarter",
     timeline: "3 months per cycle",
-    description:
-      "Quarterly subscription for full custom applications.",
+    description: "Quarterly subscription for full custom applications.",
     highlight: null,
     examples:
       "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
@@ -50,8 +47,7 @@ const pricingOptions = [
     price: "Let's Talk",
     priceDetail: null,
     timeline: "Varies",
-    description:
-      "Complex projects with custom needs. One-time payment.",
+    description: "Complex projects with custom needs. One-time payment.",
     highlight: null,
     examples:
       "Enterprise integrations, Legacy system modernization, Complex workflows",
@@ -88,7 +84,7 @@ export default function Pricing() {
                 <br />
                 Pricing
               </motion.h2>
-              <p className="text-white/70 text-lg leading-relaxed mt-6">
+              <p className="text-white text-lg leading-relaxed mt-6">
                 No hidden fees, no surprises. Pick what works for your budget
                 and timeline. Everything includes design, development, and
                 deployment.
@@ -143,15 +139,15 @@ export default function Pricing() {
                   <div className="text-4xl font-bold mb-2">
                     {option.price}
                     {option.priceDetail && (
-                      <span className="text-lg text-white/60">
+                      <span className="text-lg white">
                         {option.priceDetail}
                       </span>
                     )}
                   </div>
-                  <div className="text-sm text-white/50 mb-4">
+                  <div className="text-sm text-white mb-4">
                     Timeline: {option.timeline}
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed mb-2">
+                  <p className="text-white text-sm leading-relaxed mb-2">
                     {option.description}
                   </p>
                   {option.highlight && (
@@ -162,16 +158,14 @@ export default function Pricing() {
                       {option.highlight}
                     </p>
                   )}
-                  <div className="text-xs text-white/50 mb-4">
-                    <span className="font-semibold text-white/60">
-                      Examples:
-                    </span>{" "}
+                  <div className="text-xs text-white mb-4">
+                    <span className="font-semibold text-white">Examples:</span>{" "}
                     {option.examples}
                   </div>
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="text-sm font-semibold text-white/60 mb-3">
+                  <h4 className="text-sm font-semibold white mb-3">
                     What&apos;s Included:
                   </h4>
                   <ul className="space-y-3">
@@ -183,7 +177,7 @@ export default function Pricing() {
                         >
                           ✓
                         </span>
-                        <span className="text-white/80">{feature}</span>
+                        <span className="text-white">{feature}</span>
                       </li>
                     ))}
                   </ul>

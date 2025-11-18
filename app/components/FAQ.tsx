@@ -66,7 +66,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-black text-white px-6 mb:20 sm:mb-50">
+    <section id="faq" className="bg-black text-white px-6 mb:20 sm:mb-0">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left side - Title */}
@@ -85,7 +85,7 @@ export default function FAQ() {
                 <br />
                 Questions
               </motion.h2>
-              <p className="text-white/70 text-lg leading-relaxed mt-6 mb-8">
+              <p className="text-white text-lg leading-relaxed mt-6 mb-8">
                 Real questions from businesses like yours. Don&apos;t see your
                 question? Book a call and we&apos;ll answer it.
               </p>
