@@ -47,7 +47,7 @@ export default function TechStack() {
               We work with modern, proven technologies to build scalable and
               maintainable solutions.
             </p>
-            <div className="grid grid-cols-3 gap-4 mt-8 text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 text-sm">
               <p>
                 Our technology stack is carefully selected to ensure rapid
                 development without compromising quality or future scalability.
