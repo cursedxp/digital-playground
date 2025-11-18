@@ -19,13 +19,15 @@ function ToastContent({ onClose }: { onClose: () => void }) {
         }}
       >
         <div className="flex justify-between items-center">
-          <h3 className="text-black font-bold text-md">Founding Member Program</h3>
+          <h3 className="text-black font-bold text-md">
+            Founding Member Program
+          </h3>
           <button
             onClick={(e) => {
               e.stopPropagation();
               onClose();
             }}
-            className="text-black/60 hover:text-black transition-colors flex-shrink-0 w-8 h-8 flex items-center justify-center rounded hover:bg-black/10 cursor-pointer -mt-1 -mr-1"
+            className="text-black/60 hover:text-black transition-colors shrink-0 w-8 h-8 flex items-center justify-center rounded hover:bg-black/10 cursor-pointer -mt-1 -mr-1"
             aria-label="Close"
           >
             ✕
@@ -35,7 +37,8 @@ function ToastContent({ onClose }: { onClose: () => void }) {
         {isExpanded && (
           <div className="mt-4 space-y-4">
             <p className="text-black/80 text-sm leading-relaxed">
-              Join our first 3 founding members - priority scheduling, co-creation process, featured case study
+              Join our first 3 founding members - priority scheduling,
+              co-creation process, featured case study
             </p>
             <a
               href="https://cal.com/optimotion.dev/60-min-meeting"
@@ -55,18 +58,17 @@ function ToastContent({ onClose }: { onClose: () => void }) {
 
 function CookieToast({ onClose }: { onClose: () => void }) {
   return (
-    <div
-      className="w-80 rounded-xl shadow-2xl pointer-events-auto bg-white/95 backdrop-blur-sm p-4"
-    >
+    <div className="w-80 rounded-xl shadow-2xl pointer-events-auto bg-white/95 backdrop-blur-sm p-4">
       <div className="flex justify-between items-start gap-3">
         <div className="flex-1">
           <p className="text-black/80 text-sm leading-relaxed">
-            We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.
+            We use cookies to improve your experience on our site. By continuing
+            to use our site, you accept our use of cookies.
           </p>
         </div>
         <button
           onClick={onClose}
-          className="text-black/60 hover:text-black transition-colors flex-shrink-0 w-8 h-8 flex items-center justify-center rounded hover:bg-black/10 cursor-pointer"
+          className="text-black/60 hover:text-black transition-colors shrink-0 w-8 h-8 flex items-center justify-center rounded hover:bg-black/10 cursor-pointer"
           aria-label="Close"
         >
           ✕
