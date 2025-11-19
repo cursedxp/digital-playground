@@ -6,19 +6,19 @@ import BookCallButton from "./BookCallButton";
 
 const pricingOptions = [
   {
-    type: "Monthly Subscription",
+    type: "2-Week Sprints",
     price: "$2,400",
-    priceDetail: "/month",
-    timeline: "One feature per month",
-    description: "Monthly subscription for ongoing development. One complete feature delivered each month.",
-    highlight: "Start with one month. Keep going if you like it. Cancel anytime.",
+    priceDetail: "/sprint",
+    timeline: "2 weeks per sprint",
+    description: "Sprint-based development. One complete feature delivered every 2 weeks.",
+    highlight: "Start with one sprint. Keep going if you like it. No commitment.",
     badge: "Founding Member Program",
     badgeText:
       "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
     examples:
-      "Month 1: Authentication, Month 2: Stripe-HubSpot sync, Month 3: Email notifications, Month 4: Search with filters",
+      "Sprint 1: User authentication, Sprint 2: Stripe-HubSpot sync, Sprint 3: Email notifications, Sprint 4: Search with filters",
     features: [
-      "One feature per month",
+      "One feature per sprint",
       "Delivered tested and working",
       "Design + development included",
       "Documentation included",
