@@ -24,12 +24,12 @@ const faqs = [
   {
     question: "How do you charge for projects?",
     answer:
-      "Task-Based: $2,400/month for ongoing tasks. Project-Based: $8,000/quarter for full apps. Custom: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
+      "2-Week Sprints: $2,400/sprint for ongoing development. Project-Based: $8,000/quarter for full apps. Custom: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
   },
   {
     question: "What if we need changes after delivery?",
     answer:
-      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features or changes to the scope, that's a new task at $2,400. Many clients keep a monthly subscription going for continuous improvements.",
+      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features or changes to the scope, that's a new sprint at $2,400. Many clients keep booking sprints for continuous improvements.",
   },
   {
     question: "How is this different from hiring a developer?",
@@ -52,14 +52,14 @@ const faqs = [
       "Yes. We break complex projects into manageable pieces and work through them systematically. You get direct communication with no agency markup. If something truly needs parallel work or specialized expertise we don't have, we'll tell you upfront and can bring in trusted people.",
   },
   {
-    question: "How does the subscription billing work?",
+    question: "How does sprint billing work?",
     answer:
-      "Task-Based: $2,400/month starts when you buy your first task. After we deliver (timeline depends on scope), it auto-renews monthly. Cancel anytime, no penalties. Project-Based: $8,000/quarter for 3 months, cancel after if you want. Stripe handles billing and reminds you before each renewal.",
+      "2-Week Sprints: $2,400/sprint. Pay upfront for each sprint, delivered in 2 weeks. Book another sprint if you want to continue, or stop—no penalties. Project-Based: $8,000/quarter for 3 months with multiple sprints, cancel after if you want. Stripe handles billing.",
   },
   {
-    question: "What if I don't need a task every month?",
+    question: "What if I don't need continuous sprints?",
     answer:
-      "Cancel anytime, no penalties. Lots of clients subscribe for a few months, pause when things are quiet, then restart later. It's built for flexibility, not lock-in.",
+      "No problem. Book sprints only when you need them. Lots of clients run a few sprints, pause when things are quiet, then book more later. It's built for flexibility, not lock-in.",
   },
 ];
 
@@ -114,7 +114,7 @@ export default function FAQ() {
                   <motion.span
                     animate={{ rotate: openIndex === index ? 45 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="text-3xl font-light flex-shrink-0 mt-[-4px]"
+                    className="text-3xl font-light shrink-0 -mt-1"
                   >
                     +
                   </motion.span>
