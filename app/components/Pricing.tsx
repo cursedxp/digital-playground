@@ -6,23 +6,23 @@ import BookCallButton from "./BookCallButton";
 
 const pricingOptions = [
   {
-    type: "Task-Based",
+    type: "Feature-Based",
     price: "$2,400",
-    priceDetail: "/month",
-    timeline: "Depends on scope",
-    description: "Monthly subscription for development tasks. Cancel anytime.",
-    highlight: "Start with one task, keep going if you like it. No commitment.",
+    priceDetail: "/feature",
+    timeline: "2-4 weeks typically",
+    description: "One complete feature, built and shipped. Fixed price, no hourly billing.",
+    highlight: "Start with one feature. Keep going if you like it. No commitment.",
     badge: "Founding Member Program",
     badgeText:
       "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
     examples:
-      "Stripe-to-HubSpot sync, Email automation workflow, API integration",
+      "User authentication system, Stripe-HubSpot sync, Email notification system, Search with filters",
     features: [
-      "One task per month",
+      "One complete feature",
       "Delivered tested and working",
       "Design + development included",
       "Documentation included",
-      "Cancel anytime, no penalties",
+      "30 days of fix support",
     ],
   },
   {
@@ -30,14 +30,14 @@ const pricingOptions = [
     price: "$8,000",
     priceDetail: "/quarter",
     timeline: "3 months per cycle",
-    description: "Quarterly subscription for full custom applications.",
+    description: "Multiple features bundled. Full custom applications built feature-by-feature.",
     highlight: null,
     examples:
-      "Customer dashboard, Internal CRM, Booking system, Multi-platform integration",
+      "SaaS MVP (3-4 features), Customer portal with dashboard, Internal CRM system, Booking platform",
     features: [
       "Discovery & planning",
       "Custom design & UX",
-      "Complete build (front & back)",
+      "3-4 complete features",
       "Weekly progress updates",
       "Cancel after each quarter",
     ],
