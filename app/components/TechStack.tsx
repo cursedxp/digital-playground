@@ -80,7 +80,7 @@ export default function TechStack() {
 
       <div className="flex max-w-7xl w-full mb-12 flex-col sm:flex-row px-8 sm:px-0">
         <div className="w-full sm:w-[70%] order-2 sm:order-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
             <div>
               <h3 className="text-base font-bold mb-4">Frontend</h3>
               <ul className="space-y-2 text-white text-sm">
