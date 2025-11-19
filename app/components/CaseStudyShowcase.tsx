@@ -93,7 +93,7 @@ export default function CaseStudyShowcase() {
                 Work
               </motion.h2>
               <p className="text-white text-lg leading-relaxed mt-6">
-                Real projects we've built. Client work, internal tools, and
+                Real projects we&apos;ve built. Client work, internal tools, and
                 technical showcases.
               </p>
             </div>
