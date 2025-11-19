@@ -17,7 +17,7 @@ export default function ServiceOverview() {
         </motion.h2>
         <p className="text-left sm:text-center mb-10 max-w-3xl text-xl ">
           Get custom software that solves real problems—faster and cheaper than
-          hiring a full-time developer. Start with a small task to see how we
+          hiring a full-time developer. Start with one sprint to see how we
           work.
         </p>
       </div>
