@@ -42,11 +42,12 @@ export default function ServiceOverview() {
           </div>
 
           <div>
-            <h3 className="font-bold mb-2">Built for Real Results</h3>
+            <h3 className="font-bold mb-2">Built for Real Impact</h3>
             <p className="text-sm">
-              We care about impact, not hours billed. Every solution fits your
-              budget and works long-term. Automate manual work, eliminate
-              errors, scale without hiring more people.
+              We care about solving your problem, not billing hours. Every
+              solution fits your budget and works long-term. Sometimes
+              that&apos;s transformational. Sometimes it&apos;s a helpful
+              improvement. We&apos;re honest either way.
             </p>
           </div>
         </div>

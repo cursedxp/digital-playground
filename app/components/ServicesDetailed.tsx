@@ -9,25 +9,25 @@ export default function ServicesDetailed() {
       number: "01",
       title: "Drowning in manual data entry?",
       description:
-        "We connect your tools so they sync automatically. Your CRM talks to Stripe, payments flow to Google Sheets, emails trigger in Mailchimp. No more copy-paste.",
+        "We make your tools talk to each other automatically. Your CRM syncs with Stripe, payments show up in Google Sheets, emails trigger in Mailchimp. No more copy-paste, no more errors.",
     },
     {
       number: "02",
       title: "Spreadsheets breaking down?",
       description:
-        "We build custom dashboards that show what you need, when you need it. Real-time data, clean visualizations, built for how you actually work.",
+        "We build dashboards that show what you need, when you need it. Real-time data, clear visualizations, designed for how you actually work—not how some SaaS company thinks you should.",
     },
     {
       number: "03",
       title: "Generic tools not fitting your needs?",
       description:
-        "We build software that fits your business exactly. Customer portals, admin tools, booking systems—designed around how you work, not how some SaaS thinks you should.",
+        "We build software that fits your business exactly. Customer portals, admin tools, booking systems—built around your workflow, not the other way around.",
     },
     {
       number: "04",
       title: "Disconnected systems causing chaos?",
       description:
-        "We connect everything into one unified system. Custom APIs that make your tools talk to each other. One source of truth, no more hunting for the right data.",
+        "We connect everything into one system that actually makes sense. Your tools talk to each other. One place for the truth, no more hunting through five different platforms.",
     },
   ];
 
