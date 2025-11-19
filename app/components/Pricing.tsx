@@ -16,7 +16,7 @@ const pricingOptions = [
     badgeText:
       "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
     examples:
-      "Sprint 1: User authentication, Sprint 2: Stripe-HubSpot sync, Sprint 3: Email notifications, Sprint 4: Search with filters",
+      "User authentication, Stripe-HubSpot sync, Email notifications, Search with filters, Landing page redesign, Dashboard UX improvements",
     features: [
       "One feature per sprint",
       "Delivered tested and working",
@@ -33,7 +33,7 @@ const pricingOptions = [
     description: "Multiple features bundled. Full custom applications built feature-by-feature.",
     highlight: null,
     examples:
-      "SaaS MVP (3-4 features), Customer portal with dashboard, Internal CRM system, Booking platform",
+      "SaaS MVP with custom UX, Customer portal with dashboard, Internal CRM system, Booking platform with user flows",
     features: [
       "Discovery & planning",
       "Custom design & UX",
@@ -50,7 +50,7 @@ const pricingOptions = [
     description: "Complex projects with custom needs. One-time payment.",
     highlight: null,
     examples:
-      "Enterprise integrations, Legacy system modernization, Complex workflows",
+      "Enterprise integrations, Legacy system modernization, Complex workflows, Complete brand & product redesign",
     features: [
       "Custom assessment",
       "Flexible approach",
