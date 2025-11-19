@@ -53,7 +53,7 @@ export default function CaseStudyShowcase() {
                     </h3>
 
                     {/* Summary */}
-                    <p className="text-white text-sm leading-relaxed mb-4 flex-grow">
+                    <p className="text-white text-sm leading-relaxed mb-4 grow">
                       {study.summary}
                     </p>
 

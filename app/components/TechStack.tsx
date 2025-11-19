@@ -132,7 +132,7 @@ export default function TechStack() {
           {technologies.concat(technologies).map((tech, index) => (
             <div
               key={index}
-              className="flex items-center justify-center h-24 min-w-[80px]"
+              className="flex items-center justify-center h-24 min-w-20"
             >
               <Image
                 src={tech.logo}
