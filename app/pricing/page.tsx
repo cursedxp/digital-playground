@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import BookCallButton from "../components/BookCallButton";
-import FAQ from "../components/FAQ";
 
 const pricingOptions = [
   {
@@ -194,9 +193,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
-      {/* FAQ Section */}
-      <FAQ />
     </main>
   );
 }
