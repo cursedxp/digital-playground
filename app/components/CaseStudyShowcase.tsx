@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const caseStudies = [
   {
-    industry: "Enterprise SaaS",
+    industry: "Client Project",
     year: "2024",
     title: "How Sync turns WhatsApp into a professional support platform",
     summary:
-      "Enterprise-grade ticketing system built on WhatsApp Business API. Real-time message handling, automatic team assignment, Kanban workflow management, and analytics dashboard for support teams managing customer conversations at scale.",
+      "Ticketing system built on WhatsApp Business API for a SaaS company. Real-time message handling, automatic team assignment, Kanban workflow management, and analytics dashboard. Build complete and production-ready, pending Facebook API approval.",
     techStack: ["Next.js", "MongoDB", "WebSockets", "AWS"],
     slug: "sync",
   },
@@ -93,8 +93,8 @@ export default function CaseStudyShowcase() {
                 Work
               </motion.h2>
               <p className="text-white text-lg leading-relaxed mt-6">
-                Real projects, real results. Everything built, tested, and
-                deployed.
+                Real projects we've built. Client work, internal tools, and
+                technical showcases.
               </p>
             </div>
           </div>
