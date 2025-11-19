@@ -3,7 +3,6 @@ import ComplencyCurve from "./components/ComplencyCurve";
 import CTA from "./components/CTA";
 import DeliveryProcess from "./components/DeliveryProcess";
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
 import ServiceOverview from "./components/ServiceOverview";
@@ -26,7 +25,6 @@ export default function Home() {
       <CaseStudyShowcase />
       <FAQ />
       <CTA />
-      <Footer />
       <Toast />
     </>
   );

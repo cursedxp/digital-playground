@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import {
   OrganizationSchema,
@@ -126,6 +127,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );
