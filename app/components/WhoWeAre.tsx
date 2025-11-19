@@ -26,7 +26,7 @@ export default function WhoWeAre() {
           <div className="flex flex-col gap-6">
             <p className="text-xl leading-relaxed">
               A boutique development studio based in Germany, specializing in
-              full-stack web applications and UX design for growing businesses.
+              software for growing businesses and UX design.
             </p>
             <p className="text-base text-white leading-relaxed">
               You work directly with us. No account managers, no project

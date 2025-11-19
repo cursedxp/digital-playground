@@ -37,7 +37,7 @@ const pricingOptions = [
     features: [
       "Discovery & planning",
       "Custom design & UX",
-      "Full-stack development",
+      "Complete build (front & back)",
       "Weekly progress updates",
       "Cancel after each quarter",
     ],
@@ -172,7 +172,7 @@ export default function Pricing() {
                     {option.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm">
                         <span
-                          className="flex-shrink-0"
+                          className="shrink-0"
                           style={{ color: "#FFE028" }}
                         >
                           ✓
