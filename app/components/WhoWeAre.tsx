@@ -90,6 +90,14 @@ export default function WhoWeAre() {
                         d="m67.7827,3.1956c0-2.529-2.8019-4.0526-4.9246-2.6779L2.4268,39.6535c-1.5132.98-2.4268,2.66-2.4268,4.4629v115.7729c0,1.7594,1.4263,3.1857,3.1857,3.1857h64.597V3.1956Z"
                       ></path>
                     </svg>
+                    {/* IcTerra */}
+                    <Image
+                      src="/icterralogo.png"
+                      alt="IcTerra"
+                      width={32}
+                      height={32}
+                      className="object-contain"
+                    />
                     {/* Basari Mobile */}
                     <Image
                       src="/basarilogo.png"
