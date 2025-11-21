@@ -16,9 +16,9 @@ const caseStudies = [
   {
     industry: "Internal Tool",
     year: "2024",
-    title: "How we built a tool that generates case studies in 15 minutes",
+    title: "Storycraft: Build Your Portfolio in 15 Minutes",
     summary:
-      "AI-powered documentation tool that transforms project details into professional case studies. Answer 3-4 questions, get a polished case study in 15 minutes with inline editing, consistent formatting, and export to multiple formats.",
+      "AI-powered tool that generates professional case studies in minutes. Reduced case study creation from 3-6 hours to 10-15 minutes. Answer 3-4 guided questions, get a polished case study with inline editing, consistent formatting, and one-click export to Markdown, HTML, or PDF.",
     techStack: ["Next.js", "ChatGPT", "Claude"],
     slug: "generator",
   },
