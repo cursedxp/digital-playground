@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { Mail } from "lucide-react";
 
 export default function WhoWeAre() {
@@ -41,7 +42,14 @@ export default function WhoWeAre() {
 
               {/* Experience Text */}
               <div>
-                <h3 className="text-base font-semibold mb-1">Anil Ozsoy</h3>
+                <Link
+                  href="https://www.linkedin.com/in/anilozsoy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white/80 transition-colors"
+                >
+                  <h3 className="text-base font-semibold mb-1">Anil Ozsoy</h3>
+                </Link>
                 <p className="text-xs text-white/50 mb-3">Founder</p>
                 <p className="text-sm text-white/80 leading-relaxed mb-4">
                   Experience from leading tech companies in Europe and the US.
