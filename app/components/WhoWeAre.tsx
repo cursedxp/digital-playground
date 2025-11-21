@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Mail } from "lucide-react";
 
 export default function WhoWeAre() {
   return (
@@ -117,8 +118,9 @@ export default function WhoWeAre() {
                   </p>
                   <a
                     href="mailto:hi@optimotion.dev"
-                    className="text-sm text-white hover:text-white/80 transition-colors"
+                    className="text-sm text-white hover:text-white/80 transition-colors flex items-center gap-2"
                   >
+                    <Mail size={16} />
                     hi@optimotion.dev
                   </a>
                 </div>
