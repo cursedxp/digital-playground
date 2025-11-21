@@ -46,6 +46,19 @@ export default function WhoWeAre() {
                   Experience from leading tech companies in Europe and the US.
                 </p>
 
+                {/* Email Contact */}
+                <div className="mb-4">
+                  <p className="text-xs text-white/50 mb-2">
+                    Do you prefer email communication?
+                  </p>
+                  <a
+                    href="mailto:hi@optimotion.dev"
+                    className="text-sm text-white hover:text-white/80 transition-colors"
+                  >
+                    hi@optimotion.dev
+                  </a>
+                </div>
+
                 {/* Company Logos */}
                 <div className="mb-8">
                   <p className="text-xs text-white/50 mb-3">Previously at</p>
