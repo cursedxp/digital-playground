@@ -8,10 +8,39 @@ import {
   resultsComponents,
 } from "../components/markdown/markdownComponents";
 import CTA from "@/app/components/CTA";
+import { Metadata } from "next";
 
 export async function generateStaticParams() {
   const slugs = getCaseStudySlugs();
   return slugs.map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const { frontmatter } = await getCaseStudy(slug);
+
+  const baseUrl = "https://www.optimotion.dev";
+  const url = `${baseUrl}/case-studies/${slug}`;
+
+  return {
+    title: `${frontmatter.title} - Case Study`,
+    description:
+      frontmatter.summary ||
+      `${frontmatter.industry} project completed in ${frontmatter.year}. ${frontmatter.result}`,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${frontmatter.title} - Case Study`,
+      description: frontmatter.summary,
+      url: url,
+      type: "article",
+    },
+  };
 }
 
 export default async function CaseStudyPage({
