@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/:path((?!_next|api).*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "optimotion.dev"
+        }
+      ],
+      "destination": "https://www.optimotion.dev/:path",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "optimotion.dev"
+        }
+      ],
+      "destination": "https://www.optimotion.dev",
+      "permanent": true
+    }
+  ]
+}
