@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "How involved do we need to be during the project?",
     answer:
-      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else is async—weekly updates on what shipped and what's next. No meetings unless you want them.",
+      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else is async—weekly updates via Loom videos, Slack, email, or your preferred tool. Shared workspace (Notion, Jira, etc.) for tracking progress and feedback. No meetings unless you want them.",
   },
   {
     question: "Can you handle projects that typically require a team?",

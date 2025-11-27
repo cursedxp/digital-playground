@@ -167,7 +167,7 @@ export default function WhoWeAre() {
               <div>
                 <h3 className="font-bold mb-2">Async-First Workflow</h3>
                 <p className="text-sm text-white">
-                  No mandatory meetings. Weekly updates on progress. We reply
+                  No mandatory meetings. Weekly updates via Loom, Slack, or your tool. We reply
                   within 48 hours.
                 </p>
               </div>

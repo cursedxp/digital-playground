@@ -13,7 +13,7 @@ const phases = [
     number: "02",
     title: "Design & Build",
     description:
-      "Design and development happen in parallel. Fast iterations—you see progress early and often. Weekly updates on what shipped and what's next—delivered however works best for you. Clear timeline after understanding your needs.",
+      "Design and development happen in parallel. Fast iterations—you see progress early and often. Weekly async updates (Loom, Slack, email—your choice) showing what shipped and what's next. Shared workspace (Notion, Jira, or your tool) to track progress. Clear timeline after understanding your needs.",
   },
   {
     number: "03",
@@ -34,7 +34,7 @@ export default function DeliveryProcess() {
           <div className="flex flex-col">
             <p className="text-xl mt-6 max-w-sm">
               Built for busy founders. We build while you run your business.
-              Review progress updates when it suits you—no meetings. Fast iterations
+              Review progress updates when it suits you—async via Loom, Slack, email, or your preferred tool. No meetings needed. Fast iterations
               mean you see progress early and often. Timeline depends on scope—we&apos;ll give you exact dates upfront.
             </p>
             <div className="hidden md:grid grid-cols-3 gap-4 mt-8 text-sm">
