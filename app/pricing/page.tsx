@@ -6,60 +6,42 @@ import BookCallButton from "../components/BookCallButton";
 
 const pricingOptions = [
   {
-    type: "2-Week Sprints",
-    price: "$2,400",
-    priceDetail: "/sprint",
+    type: "2-Week Sprint",
+    price: "$5,000",
+    priceDetail: null,
     timeline: "2 weeks per sprint",
     description:
-      "Sprint-based development. One complete feature delivered every 2 weeks.",
-    highlight:
-      "Start with one sprint. Keep going if you like it. No commitment.",
-    badge: "Founding Member Program",
-    badgeText:
-      "Join our first 3 founding members - priority scheduling, co-creation process, featured case study",
+      "Perfect for well-defined features that need to ship fast.",
+    highlight: "Start with one sprint. Keep going if you like it. No commitment.",
+    badge: null,
+    badgeText: null,
     examples:
-      "User authentication, Stripe-HubSpot sync, Email notifications, Search with filters, Landing page redesign, Dashboard UX improvements",
+      "Authentication systems, Payment integrations, Dashboard redesigns, Search functionality, Landing pages, Email notifications",
     features: [
-      "One feature per sprint",
+      "One complete feature delivered",
+      "Design + development + deployment included",
       "Delivered tested and working",
-      "Design + development included",
       "Documentation included",
       "Cancel anytime, no penalties",
     ],
   },
   {
-    type: "Project-Based",
-    price: "$8,000",
-    priceDetail: "/quarter",
-    timeline: "3 months per cycle",
-    description:
-      "Multiple features bundled. Full custom applications built feature-by-feature.",
-    highlight: null,
-    examples:
-      "SaaS MVP with custom UX, Customer portal with dashboard, Internal CRM system, Booking platform with user flows",
-    features: [
-      "Discovery & planning",
-      "Custom design & UX",
-      "3-4 complete features",
-      "Weekly progress updates",
-      "Cancel after each quarter",
-    ],
-  },
-  {
-    type: "Custom",
+    type: "Custom Projects",
     price: "Let's Talk",
     priceDetail: null,
     timeline: "Varies",
-    description: "Complex projects with custom needs. One-time payment.",
+    description: "For projects with custom needs—big or small, simple or complex.",
     highlight: null,
+    badge: null,
+    badgeText: null,
     examples:
-      "Enterprise integrations, Legacy system modernization, Complex workflows, Complete brand & product redesign",
+      "Monthly development partnerships, Multi-feature applications, Enterprise integrations, Legacy system modernization",
     features: [
-      "Custom assessment",
-      "Flexible approach",
-      "Tailored solutions",
+      "Custom assessment & proposal",
+      "Flexible engagement model",
+      "Tailored to your budget & timeline",
       "Transparent quoting",
-      "One-time payment (no subscription)",
+      "Ongoing support options",
     ],
   },
 ];
