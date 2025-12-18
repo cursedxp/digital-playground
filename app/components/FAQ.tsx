@@ -24,12 +24,12 @@ const faqs = [
   {
     question: "How do you charge for projects?",
     answer:
-      "2-Week Sprints: $2,400/sprint for ongoing development. Project-Based: $8,000/quarter for full apps. Custom: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
+      "Monthly Plan: $5,000/month for two complete features delivered every month. Custom Projects: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
   },
   {
     question: "What if we need changes after delivery?",
     answer:
-      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features or changes to the scope, that's a new sprint at $2,400. Many clients keep booking sprints for continuous improvements.",
+      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features beyond your current month's scope, we'll add them to next month's sprint queue. Many clients stay subscribed for continuous improvements.",
   },
   {
     question: "How is this different from hiring a developer?",
@@ -52,14 +52,14 @@ const faqs = [
       "Yes. We break complex projects into manageable pieces and work through them systematically. You get direct communication with no agency markup. If something truly needs parallel work or specialized expertise we don't have, we'll tell you upfront and can bring in trusted people.",
   },
   {
-    question: "How does sprint billing work?",
+    question: "How does billing work?",
     answer:
-      "2-Week Sprints: $2,400/sprint. Pay upfront for each sprint, delivered in 2 weeks. Book another sprint if you want to continue, or stop—no penalties. Project-Based: $8,000/quarter for 3 months with multiple sprints, cancel after if you want. Stripe handles billing.",
+      "Monthly Plan: $5,000/month, billed monthly. Two 2-week sprints delivered each month with two complete features. Cancel anytime with 30 days notice. Stripe handles billing—simple and secure.",
   },
   {
-    question: "What if I don't need continuous sprints?",
+    question: "What if I don't need continuous development?",
     answer:
-      "No problem. Book sprints only when you need them. Lots of clients run a few sprints, pause when things are quiet, then book more later. It's built for flexibility, not lock-in.",
+      "No problem. Subscribe for a month or two, cancel when you're done, and come back later if needed. Lots of clients subscribe for a few months, pause when things are quiet, then resubscribe later. It's built for flexibility, not lock-in.",
   },
 ];
 

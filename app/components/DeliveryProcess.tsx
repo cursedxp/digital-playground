@@ -35,7 +35,7 @@ export default function DeliveryProcess() {
             <p className="text-xl mt-6 max-w-sm">
               Built for busy founders. We build while you run your business.
               Review progress updates when it suits you—async via Loom, Slack, email, or your preferred tool. No meetings needed. Fast iterations
-              mean you see progress early and often. Timeline depends on scope—we&apos;ll give you exact dates upfront.
+              mean you see progress early and often. Each sprint is 2 weeks. Complex features span multiple sprints—we&apos;ll scope them upfront so you know exactly what to expect each month.
             </p>
             <div className="hidden md:grid grid-cols-3 gap-4 mt-8 text-sm">
               {phases.map((phase, index) => (

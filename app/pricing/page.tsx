@@ -6,19 +6,19 @@ import BookCallButton from "../components/BookCallButton";
 
 const pricingOptions = [
   {
-    type: "2-Week Sprint",
+    type: "Monthly Plan",
     price: "$5,000",
-    priceDetail: null,
-    timeline: "2 weeks per sprint",
-    description:
-      "Perfect for well-defined features that need to ship fast.",
-    highlight: "Start with one sprint. Keep going if you like it. No commitment.",
+    priceDetail: "/month",
+    timeline: "Two 2-week sprints per month",
+    description: "Subscribe for ongoing development. Two complete features delivered every month.",
+    highlight:
+      "Start with one month. Keep going if you like it. No commitment.",
     badge: null,
     badgeText: null,
     examples:
-      "Authentication systems, Payment integrations, Dashboard redesigns, Search functionality, Landing pages, Email notifications",
+      "Examples per sprint (one complete feature): User authentication system, Stripe payment integration, Admin dashboard with analytics, Email notification system, Search functionality, Landing page design & build",
     features: [
-      "One complete feature delivered",
+      "Two complete features delivered per month",
       "Design + development + deployment included",
       "Delivered tested and working",
       "Documentation included",

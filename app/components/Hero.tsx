@@ -10,17 +10,16 @@ export default function Hero() {
       {/* <Overlay /> */}
       <TransitionComp className="bottom-0 left-0 w-full h-48" />
       {/* Content */}
-      <div className="relative z-10 max-w-4xl m-auto flex flex-col items-center px-6 text-center">
+      <div className="relative z-10 max-w-5xl m-auto flex flex-col items-center px-6 text-center">
         <div className="rounded-full flex items-center justify-center radial-gradient p-10">
           <div className="w-[300px] h-[300px] mx-auto rounded-full">
             <MoleculeBackground className="w-full h-full" />
           </div>
         </div>
         <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
-          Smart Solutions{" "}
-          <span className="font-serif text-7xl sm:text-8xl ">Growing </span>
+          Development Subscription
           <span className="relative inline-block font-serif text-7xl sm:text-8xl font-extralight tracking-tight">
-            <span className="relative z-10">Businesses</span>
+            <span className="relative z-10">for Businesses</span>
             <span
               className="absolute inset-0 -inset-x-2"
               style={{
@@ -34,9 +33,8 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-white mb-10">
-          Sprint-based development for growing businesses. We build software
-          that fits your needs, make your systems talk to each other, and handle
-          the repetitive work. Cancel anytime—no long-term contracts.
+          We build software that fits your needs, make your systems talk to each other,
+          and handle the repetitive work. Cancel anytime—no long-term contracts.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

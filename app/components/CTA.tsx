@@ -10,8 +10,8 @@ export default function CTA() {
           Ready to Start Building?
         </h2>
         <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-          Start with a discovery call to identify your bottlenecks, or jump in
-          with one sprint to test our collaboration.
+          Start with a discovery call to identify your bottlenecks, or subscribe
+          for one month to test our collaboration.
         </p>
         <BookCallButton
           text="Book a Discovery Call"
