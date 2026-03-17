@@ -72,13 +72,15 @@ export default async function BlogPostPage({
     <div className="min-h-screen bg-black text-white">
       <Navigation />
 
-      <div className="max-w-7xl mx-auto px-6 py-8 sm:py-16 pt-32">
-        <Link
-          href="/blog"
-          className="text-white/40 hover:text-white text-sm mb-8 inline-block transition-colors"
-        >
-          ← Back to Blog
-        </Link>
+      <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <div className="mb-8 mt-8">
+          <Link
+            href="/blog"
+            className="text-white/40 hover:text-white text-sm inline-block transition-colors"
+          >
+            ← Back to Blog
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <BlogSidebar

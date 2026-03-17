@@ -43,9 +43,6 @@ export function BlogSidebar({
         {/* Table of Contents */}
         {headings.length > 0 && (
           <div>
-            <h3 className="text-sm font-semibold mb-3 text-white">
-              On this page
-            </h3>
             <nav className="flex flex-col gap-2">
               {headings.map((heading) => (
                 <a
