@@ -1,6 +1,7 @@
 "use client";
 
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { Components } from "react-markdown";
 
 interface BlogContentProps {
@@ -32,7 +33,7 @@ const components: Components = {
 export function BlogContent({ content }: BlogContentProps) {
   return (
     <div className="prose prose-invert prose-lg max-w-none prose-headings:text-white prose-p:text-white/80 prose-a:text-[#FFE028] prose-a:no-underline hover:prose-a:underline prose-strong:text-white prose-li:text-white/80">
-      <ReactMarkdown components={components}>{content}</ReactMarkdown>
+      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components}>{content}</ReactMarkdown>
     </div>
   );
 }
