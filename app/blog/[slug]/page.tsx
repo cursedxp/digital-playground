@@ -39,6 +39,19 @@ export async function generateMetadata({
   };
 }
 
+function formatDate(dateStr: string): string {
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
 function extractHeadings(content: string): { id: string; text: string }[] {
   const lines = content.split("\n");
   const headings: { id: string; text: string }[] = [];
@@ -73,15 +86,6 @@ export default async function BlogPostPage({
       <Navigation />
 
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
-        <div className="mb-8 mt-8">
-          <Link
-            href="/blog"
-            className="text-white/40 hover:text-white text-sm inline-block transition-colors"
-          >
-            ← Back to Blog
-          </Link>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           <BlogSidebar
             headings={headings}
@@ -91,8 +95,15 @@ export default async function BlogPostPage({
           />
 
           <article className="lg:col-span-9">
+            <Link
+              href="/blog"
+              className="text-[#FFE028] hover:text-[#FFE028]/80 text-sm mb-6 inline-block transition-colors"
+            >
+              ← Back to Blog
+            </Link>
+
             <div className="flex items-center gap-3 text-sm text-white/40 mb-4">
-              <time>{post.frontmatter.date}</time>
+              <time>{formatDate(post.frontmatter.date)}</time>
               {post.frontmatter.readTime && (
                 <>
                   <span>·</span>

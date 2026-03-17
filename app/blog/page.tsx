@@ -4,6 +4,19 @@ import Navigation from "@/app/components/Navigation";
 import CTA from "@/app/components/CTA";
 import { Metadata } from "next";
 
+function formatDate(dateStr: string): string {
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
 export const metadata: Metadata = {
   title: "Blog - Optimotion",
   description:
@@ -39,7 +52,7 @@ export default async function BlogPage() {
               >
                 <article className="border border-white/10 rounded-lg p-6 hover:border-[#FFE028]/50 transition-colors">
                   <div className="flex items-center gap-3 text-sm text-white/40 mb-3">
-                    <time>{post.frontmatter.date}</time>
+                    <time>{formatDate(post.frontmatter.date)}</time>
                     {post.frontmatter.readTime && (
                       <>
                         <span>·</span>
