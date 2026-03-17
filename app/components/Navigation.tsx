@@ -58,6 +58,12 @@ export default function Navigation() {
             >
               FAQ
             </Link>
+            <Link
+              href="/blog"
+              className="text-white/80 hover:text-white transition-colors"
+            >
+              Blog
+            </Link>
           </div>
 
           {/* Right side - CTA Button (Desktop) + Mobile Menu Toggle */}
@@ -119,6 +125,13 @@ export default function Navigation() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 FAQ
+              </Link>
+              <Link
+                href="/blog"
+                className="text-white/80 hover:text-white transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Blog
               </Link>
               <div className="pt-2">
                 <BookCallButton />

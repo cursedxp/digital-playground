@@ -62,6 +62,12 @@ export default function Footer() {
                 FAQ
               </a>
               <a
+                href="/blog"
+                className="text-white hover:text-white/80 transition-colors text-sm"
+              >
+                Blog
+              </a>
+              <a
                 href="/terms"
                 className="text-white hover:text-white/80 transition-colors text-sm"
               >
