@@ -32,8 +32,8 @@ function ExpiredPage() {
           </div>
           <span className="text-white text-base font-bold">Optimotion</span>
         </Link>
-        <h1 className="text-3xl font-bold text-white mb-4">This Report Has Expired</h1>
-        <p className="text-white/70 text-lg mb-8 leading-relaxed">
+        <h1 className="text-5xl font-bold text-white mb-6">This Report Has Expired</h1>
+        <p className="text-white/70 text-xl mb-10 leading-relaxed">
           Your website may have changed since this analysis was generated.
           Get a fresh report with updated insights.
         </p>
@@ -70,33 +70,17 @@ export default async function ReportPage({ params }: PageProps) {
   const overallScore = record["Overall Score"] || computeOverallScore(analysis);
 
   return (
-    <>
-      {/* Sticky header */}
-      <header className="sticky top-0 z-40 bg-black/50 backdrop-blur-sm border-b border-white/10">
-        <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link href="https://www.optimotion.dev" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <div className="relative flex items-center justify-center">
-              <div className="w-8 h-8 rounded-full border-2 border-white" />
-              <div className="absolute w-4 h-4 rounded-full bg-white" />
-            </div>
-            <span className="text-white text-base font-bold">Optimotion</span>
-          </Link>
-          <ShareButton reportId={reportId} />
-        </div>
-      </header>
-
-      <main className="max-w-3xl mx-auto pb-16">
-        <ReportClient
-          company={record.Company}
-          website={record.Website}
-          overallScore={overallScore}
-          generatedAt={record["Generated At"] || record.CreatedAt}
-          analysis={analysis}
-          issues={issues}
-          recommendations={recommendations}
-          reportId={reportId}
-        />
-      </main>
-    </>
+    <div className="bg-black text-white">
+      <ReportClient
+        company={record.Company}
+        website={record.Website}
+        overallScore={overallScore}
+        generatedAt={record["Generated At"] || record.CreatedAt}
+        analysis={analysis}
+        issues={issues}
+        recommendations={recommendations}
+        reportId={reportId}
+      />
+    </div>
   );
 }
