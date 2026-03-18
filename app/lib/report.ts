@@ -4,7 +4,7 @@ const NOCODB_V1_API =
   "https://core.optimotion.dev/api/v1/db/data/noco/pfj0f9gvfaprl5w/mwpedms7gbaezxp";
 const NOCODB_V2_API =
   "https://core.optimotion.dev/api/v2/tables/mwpedms7gbaezxp/records";
-const NOCODB_TOKEN = "***REMOVED***";
+const NOCODB_TOKEN = process.env.NOCODB_TOKEN!;
 
 async function fetchNocoDB(params: string = ""): Promise<Record<string, unknown>[]> {
   const url = `${NOCODB_V1_API}${params ? `?${params}` : ""}`;

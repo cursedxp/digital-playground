@@ -15,7 +15,7 @@ export interface BlogPost {
 
 const NOCODB_API =
   "https://core.optimotion.dev/api/v1/db/data/noco/pfj0f9gvfaprl5w/mq2rfhtokkgjrja";
-const NOCODB_TOKEN = "***REMOVED***";
+const NOCODB_TOKEN = process.env.NOCODB_TOKEN!;
 
 async function fetchNocoDB(params: string = ""): Promise<Record<string, unknown>[]> {
   const url = `${NOCODB_API}${params ? `?${params}` : ""}`;
