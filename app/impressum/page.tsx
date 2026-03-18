@@ -10,8 +10,7 @@ export default function Impressum() {
               Information according to § 5 TMG
             </h2>
             <p>Digital Playground</p>
-            <p>Am Kapellengraben 49</p>
-            <p>40670 Meerbusch, Germany</p>
+            <p>Meerbusch, Germany</p>
           </section>
 
           <section>
@@ -32,8 +31,7 @@ export default function Impressum() {
               Responsible for content according to § 55 Abs. 2 RStV
             </h2>
             <p>Digital Playground</p>
-            <p>Am Kapellengraben 49</p>
-            <p>40670 Meerbusch, Germany</p>
+            <p>Meerbusch, Germany</p>
           </section>
 
           <section>

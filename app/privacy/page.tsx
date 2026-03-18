@@ -203,7 +203,7 @@ export default function PrivacyPolicy() {
             </p>
             <ul className="space-y-2">
               <li><strong>Email:</strong> hi@digitalplayground.io</li>
-              <li><strong>Address:</strong> Am Kapellengraben 49, 40670 Meerbusch, Germany</li>
+              <li><strong>Address:</strong> Meerbusch, Germany</li>
             </ul>
           </section>
           </div>
