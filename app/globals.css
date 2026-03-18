@@ -35,3 +35,15 @@
 .animate-scroll {
   animation: scroll 40s linear infinite;
 }
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+  }
+  nav,
+  footer {
+    display: none !important;
+  }
+}

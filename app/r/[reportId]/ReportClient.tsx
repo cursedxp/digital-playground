@@ -4,8 +4,14 @@ import { AnalysisData, Issue } from "@/app/types/report";
 import { Recommendation } from "@/app/lib/recommendations";
 import { lcpColor, fidColor, clsColor, fcpColor } from "@/app/lib/scoring";
 import ReportHeader from "@/app/components/report/ReportHeader";
-import ScoreRing from "@/app/components/report/ScoreRing";
+import ScreenshotPreview from "@/app/components/report/ScreenshotPreview";
+import MobileDesktopCompare from "@/app/components/report/MobileDesktopCompare";
 import MetricCard from "@/app/components/report/MetricCard";
+import SpeedTimeline from "@/app/components/report/SpeedTimeline";
+import BounceCallout from "@/app/components/report/BounceCallout";
+import SEOSection from "@/app/components/report/SEOSection";
+import OGPreview from "@/app/components/report/OGPreview";
+import SecuritySection from "@/app/components/report/SecuritySection";
 import TechBadge from "@/app/components/report/TechBadge";
 import IssueRow from "@/app/components/report/IssueRow";
 import AccordionSection from "@/app/components/report/AccordionSection";
@@ -55,6 +61,7 @@ export default function ReportClient({
   const ps = analysis.pagespeed;
   const mobile = ps?.mobile;
   const desktop = ps?.desktop;
+  const seo = analysis.seo;
 
   return (
     <>
@@ -68,24 +75,26 @@ export default function ReportClient({
         generatedAt={generatedAt}
       />
 
-      {/* Performance Scores */}
-      {ps && (mobile || desktop) && (
+      {/* Screenshot */}
+      {mobile?.screenshot && (
         <SectionReveal className="mb-20 px-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Performance & Accessibility</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            <ScoreRing score={mobile?.performance_score ?? null} label="Mobile Performance" />
-            <ScoreRing score={desktop?.performance_score ?? null} label="Desktop Performance" />
-            <ScoreRing score={mobile?.accessibility_score ?? null} label="Mobile Accessibility" />
-            <ScoreRing score={desktop?.accessibility_score ?? null} label="Desktop Accessibility" />
-          </div>
+          <ScreenshotPreview screenshot={mobile.screenshot} />
         </SectionReveal>
       )}
 
-      {/* Core Web Vitals */}
+      {/* Mobile vs Desktop Comparison */}
+      {ps && (mobile || desktop) && (
+        <SectionReveal className="mb-20 px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Performance & Accessibility</h2>
+          <MobileDesktopCompare mobile={mobile ?? null} desktop={desktop ?? null} />
+        </SectionReveal>
+      )}
+
+      {/* Core Web Vitals + Timeline + Bounce */}
       {mobile && (mobile.lcp_ms || mobile.fid_ms || mobile.cls !== null || mobile.fcp_ms) && (
         <SectionReveal className="mb-20 px-6">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Core Web Vitals</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
             {mobile.lcp_ms != null && (
               <MetricCard
                 label="LCP"
@@ -119,6 +128,46 @@ export default function ReportClient({
               />
             )}
           </div>
+
+          {/* Speed Timeline */}
+          {mobile.fcp_ms != null && mobile.lcp_ms != null && (
+            <SpeedTimeline fcpMs={mobile.fcp_ms} lcpMs={mobile.lcp_ms} />
+          )}
+
+          {/* Bounce Rate Callout */}
+          {mobile.lcp_ms != null && mobile.lcp_ms > 1000 && (
+            <div className="mt-6">
+              <BounceCallout lcpMs={mobile.lcp_ms} />
+            </div>
+          )}
+        </SectionReveal>
+      )}
+
+      {/* SEO Overview */}
+      {seo && (
+        <SectionReveal className="mb-20 px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">SEO Overview</h2>
+          <SEOSection seo={seo} title={analysis.title} description={analysis.description} />
+          {/* OG Preview */}
+          {(seo.og_title || seo.og_image) && (
+            <div className="mt-6">
+              <p className="text-sm text-white/50 mb-3">Social share preview</p>
+              <OGPreview
+                ogTitle={seo.og_title}
+                ogDescription={seo.og_description}
+                ogImage={seo.og_image}
+                url={analysis.url}
+              />
+            </div>
+          )}
+        </SectionReveal>
+      )}
+
+      {/* Security & Headers */}
+      {(analysis.observatory || analysis.ssl) && (
+        <SectionReveal className="mb-20 px-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Security & Headers</h2>
+          <SecuritySection observatory={analysis.observatory} ssl={analysis.ssl} />
         </SectionReveal>
       )}
 
@@ -162,30 +211,6 @@ export default function ReportClient({
             </div>
           </AccordionSection>
         </SectionReveal>
-
-        {/* Security */}
-        {analysis.ssl && (
-          <SectionReveal>
-            <AccordionSection title="Security">
-              <div className="flex items-center gap-3">
-                <span style={{ color: analysis.ssl.valid && !analysis.ssl.expired ? "#22C55E" : "#EF4444" }} className="text-lg">
-                  {analysis.ssl.valid && !analysis.ssl.expired ? "✓" : "✗"}
-                </span>
-                <div>
-                  <p className="text-sm font-medium text-white">
-                    SSL Certificate: {analysis.ssl.valid && !analysis.ssl.expired ? "Valid" : "Invalid"}
-                  </p>
-                  {analysis.ssl.issuer && (
-                    <p className="text-xs text-white/50">Issued by {analysis.ssl.issuer}</p>
-                  )}
-                  {analysis.ssl.days_until_expiry != null && (
-                    <p className="text-xs text-white/50">{analysis.ssl.days_until_expiry} days until expiry</p>
-                  )}
-                </div>
-              </div>
-            </AccordionSection>
-          </SectionReveal>
-        )}
 
         {/* Content Freshness */}
         {analysis.freshness && (

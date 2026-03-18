@@ -85,6 +85,60 @@ export function generateIssues(data: AnalysisData): Issue[] {
     issues.push({ label: "No social media links found", severity: "info", detail: "Social profiles help build credibility" });
   }
 
+  // SEO issues
+  const seo = data.seo;
+  if (seo) {
+    if (seo.h1_count === 0) {
+      issues.push({ label: "Missing H1 heading tag", severity: "warning", detail: "Every page should have exactly one H1" });
+    } else if (seo.h1_count > 1) {
+      issues.push({ label: "Multiple H1 heading tags", severity: "warning", detail: `Found ${seo.h1_count} H1 tags — should be exactly one` });
+    }
+
+    const titleLen = data.title?.length || 0;
+    if (titleLen === 0) {
+      issues.push({ label: "Missing page title", severity: "critical" });
+    } else if (titleLen < 30) {
+      issues.push({ label: "Page title is too short", severity: "warning", detail: `${titleLen} characters (recommended: 50-60)` });
+    } else if (titleLen > 70) {
+      issues.push({ label: "Page title is too long", severity: "warning", detail: `${titleLen} characters (recommended: 50-60)` });
+    }
+
+    const descLen = data.description?.length || 0;
+    if (descLen === 0) {
+      issues.push({ label: "Missing meta description", severity: "warning", detail: "Meta description helps click-through rate in search" });
+    } else if (descLen < 70) {
+      issues.push({ label: "Meta description is too short", severity: "info", detail: `${descLen} characters (recommended: 150-160)` });
+    } else if (descLen > 170) {
+      issues.push({ label: "Meta description is too long", severity: "info", detail: `${descLen} characters (recommended: 150-160)` });
+    }
+
+    if (!seo.canonical) {
+      issues.push({ label: "No canonical URL set", severity: "info", detail: "Canonical URLs prevent duplicate content issues" });
+    }
+
+    if (!seo.og_title || !seo.og_image) {
+      issues.push({ label: "Incomplete Open Graph tags", severity: "info", detail: "OG tags improve how links appear when shared on social media" });
+    }
+
+    if (seo.images_missing_alt > 0) {
+      issues.push({ label: "Images missing alt text", severity: "warning", detail: `${seo.images_missing_alt} of ${seo.total_images} images lack alt text` });
+    }
+
+    if (!seo.has_structured_data) {
+      issues.push({ label: "No structured data (JSON-LD)", severity: "info", detail: "Structured data enables rich snippets in search results" });
+    }
+  }
+
+  // Observatory security issues
+  const obs = data.observatory;
+  if (obs) {
+    if (obs.grade && ["D", "D-", "D+", "F"].includes(obs.grade)) {
+      issues.push({ label: "Poor security headers grade", severity: "critical", detail: `Mozilla Observatory: Grade ${obs.grade} (${obs.score}/145)` });
+    } else if (obs.grade && ["C", "C-", "C+"].includes(obs.grade)) {
+      issues.push({ label: "Security headers need improvement", severity: "warning", detail: `Mozilla Observatory: Grade ${obs.grade} (${obs.score}/145)` });
+    }
+  }
+
   // Sort by severity
   const order: Record<Severity, number> = { critical: 0, warning: 1, info: 2 };
   issues.sort((a, b) => order[a.severity] - order[b.severity]);

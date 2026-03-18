@@ -16,6 +16,7 @@ export interface PageSpeedStrategy {
   fid_ms: number | null;
   cls: number | null;
   fcp_ms: number | null;
+  screenshot?: string | null;
 }
 
 export interface PageSpeedData {
@@ -46,6 +47,41 @@ export interface SaaSDetails {
   open_positions: number;
 }
 
+export interface SEOData {
+  h1_count: number;
+  h1_texts: string[];
+  h2_count: number;
+  meta_robots: string | null;
+  canonical: string | null;
+  og_title: string | null;
+  og_description: string | null;
+  og_image: string | null;
+  twitter_card: string | null;
+  language: string | null;
+  total_images: number;
+  images_missing_alt: number;
+  has_structured_data: boolean;
+  schema_types: string[];
+  internal_links: number;
+  external_links: number;
+}
+
+export interface ObservatoryData {
+  grade: string;
+  score: number;
+  tests_passed: number;
+  tests_failed: number;
+  tests_quantity: number;
+}
+
+export interface CrUXData {
+  largest_contentful_paint?: number;
+  cumulative_layout_shift?: number;
+  interaction_to_next_paint?: number;
+  first_contentful_paint?: number;
+  experimental_time_to_first_byte?: number;
+}
+
 export interface AnalysisData {
   url: string;
   segment: "local" | "saas" | "founder";
@@ -66,6 +102,9 @@ export interface AnalysisData {
   freshness: FreshnessData | null;
   social_media: Record<string, string>;
   saas_details: SaaSDetails | null;
+  seo: SEOData | null;
+  observatory: ObservatoryData | null;
+  crux: CrUXData | null;
   title: string;
   description: string;
   has_mobile_viewport?: boolean;

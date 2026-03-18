@@ -5,6 +5,7 @@ import ReportClient from "./ReportClient";
 import Link from "next/link";
 import { Metadata } from "next";
 import BookCallButton from "@/app/components/BookCallButton";
+import ShareButton from "@/app/components/report/ShareButton";
 
 interface PageProps {
   params: Promise<{ reportId: string }>;
@@ -80,7 +81,7 @@ export default async function ReportPage({ params }: PageProps) {
             </div>
             <span className="text-white text-base font-bold">Optimotion</span>
           </Link>
-          <span className="text-xs text-white/50">Website Audit Report</span>
+          <ShareButton reportId={reportId} />
         </div>
       </header>
 
