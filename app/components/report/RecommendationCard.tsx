@@ -1,5 +1,4 @@
 import { ServiceInfo } from "@/app/lib/services";
-import { Check } from "lucide-react";
 
 interface RecommendationCardProps {
   service: ServiceInfo;
@@ -8,13 +7,13 @@ interface RecommendationCardProps {
 
 export default function RecommendationCard({ service, reason }: RecommendationCardProps) {
   return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white">
-      <h3 className="text-lg font-bold text-gray-900 mb-2">{service.name}</h3>
-      <p className="text-sm text-gray-600 mb-4">{reason}</p>
+    <div className="border border-white/10 rounded-xl p-6">
+      <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
+      <p className="text-sm text-white/70 mb-4 leading-relaxed">{reason}</p>
       <ul className="space-y-2">
         {service.bullets.map((bullet) => (
-          <li key={bullet} className="flex items-start gap-2 text-sm text-gray-700">
-            <Check className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
+          <li key={bullet} className="flex items-start gap-2 text-sm text-white/80">
+            <span className="mt-0.5 shrink-0" style={{ color: "#FFE028" }}>✓</span>
             <span>{bullet}</span>
           </li>
         ))}

@@ -24,20 +24,20 @@ export default function ReportHeader({ company, website, overallScore, generated
   })();
 
   return (
-    <div className="text-center py-12 px-4">
+    <div className="text-center py-16 px-6">
       <motion.p
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-sm text-gray-500 uppercase tracking-wider mb-2"
+        transition={{ duration: 0.6 }}
+        className="text-sm text-white/50 uppercase tracking-wider mb-4"
       >
         Website Audit Report
       </motion.p>
       <motion.h1
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2"
+        transition={{ duration: 0.6, delay: 0.1 }}
+        className="text-4xl sm:text-5xl font-bold text-white mb-3"
       >
         {company}
       </motion.h1>
@@ -45,10 +45,10 @@ export default function ReportHeader({ company, website, overallScore, generated
         href={website.startsWith("http") ? website : `https://${website}`}
         target="_blank"
         rel="noopener noreferrer"
-        initial={{ opacity: 0, y: 10 }}
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="text-gray-500 hover:text-gray-700 underline text-sm mb-8 inline-block"
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-white/50 hover:text-white/80 transition-colors text-sm mb-10 inline-block"
       >
         {website}
       </motion.a>
@@ -56,7 +56,7 @@ export default function ReportHeader({ company, website, overallScore, generated
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.3 }}
-        className="flex justify-center my-8"
+        className="flex justify-center my-10"
       >
         <ScoreRing score={overallScore} label="Overall Score" size={160} strokeWidth={10} />
       </motion.div>
@@ -64,7 +64,7 @@ export default function ReportHeader({ company, website, overallScore, generated
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="text-xs text-gray-400"
+        className="text-xs text-white/50"
       >
         Generated on {formattedDate}
       </motion.p>

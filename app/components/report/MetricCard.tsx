@@ -1,6 +1,6 @@
 "use client";
 
-import { ScoreColor, COLOR_BG_MAP, COLOR_TEXT_MAP } from "@/app/lib/scoring";
+import { ScoreColor, COLOR_MAP } from "@/app/lib/scoring";
 
 interface MetricCardProps {
   label: string;
@@ -11,10 +11,10 @@ interface MetricCardProps {
 
 export default function MetricCard({ label, value, color, sublabel }: MetricCardProps) {
   return (
-    <div className={`rounded-xl p-4 ${COLOR_BG_MAP[color]}`}>
-      <p className="text-sm text-gray-600 mb-1">{label}</p>
-      <p className={`text-2xl font-bold ${COLOR_TEXT_MAP[color]}`}>{value}</p>
-      {sublabel && <p className="text-xs text-gray-500 mt-1">{sublabel}</p>}
+    <div className="rounded-xl p-4 border border-white/10">
+      <p className="text-sm text-white/50 mb-1">{label}</p>
+      <p className="text-2xl font-bold" style={{ color: COLOR_MAP[color] }}>{value}</p>
+      {sublabel && <p className="text-xs text-white/50 mt-1">{sublabel}</p>}
     </div>
   );
 }

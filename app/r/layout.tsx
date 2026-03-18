@@ -8,16 +8,8 @@ export const metadata: Metadata = {
 
 export default function ReportLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      {/* Hide main site nav/footer, override dark background */}
-      <style>{`
-        nav.fixed { display: none !important; }
-        footer { display: none !important; }
-        body { background: white !important; padding: 0 !important; }
-      `}</style>
-      <div className="min-h-screen bg-white">
-        {children}
-      </div>
-    </>
+    <div className="min-h-screen bg-black text-white">
+      {children}
+    </div>
   );
 }

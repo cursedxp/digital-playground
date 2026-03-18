@@ -1,8 +1,8 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import { ReactNode, useState } from "react";
+import { useState } from "react";
+import { ReactNode } from "react";
 
 interface AccordionSectionProps {
   title: string;
@@ -14,15 +14,19 @@ export default function AccordionSection({ title, children, defaultOpen = false 
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden">
+    <div className="border-b border-white/20 pb-4">
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between px-5 py-4 bg-white hover:bg-gray-50 transition-colors cursor-pointer"
+        className="w-full text-left flex items-start justify-between gap-4 group cursor-pointer"
       >
-        <span className="font-semibold text-gray-900">{title}</span>
-        <motion.div animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }}>
-          <ChevronDown className="w-5 h-5 text-gray-500" />
-        </motion.div>
+        <span className="font-semibold text-white text-lg">{title}</span>
+        <motion.span
+          animate={{ rotate: open ? 45 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="text-white/50 text-2xl leading-none mt-0.5 shrink-0"
+        >
+          +
+        </motion.span>
       </button>
       <AnimatePresence initial={false}>
         {open && (
@@ -30,9 +34,9 @@ export default function AccordionSection({ title, children, defaultOpen = false 
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3 }}
           >
-            <div className="px-5 pb-5">{children}</div>
+            <div className="mt-4 pr-8">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>

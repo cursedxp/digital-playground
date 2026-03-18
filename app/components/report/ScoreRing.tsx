@@ -31,7 +31,7 @@ export default function ScoreRing({ score, label, size = 120, strokeWidth = 8 }:
             cy={size / 2}
             r={radius}
             fill="none"
-            stroke="#E5E7EB"
+            stroke="rgba(255,255,255,0.1)"
             strokeWidth={strokeWidth}
           />
           <motion.circle
@@ -49,12 +49,12 @@ export default function ScoreRing({ score, label, size = 120, strokeWidth = 8 }:
           />
         </svg>
         <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-2xl font-bold text-gray-900">
+          <span className="text-2xl font-bold text-white">
             {isInView ? <AnimatedCounter target={value} /> : "0"}
           </span>
         </div>
       </div>
-      <span className="text-sm text-gray-600 text-center">{label}</span>
+      <span className="text-sm text-white/70 text-center">{label}</span>
     </div>
   );
 }
