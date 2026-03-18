@@ -76,9 +76,9 @@ export default function ReportClient({
       />
 
       {/* Screenshot */}
-      {mobile?.screenshot && (
+      {desktop?.screenshot && (
         <SectionReveal className="mb-20 px-6">
-          <ScreenshotPreview screenshot={mobile.screenshot} />
+          <ScreenshotPreview screenshot={desktop.screenshot} />
         </SectionReveal>
       )}
 
