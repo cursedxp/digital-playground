@@ -11,7 +11,6 @@ import SecurityReportSection from "@/app/components/report/SecurityReportSection
 import IssuesSection from "@/app/components/report/IssuesSection";
 import DetailsSection from "@/app/components/report/DetailsSection";
 import RecommendationsSection from "@/app/components/report/RecommendationsSection";
-import CTASection from "@/app/components/report/CTASection";
 
 interface ReportClientProps {
   company: string;
@@ -76,7 +75,6 @@ export default function ReportClient({
 
       <RecommendationsSection recommendations={recommendations} />
 
-      <CTASection />
     </>
   );
 }

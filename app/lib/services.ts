@@ -5,54 +5,26 @@ export interface ServiceInfo {
 }
 
 export const SERVICES: Record<string, ServiceInfo> = {
-  "mobile-first-rebuild": {
-    name: "Mobile-First Website Rebuild",
-    description: "A complete redesign and rebuild of your website, optimized for mobile-first performance and conversions.",
+  "monthly-plan": {
+    name: "Monthly Plan",
+    description: "Subscribe for ongoing development. Two complete features delivered every month.",
     bullets: [
-      "Mobile-optimized experience that loads fast",
-      "Improved page speed and Core Web Vitals",
-      "Online booking and lead capture built in",
-      "SEO foundations for local search visibility",
+      "Two complete features delivered per month",
+      "Design + development + deployment included",
+      "Delivered tested and working",
+      "Documentation included",
+      "Cancel anytime, no penalties",
     ],
   },
-  "monthly-retainer": {
-    name: "Monthly Development Retainer",
-    description: "Ongoing development capacity for your product — design, features, and fixes delivered continuously.",
+  "custom-projects": {
+    name: "Custom Projects",
+    description: "For projects with custom needs — big or small, simple or complex.",
     bullets: [
-      "Ongoing development capacity each month",
-      "Design and engineering included",
-      "Direct access to your dedicated engineer",
-      "Cancel or pause anytime",
-    ],
-  },
-  "mvp-development": {
-    name: "MVP Development",
-    description: "Go from idea to deployed product in 4 weeks with a fixed-scope build.",
-    bullets: [
-      "From spec to deployed product in 4 weeks",
-      "Fixed scope — no surprise costs",
-      "You own everything we build",
-      "Post-launch support included",
-    ],
-  },
-  "integrations-automation": {
-    name: "Custom Integrations & Automation",
-    description: "Connect your tools, automate workflows, and eliminate manual processes.",
-    bullets: [
-      "Connect your existing tools and platforms",
-      "Automate repetitive manual workflows",
-      "Custom API integrations",
-      "Reduce operational overhead",
-    ],
-  },
-  "custom-package": {
-    name: "Custom Package",
-    description: "Not sure what you need? We'll scope a package around your specific situation — no fixed tiers, no unnecessary extras.",
-    bullets: [
-      "Scoped around your exact needs",
-      "Fixed price agreed before we start",
-      "You own everything we build",
-      "Flexible timeline to fit your schedule",
+      "Custom assessment & proposal",
+      "Flexible engagement model",
+      "Tailored to your budget & timeline",
+      "Transparent quoting",
+      "Ongoing support options",
     ],
   },
 };

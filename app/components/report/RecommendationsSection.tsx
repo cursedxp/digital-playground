@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Recommendation } from "@/app/lib/recommendations";
+import BookCallButton from "@/app/components/BookCallButton";
 
 interface RecommendationsSectionProps {
   recommendations: Recommendation[];
@@ -41,11 +42,10 @@ export default function RecommendationsSection({ recommendations }: Recommendati
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="border-t border-white/20 pt-6"
               >
                 <h3 className="text-2xl font-bold mb-2">{rec.service.name}</h3>
                 <p className="text-white text-sm leading-relaxed mb-4">{rec.reason}</p>
-                <ul className="space-y-3">
+                <ul className="space-y-3 mb-6">
                   {rec.service.bullets.map(bullet => (
                     <li key={bullet} className="flex items-start gap-2 text-sm">
                       <span className="shrink-0" style={{ color: "#FFE028" }}>✓</span>
@@ -53,6 +53,7 @@ export default function RecommendationsSection({ recommendations }: Recommendati
                     </li>
                   ))}
                 </ul>
+                <BookCallButton text="Book a Call" />
               </motion.div>
             ))}
           </div>

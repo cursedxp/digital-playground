@@ -151,37 +151,32 @@ export function generateRecommendations(data: AnalysisData, issues: Issue[]): Re
   const segment = data.segment || "local";
   const criticalCount = issues.filter(i => i.severity === "critical").length;
 
-  if (segment === "local") {
+  if (segment === "saas") {
     recs.push({
-      service: SERVICES["mobile-first-rebuild"],
-      reason: "Based on our analysis, a mobile-first rebuild would address the performance and usability issues we found on your site.",
+      service: SERVICES["monthly-plan"],
+      reason: "A monthly plan gives you steady development capacity to continuously ship improvements, fix issues, and keep your product moving — without the overhead of hiring.",
     });
-  } else if (segment === "saas") {
+  } else {
     recs.push({
-      service: SERVICES["monthly-retainer"],
-      reason: "A monthly retainer gives you ongoing development capacity to continuously improve your product and fix issues as they arise.",
-    });
-  } else if (segment === "founder") {
-    recs.push({
-      service: SERVICES["mvp-development"],
-      reason: "We can take your product from concept to deployment in 4 weeks with a fixed-scope build.",
+      service: SERVICES["custom-projects"],
+      reason: criticalCount >= 3
+        ? "With several critical issues to address, a scoped project is the fastest way to fix the foundations and get your site performing properly."
+        : "We'll assess your site's specific situation and put together a proposal tailored to what you actually need — no fixed tiers, no unnecessary extras.",
     });
   }
 
-  // Additional recommendation based on issues
-  const hasIntegrationIssue = data.saas_details && !data.saas_details.has_integrations_page;
-  if (hasIntegrationIssue || criticalCount >= 3) {
+  // Always show the other option as an alternative
+  if (segment === "saas") {
     recs.push({
-      service: SERVICES["integrations-automation"],
-      reason: "Connecting your tools and automating workflows can reduce manual overhead and improve your team's efficiency.",
+      service: SERVICES["custom-projects"],
+      reason: "Prefer a fixed-scope engagement? We can scope a one-time project around your specific needs with a clear deliverable and price agreed upfront.",
+    });
+  } else {
+    recs.push({
+      service: SERVICES["monthly-plan"],
+      reason: "If you'd rather have ongoing development capacity — two complete features delivered every month — the monthly plan gives you a predictable way to keep improving your site.",
     });
   }
-
-  // Always offer a custom package as the last option
-  recs.push({
-    service: SERVICES["custom-package"],
-    reason: "Every site is different. If none of the above fits your situation exactly, we can scope something built around what you actually need.",
-  });
 
   return recs;
 }
