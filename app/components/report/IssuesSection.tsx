@@ -49,9 +49,6 @@ export default function IssuesSection({ issues }: IssuesSectionProps) {
                 className="border-b border-white/20 pb-4"
               >
                 <div className="flex items-start gap-3">
-                  <span className="text-white/30 text-xs mt-1.5 shrink-0 uppercase tracking-widest">
-                    {issue.severity === "critical" ? "!" : issue.severity === "warning" ? "▲" : "·"}
-                  </span>
                   <div>
                     <p className="text-xl font-semibold">{issue.label}</p>
                     {issue.detail && <p className="text-white/80 text-sm mt-1">{issue.detail}</p>}

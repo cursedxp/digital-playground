@@ -18,7 +18,7 @@ export default function SpeedTimeline({ fcpMs, lcpMs }: SpeedTimelineProps) {
 
   return (
     <div>
-      <p className="text-sm text-white/80 mb-3">Load Timeline</p>
+      <p className="text-sm text-white mb-3">Load Timeline</p>
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto" role="img" aria-label="Speed timeline">
         {/* Track */}
         <rect
@@ -43,11 +43,11 @@ export default function SpeedTimeline({ fcpMs, lcpMs }: SpeedTimelineProps) {
         </text>
 
         {/* 0 label */}
-        <text x={padding} y={height - 2} fill="rgba(255,255,255,0.3)" fontSize="9" fontFamily="inherit">
+        <text x={padding} y={height - 2} fill="white" fontSize="9" fontFamily="inherit">
           0s
         </text>
         {/* Max label */}
-        <text x={width - padding} y={height - 2} textAnchor="end" fill="rgba(255,255,255,0.3)" fontSize="9" fontFamily="inherit">
+        <text x={width - padding} y={height - 2} textAnchor="end" fill="white" fontSize="9" fontFamily="inherit">
           {(maxMs / 1000).toFixed(1)}s
         </text>
       </svg>

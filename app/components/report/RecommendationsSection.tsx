@@ -33,7 +33,7 @@ export default function RecommendationsSection({ recommendations }: Recommendati
             </div>
           </div>
 
-          <div className="lg:col-span-8 space-y-8">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {recommendations.map((rec, i) => (
               <motion.div
                 key={rec.service.name}
@@ -41,6 +41,7 @@ export default function RecommendationsSection({ recommendations }: Recommendati
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="border-t border-white/20 pt-6"
               >
                 <h3 className="text-2xl font-bold mb-2">{rec.service.name}</h3>
                 <p className="text-white text-sm leading-relaxed mb-4">{rec.reason}</p>

@@ -24,7 +24,7 @@ export default function BounceCallout({ lcpMs }: BounceCalloutProps) {
   }
 
   return (
-    <p className="text-sm text-white/80 leading-relaxed">
+    <p className="text-sm text-white leading-relaxed">
       Your page takes <span className="font-semibold" style={{ color: "#FFE028" }}>{seconds.toFixed(1)}s</span> to
       load. Google research shows this causes{" "}
       <span className="font-semibold" style={{ color: "#FFE028" }}>~{bouncePercent}%</span> of mobile visitors to bounce.

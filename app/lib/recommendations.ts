@@ -177,6 +177,12 @@ export function generateRecommendations(data: AnalysisData, issues: Issue[]): Re
     });
   }
 
+  // Always offer a custom package as the last option
+  recs.push({
+    service: SERVICES["custom-package"],
+    reason: "Every site is different. If none of the above fits your situation exactly, we can scope something built around what you actually need.",
+  });
+
   return recs;
 }
 

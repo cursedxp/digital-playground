@@ -45,4 +45,14 @@ export const SERVICES: Record<string, ServiceInfo> = {
       "Reduce operational overhead",
     ],
   },
+  "custom-package": {
+    name: "Custom Package",
+    description: "Not sure what you need? We'll scope a package around your specific situation — no fixed tiers, no unnecessary extras.",
+    bullets: [
+      "Scoped around your exact needs",
+      "Fixed price agreed before we start",
+      "You own everything we build",
+      "Flexible timeline to fit your schedule",
+    ],
+  },
 };

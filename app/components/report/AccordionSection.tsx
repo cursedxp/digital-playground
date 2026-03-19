@@ -8,9 +8,10 @@ interface AccordionSectionProps {
   title: string;
   children: ReactNode;
   defaultOpen?: boolean;
+  size?: "sm" | "lg";
 }
 
-export default function AccordionSection({ title, children, defaultOpen = false }: AccordionSectionProps) {
+export default function AccordionSection({ title, children, defaultOpen = false, size = "sm" }: AccordionSectionProps) {
   const [open, setOpen] = useState(defaultOpen);
 
   return (
@@ -19,11 +20,11 @@ export default function AccordionSection({ title, children, defaultOpen = false 
         onClick={() => setOpen(!open)}
         className="w-full text-left flex items-start justify-between gap-4 group cursor-pointer"
       >
-        <span className="font-semibold text-white text-lg">{title}</span>
+        <span className={size === "lg" ? "font-semibold text-white text-xl md:text-2xl" : "font-semibold text-white text-lg"}>{title}</span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3 }}
-          className="text-white text-2xl leading-none mt-0.5 shrink-0"
+          className={size === "lg" ? "text-white text-3xl font-light shrink-0 -mt-1" : "text-white text-2xl leading-none mt-0.5 shrink-0"}
         >
           +
         </motion.span>
@@ -36,7 +37,7 @@ export default function AccordionSection({ title, children, defaultOpen = false 
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="mt-4 pr-8">{children}</div>
+            <div className={size === "lg" ? "mt-4 pr-8 text-white text-lg leading-relaxed" : "mt-4 pr-8"}>{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
