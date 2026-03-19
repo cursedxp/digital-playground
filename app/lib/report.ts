@@ -148,18 +148,8 @@ export function recordToAnalysis(r: ReportRecord): AnalysisData | null {
   };
 }
 
-/** @deprecated Use recordToAnalysis instead */
 export function parseAnalysis(record: ReportRecord): AnalysisData | null {
-  // Try new column-based approach first
-  const fromColumns = recordToAnalysis(record);
-  if (fromColumns) return fromColumns;
-
-  // Fallback to legacy JSON field
-  try {
-    return JSON.parse(record["Analysis JSON"] ?? "") as AnalysisData;
-  } catch {
-    return null;
-  }
+  return recordToAnalysis(record);
 }
 
 export function isExpired(record: ReportRecord): boolean {

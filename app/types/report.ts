@@ -120,7 +120,6 @@ export interface ReportRecord {
   Company: string;
   Website: string;
   Segment: "local" | "saas" | "founder";
-  "Analysis JSON"?: string;
   "Overall Score": number;
   Status: "generating" | "ready" | "expired";
   "View Count": number;
