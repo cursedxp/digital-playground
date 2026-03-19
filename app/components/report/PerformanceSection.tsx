@@ -46,42 +46,25 @@ export default function PerformanceSection({ mobile, desktop }: PerformanceSecti
   const summary = buildSummary(mobile, desktop);
 
   return (
-    <section className="bg-black text-white px-6 mb-20 sm:mb-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
-              <motion.h2
-                className="text-5xl sm:text-7xl font-bold"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                Performance
-              </motion.h2>
-              <p className="text-white text-lg leading-relaxed mt-6">
-                How your site performs for real visitors on mobile and desktop devices.
-              </p>
-              <div className="mt-8 flex flex-col gap-2">
-                <p className="text-xs text-white uppercase tracking-widest mb-1">Score scale</p>
-                {[
-                  { range: "90–100", label: "Good", color: "#22C55E" },
-                  { range: "50–89", label: "Needs Work", color: "#F59E0B" },
-                  { range: "0–49", label: "Poor", color: "#EF4444" },
-                ].map(({ range, label, color }) => (
-                  <div key={range} className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
-                    <span className="text-sm" style={{ color }}>{label}</span>
-                    <span className="text-xs text-white">{range}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 px-8 sm:px-0">
+        <div className="col-span-1 flex flex-col items-end">
+          <motion.h2
+            className="text-7xl font-bold text-right"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Performance
+          </motion.h2>
+        </div>
 
-          <div className="lg:col-span-8">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
+        <div className="col-span-2">
+            <p className="text-white text-xl leading-relaxed max-w-md mb-12 ml-auto">
+              How your site performs for real visitors on mobile and desktop devices.
+            </p>
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {mobile?.performance_score != null && (
                 <div className="flex flex-col gap-3">
                   <span className="text-sm text-white">Mobile</span>
@@ -117,11 +100,26 @@ export default function PerformanceSection({ mobile, desktop }: PerformanceSecti
             </div>
 
             {summary && (
-              <p className="text-white text-base leading-relaxed border-t border-white/10 pt-6">
-                {summary}
-              </p>
+              <div className="border-t border-white/10 pt-6 space-y-4">
+                <p className="text-white text-base leading-relaxed">
+                  {summary}
+                </p>
+                <div className="flex items-center gap-6">
+                  <p className="text-xs text-white uppercase tracking-widest">Score scale</p>
+                  {[
+                    { range: "90–100", label: "Good", color: "#22C55E" },
+                    { range: "50–89", label: "Needs Work", color: "#F59E0B" },
+                    { range: "0–49", label: "Poor", color: "#EF4444" },
+                  ].map(({ range, label, color }) => (
+                    <div key={range} className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: color }} />
+                      <span className="text-sm" style={{ color }}>{label}</span>
+                      <span className="text-xs text-white">{range}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             )}
-          </div>
         </div>
       </div>
     </section>

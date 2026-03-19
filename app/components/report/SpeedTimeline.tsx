@@ -4,53 +4,37 @@ interface SpeedTimelineProps {
 }
 
 export default function SpeedTimeline({ fcpMs, lcpMs }: SpeedTimelineProps) {
-  const maxMs = Math.max(lcpMs * 1.3, 5000);
-  const width = 600;
-  const height = 60;
-  const trackY = 24;
-  const trackHeight = 8;
-  const padding = 20;
-  const usable = width - padding * 2;
-
-  const fcpX = padding + (fcpMs / maxMs) * usable;
-  const lcpX = padding + (lcpMs / maxMs) * usable;
-  const hex = "#FFE028";
+  const gapMs = lcpMs - fcpMs;
 
   return (
-    <div>
-      <p className="text-sm text-white mb-3">Load Timeline</p>
-      <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto" role="img" aria-label="Speed timeline">
-        {/* Track */}
-        <rect
-          x={padding}
-          y={trackY}
-          width={usable}
-          height={trackHeight}
-          rx={trackHeight / 2}
-          fill="rgba(255,255,255,0.1)"
-        />
+    <div className="w-full">
+      <p className="text-sm text-white uppercase tracking-widest mb-6">Load Timeline</p>
+      <div className="flex items-center gap-6">
 
-        {/* FCP marker */}
-        <line x1={fcpX} y1={trackY - 4} x2={fcpX} y2={trackY + trackHeight + 4} stroke={hex} strokeWidth="2" strokeLinecap="round" />
-        <text x={fcpX} y={trackY - 8} textAnchor="middle" fill={hex} fontSize="10" fontFamily="inherit">
-          FCP {(fcpMs / 1000).toFixed(1)}s
-        </text>
+        <div className="flex flex-col">
+          <span className="text-xs text-white uppercase tracking-widest mb-1">First Content</span>
+          <span className="text-5xl font-bold" style={{ color: "#FFE028" }}>
+            {(fcpMs / 1000).toFixed(1)}<span className="text-2xl font-normal text-white">s</span>
+          </span>
+          <span className="text-xs text-white mt-1">FCP</span>
+          <span className="text-xs text-white mt-2 max-w-[140px] leading-relaxed">Time until the first pixel of content appears on screen</span>
+        </div>
 
-        {/* LCP marker */}
-        <line x1={lcpX} y1={trackY - 4} x2={lcpX} y2={trackY + trackHeight + 4} stroke={hex} strokeWidth="2" strokeLinecap="round" />
-        <text x={lcpX} y={trackY + trackHeight + 16} textAnchor="middle" fill={hex} fontSize="10" fontFamily="inherit">
-          LCP {(lcpMs / 1000).toFixed(1)}s
-        </text>
+        <div className="flex flex-col items-center gap-1 text-white">
+          <span className="text-xs text-white">+{(gapMs / 1000).toFixed(1)}s</span>
+          <span className="text-2xl">→</span>
+        </div>
 
-        {/* 0 label */}
-        <text x={padding} y={height - 2} fill="white" fontSize="9" fontFamily="inherit">
-          0s
-        </text>
-        {/* Max label */}
-        <text x={width - padding} y={height - 2} textAnchor="end" fill="white" fontSize="9" fontFamily="inherit">
-          {(maxMs / 1000).toFixed(1)}s
-        </text>
-      </svg>
+        <div className="flex flex-col">
+          <span className="text-xs text-white uppercase tracking-widest mb-1">Main Content</span>
+          <span className="text-5xl font-bold" style={{ color: "#FFE028" }}>
+            {(lcpMs / 1000).toFixed(1)}<span className="text-2xl font-normal text-white">s</span>
+          </span>
+          <span className="text-xs text-white mt-1">LCP</span>
+          <span className="text-xs text-white mt-2 max-w-[140px] leading-relaxed">Time until the main content (image or text block) is visible</span>
+        </div>
+
+      </div>
     </div>
   );
 }

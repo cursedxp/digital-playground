@@ -12,13 +12,11 @@ export default function RecommendationsSection({ recommendations }: Recommendati
   if (recommendations.length === 0) return null;
 
   return (
-    <section className="bg-black text-white px-6 mb-20 sm:mb-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 px-8 sm:px-0">
+        <div className="col-span-1">
               <motion.h2
-                className="text-5xl sm:text-7xl font-bold"
+                className="text-7xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -28,13 +26,9 @@ export default function RecommendationsSection({ recommendations }: Recommendati
                 <br />
                 Recommend
               </motion.h2>
-              <p className="text-white text-lg leading-relaxed mt-6">
-                Based on the issues we found, here&apos;s how we can help.
-              </p>
-            </div>
-          </div>
+        </div>
 
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {recommendations.map((rec, i) => (
               <motion.div
                 key={rec.service.name}
@@ -56,7 +50,6 @@ export default function RecommendationsSection({ recommendations }: Recommendati
                 <BookCallButton text="Book a Call" />
               </motion.div>
             ))}
-          </div>
         </div>
       </div>
     </section>

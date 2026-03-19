@@ -6,11 +6,6 @@ interface SEOSectionProps {
   description: string;
 }
 
-function charCountColor(count: number, good: [number, number], bad: [number, number]): string {
-  if (count >= good[0] && count <= good[1]) return "text-[#FFE028]";
-  if (count < bad[0] || count > bad[1]) return "text-red-400";
-  return "text-amber-400";
-}
 
 function CheckItem({ pass, label }: { pass: boolean; label: string }) {
   return (
@@ -30,38 +25,8 @@ export default function SEOSection({ seo, title, description }: SEOSectionProps)
   return (
     <div className="space-y-10">
 
-      {/* Google SERP preview */}
-      <div>
-        <p className="text-sm text-white mb-3 uppercase tracking-wide">Google Search Preview</p>
-        <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4">
-          {/* Favicon + URL row */}
-          <div className="flex items-center gap-2 mb-2">
-            <div className="w-4 h-4 rounded-full bg-white/20 shrink-0" />
-            <span className="text-xs text-white truncate">{seo.canonical || "your-website.com"}</span>
-          </div>
-          {/* Title */}
-          <p className="text-lg font-medium leading-snug" style={{ color: "#8ab4f8" }}>
-            {title ? (title.length > 60 ? title.slice(0, 60) + "…" : title) : "No title set"}
-          </p>
-          {/* Description */}
-          <p className="text-sm text-white/80 leading-relaxed">
-            {description ? (description.length > 160 ? description.slice(0, 160) + "…" : description) : "No meta description set."}
-          </p>
-        </div>
-        {/* Char counts under the card */}
-        <div className="flex items-center gap-2 mt-1">
-          <p className={`text-xs ${charCountColor(title.length, [50, 60], [30, 70])}`}>
-            Title: {title.length} chars {title.length >= 50 && title.length <= 60 ? "· good" : title.length > 60 ? "· too long" : title.length < 30 ? "· too short" : "· borderline"}
-          </p>
-          <span className="text-white/20 text-xs">|</span>
-          <p className={`text-xs ${charCountColor(description.length, [150, 160], [70, 170])}`}>
-            Description: {description.length} chars {description.length >= 150 && description.length <= 160 ? "· good" : description.length > 170 ? "· too long" : description.length < 70 ? "· too short" : "· borderline"}
-          </p>
-        </div>
-      </div>
-
       {/* Stats grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
         <div>
           <span className="text-sm text-white">H1 Tags</span>
           <p className="text-3xl font-bold" style={{ color: "#FFE028" }}>{seo.h1_count}</p>

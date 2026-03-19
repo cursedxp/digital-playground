@@ -51,13 +51,11 @@ export default function SEOReportSection({ seo, title, description, url }: SEORe
   const summary = buildSEOSummary(seo, title, description);
 
   return (
-    <section className="bg-black text-white px-6 mb-20 sm:mb-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 px-8 sm:px-0">
+        <div className="col-span-1">
               <motion.h2
-                className="text-5xl sm:text-7xl font-bold"
+                className="text-7xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -67,13 +65,12 @@ export default function SEOReportSection({ seo, title, description, url }: SEORe
                 <br />
                 Overview
               </motion.h2>
-              <p className="text-white text-lg leading-relaxed mt-6">
-                How your site appears to search engines and social platforms.
-              </p>
-            </div>
-          </div>
+        </div>
 
-          <div className="lg:col-span-8">
+        <div className="col-span-2">
+            <p className="text-white text-xl leading-relaxed max-w-md mb-8 ml-auto">
+              How your site appears to search engines and social platforms.
+            </p>
             <SEOSection seo={seo} title={title} description={description} />
             {(seo.og_title || seo.og_image) && (
               <div className="mt-8">
@@ -89,7 +86,6 @@ export default function SEOReportSection({ seo, title, description, url }: SEORe
             <p className="text-white text-base leading-relaxed border-t border-white/10 pt-6 mt-8">
               {summary}
             </p>
-          </div>
         </div>
       </div>
     </section>

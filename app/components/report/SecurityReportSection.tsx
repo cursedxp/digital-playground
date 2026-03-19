@@ -46,34 +46,29 @@ export default function SecurityReportSection({ observatory, ssl }: SecurityRepo
   const summary = buildSecuritySummary(observatory, ssl);
 
   return (
-    <section className="bg-black text-white px-6 mb-20 sm:mb-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
-              <motion.h2
-                className="text-5xl sm:text-7xl font-bold"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-              >
-                Security
-              </motion.h2>
-              <p className="text-white text-lg leading-relaxed mt-6">
-                SSL certificate, security headers, and browser protection policies.
-              </p>
-            </div>
-          </div>
-
-          <div className="lg:col-span-8">
-            <SecuritySection observatory={observatory} ssl={ssl} />
-            {summary && (
-              <p className="text-white text-base leading-relaxed border-t border-white/10 pt-6 mt-8">
-                {summary}
-              </p>
-            )}
-          </div>
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 px-8 sm:px-0">
+        <div className="col-span-2">
+          <p className="text-white text-xl leading-relaxed max-w-md mb-8">
+            SSL certificate, security headers, and browser protection policies.
+          </p>
+          <SecuritySection observatory={observatory} ssl={ssl} />
+          {summary && (
+            <p className="text-white text-base leading-relaxed border-t border-white/10 pt-6 mt-8">
+              {summary}
+            </p>
+          )}
+        </div>
+        <div className="col-span-1 flex flex-col items-end">
+          <motion.h2
+            className="text-7xl font-bold text-right"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            Security
+          </motion.h2>
         </div>
       </div>
     </section>

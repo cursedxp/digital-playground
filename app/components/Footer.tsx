@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { Facebook, Twitter, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
     <footer className="relative z-40 bg-black/80 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo and About */}
           <div className="flex flex-col gap-4">
             <Link
@@ -30,61 +30,16 @@ export default function Footer() {
           {/* Navigation Links */}
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-            <nav className="flex flex-col gap-2">
-              <a
-                href="#services"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Services
-              </a>
-              <a
-                href="#how-it-works"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                How It Works
-              </a>
-              <a
-                href="#pricing"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Pricing
-              </a>
-              <a
-                href="#about"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                About
-              </a>
-              <a
-                href="#faq"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                FAQ
-              </a>
-              <a
-                href="/blog"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Blog
-              </a>
-              <a
-                href="/terms"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Terms of Service
-              </a>
-              <a
-                href="/impressum"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Impressum
-              </a>
-              <a
-                href="/privacy"
-                className="text-white hover:text-white/80 transition-colors text-sm"
-              >
-                Privacy Policy
-              </a>
+            <nav className="grid grid-cols-2 gap-x-6 gap-y-2">
+              <a href="#services" className="text-white hover:text-white/80 transition-colors text-sm">Services</a>
+              <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors text-sm">How It Works</a>
+              <a href="#pricing" className="text-white hover:text-white/80 transition-colors text-sm">Pricing</a>
+              <a href="#about" className="text-white hover:text-white/80 transition-colors text-sm">About</a>
+              <a href="#faq" className="text-white hover:text-white/80 transition-colors text-sm">FAQ</a>
+              <a href="/blog" className="text-white hover:text-white/80 transition-colors text-sm">Blog</a>
+              <a href="/terms" className="text-white hover:text-white/80 transition-colors text-sm">Terms of Service</a>
+              <a href="/impressum" className="text-white hover:text-white/80 transition-colors text-sm">Impressum</a>
+              <a href="/privacy" className="text-white hover:text-white/80 transition-colors text-sm">Privacy Policy</a>
             </nav>
           </div>
 
@@ -112,26 +67,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Social Media */}
-          <div>
-            <h3 className="text-white font-semibold mb-4">Follow Us</h3>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-black hover:bg-gray flex items-center justify-center transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-black flex items-center justify-center transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-            </div>
-          </div>
         </div>
 
         {/* Copyright */}

@@ -12,13 +12,11 @@ export default function IssuesSection({ issues }: IssuesSectionProps) {
   if (issues.length === 0) return null;
 
   return (
-    <section className="bg-black text-white px-6 mb-20 sm:mb-50">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-24">
+    <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
+      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 px-8 sm:px-0">
+        <div className="col-span-1">
               <motion.h2
-                className="text-5xl sm:text-7xl font-bold"
+                className="text-7xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -28,17 +26,16 @@ export default function IssuesSection({ issues }: IssuesSectionProps) {
                 <br />
                 Found
               </motion.h2>
-              <p className="text-white text-lg leading-relaxed mt-6">
-                {issues.length} issues detected. Sorted by priority.
-              </p>
               <BookCallButton
                 text="Let's Fix These"
                 className="inline-block mt-8 px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
               />
-            </div>
-          </div>
+        </div>
 
-          <div className="lg:col-span-8 space-y-4">
+        <div className="col-span-2 space-y-4">
+            <p className="text-white text-xl leading-relaxed max-w-md mb-4">
+              {issues.length} issues detected. Sorted by priority.
+            </p>
             {issues.map((issue, i) => (
               <motion.div
                 key={i}
@@ -56,7 +53,6 @@ export default function IssuesSection({ issues }: IssuesSectionProps) {
                 </div>
               </motion.div>
             ))}
-          </div>
         </div>
       </div>
     </section>
