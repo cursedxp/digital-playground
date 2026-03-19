@@ -10,7 +10,7 @@ export default function BenchmarkBar({ value, label, maxValue = 100 }: Benchmark
 
   return (
     <div>
-      <p className="text-sm text-white/70 mb-2">{label}</p>
+      <p className="text-sm text-white mb-2">{label}</p>
       <div className="relative h-6 rounded-full bg-white/10 overflow-hidden">
         {/* Zone gradient: red 0-49%, amber 50-89%, green 90-100% */}
         <div className="absolute inset-0 flex">
@@ -24,7 +24,7 @@ export default function BenchmarkBar({ value, label, maxValue = 100 }: Benchmark
           style={{ left: `calc(${percent}% - 2px)` }}
         />
       </div>
-      <p className="text-xs text-white/50 mt-1.5">
+      <p className="text-xs text-white mt-1.5">
         Score: {value}/{maxValue}
       </p>
     </div>

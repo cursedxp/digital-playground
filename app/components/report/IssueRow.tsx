@@ -20,7 +20,7 @@ export default function IssueRow({ label, severity, detail }: IssueRowProps) {
       />
       <div className="min-w-0">
         <p className="text-white font-medium text-sm">{label}</p>
-        {detail && <p className="text-white/50 text-xs mt-0.5">{detail}</p>}
+        {detail && <p className="text-white text-xs mt-0.5">{detail}</p>}
       </div>
     </div>
   );

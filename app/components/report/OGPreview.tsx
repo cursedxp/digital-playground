@@ -16,7 +16,7 @@ export default function OGPreview({ ogTitle, ogDescription, ogImage, url }: OGPr
 
   return (
     <div>
-      <p className="text-sm text-white/50 mb-3">Social Share Preview</p>
+      <p className="text-sm text-white mb-3">Social Share Preview</p>
       <div className="rounded-xl border border-white/10 overflow-hidden max-w-md">
         {/* Image area */}
         <div className="aspect-[1.91/1] bg-white/5 flex items-center justify-center overflow-hidden">
@@ -28,12 +28,12 @@ export default function OGPreview({ ogTitle, ogDescription, ogImage, url }: OGPr
         </div>
         {/* Card body */}
         <div className="px-4 py-3 bg-white/[0.03]">
-          <p className="text-xs text-white/40 uppercase tracking-wide mb-1">{domain}</p>
+          <p className="text-xs text-white uppercase tracking-wide mb-1">{domain}</p>
           <p className="text-sm font-semibold text-white truncate">
             {ogTitle || "No og:title set"}
           </p>
           {ogDescription && (
-            <p className="text-xs text-white/50 mt-1 line-clamp-2">{ogDescription}</p>
+            <p className="text-xs text-white mt-1 line-clamp-2">{ogDescription}</p>
           )}
         </div>
       </div>

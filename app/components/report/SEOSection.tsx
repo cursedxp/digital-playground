@@ -7,18 +7,18 @@ interface SEOSectionProps {
 }
 
 function charCountColor(count: number, good: [number, number], bad: [number, number]): string {
-  if (count >= good[0] && count <= good[1]) return "text-green-400";
+  if (count >= good[0] && count <= good[1]) return "text-[#FFE028]";
   if (count < bad[0] || count > bad[1]) return "text-red-400";
   return "text-amber-400";
 }
 
 function CheckItem({ pass, label }: { pass: boolean; label: string }) {
   return (
-    <div className="flex items-start gap-2 py-1.5">
-      <span className={pass ? "text-[#FFE028]" : "text-white/30"}>
+    <div className="flex items-start gap-2 py-2 border-b border-white/10 last:border-0">
+      <span className={pass ? "text-[#FFE028] shrink-0" : "text-white/30 shrink-0"}>
         {pass ? "✓" : "✗"}
       </span>
-      <span className="text-sm text-white/70">{label}</span>
+      <span className="text-sm text-white leading-snug">{label}</span>
     </div>
   );
 }
@@ -28,101 +28,104 @@ export default function SEOSection({ seo, title, description }: SEOSectionProps)
   const altPercent = seo.total_images > 0 ? (imagesWithAlt / seo.total_images) * 100 : 0;
 
   return (
-    <div>
-      <h2 className="text-xl font-bold text-white mb-6">SEO Overview</h2>
+    <div className="space-y-10">
 
-      <div className="space-y-5">
-        {/* Title tag */}
-        <div>
-          <p className="text-sm text-white/50 mb-1.5">Title Tag</p>
-          <div className="rounded-lg bg-white/5 border border-white/10 px-4 py-2.5 font-mono text-sm text-white break-all">
-            {title || "—"}
+      {/* Google SERP preview */}
+      <div>
+        <p className="text-sm text-white mb-3 uppercase tracking-wide">Google Search Preview</p>
+        <div className="rounded-xl border border-white/10 bg-white/5 px-5 py-4">
+          {/* Favicon + URL row */}
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-4 h-4 rounded-full bg-white/20 shrink-0" />
+            <span className="text-xs text-white truncate">{seo.canonical || "your-website.com"}</span>
           </div>
-          <p className={`text-xs mt-1 ${charCountColor(title.length, [50, 60], [30, 70])}`}>
-            {title.length} characters
+          {/* Title */}
+          <p className="text-lg font-medium leading-snug" style={{ color: "#8ab4f8" }}>
+            {title ? (title.length > 60 ? title.slice(0, 60) + "…" : title) : "No title set"}
+          </p>
+          {/* Description */}
+          <p className="text-sm text-white/80 leading-relaxed">
+            {description ? (description.length > 160 ? description.slice(0, 160) + "…" : description) : "No meta description set."}
           </p>
         </div>
-
-        {/* Meta description */}
-        <div>
-          <p className="text-sm text-white/50 mb-1.5">Meta Description</p>
-          <div className="rounded-lg bg-white/5 border border-white/10 px-4 py-2.5 font-mono text-sm text-white break-all">
-            {description || "—"}
-          </div>
-          <p className={`text-xs mt-1 ${charCountColor(description.length, [150, 160], [70, 170])}`}>
-            {description.length} characters
+        {/* Char counts under the card */}
+        <div className="flex items-center gap-2 mt-1">
+          <p className={`text-xs ${charCountColor(title.length, [50, 60], [30, 70])}`}>
+            Title: {title.length} chars {title.length >= 50 && title.length <= 60 ? "· good" : title.length > 60 ? "· too long" : title.length < 30 ? "· too short" : "· borderline"}
           </p>
-        </div>
-
-        {/* H1 */}
-        <div className="flex items-start gap-2">
-          <span className={seo.h1_count === 1 ? "text-[#FFE028]" : "text-amber-400"}>
-            {seo.h1_count === 1 ? "✓" : "⚠"}
-          </span>
-          <div className="text-sm">
-            <span className="text-white/70">
-              H1 Tag — {seo.h1_count === 1 ? "1 found" : seo.h1_count === 0 ? "missing" : `${seo.h1_count} found (should be 1)`}
-            </span>
-            {seo.h1_texts.length > 0 && (
-              <p className="text-white/50 text-xs mt-0.5 font-mono">{seo.h1_texts.join(", ")}</p>
-            )}
-          </div>
-        </div>
-
-        {/* Open Graph */}
-        <div>
-          <p className="text-sm text-white/50 mb-2">Open Graph</p>
-          <CheckItem pass={!!seo.og_title} label={seo.og_title ? `og:title — ${seo.og_title}` : "og:title — missing"} />
-          <CheckItem pass={!!seo.og_image} label={seo.og_image ? "og:image — present" : "og:image — missing"} />
-        </div>
-
-        {/* Image alt text */}
-        <div>
-          <p className="text-sm text-white/70 mb-1.5">
-            {imagesWithAlt}/{seo.total_images} images have alt text
+          <span className="text-white/20 text-xs">|</span>
+          <p className={`text-xs ${charCountColor(description.length, [150, 160], [70, 170])}`}>
+            Description: {description.length} chars {description.length >= 150 && description.length <= 160 ? "· good" : description.length > 170 ? "· too long" : description.length < 70 ? "· too short" : "· borderline"}
           </p>
-          <div className="h-2 rounded-full bg-white/10 overflow-hidden">
-            <div
-              className="h-full rounded-full bg-[#FFE028] transition-all"
-              style={{ width: `${altPercent}%` }}
-            />
-          </div>
-        </div>
-
-        {/* Structured data */}
-        <CheckItem
-          pass={seo.has_structured_data}
-          label={
-            seo.has_structured_data
-              ? `Structured data — ${seo.schema_types.join(", ")}`
-              : "Structured data — none found"
-          }
-        />
-
-        {/* Canonical */}
-        <CheckItem
-          pass={!!seo.canonical}
-          label={seo.canonical ? `Canonical URL — ${seo.canonical}` : "Canonical URL — missing"}
-        />
-
-        {/* Language */}
-        <div className="flex items-start gap-2 py-1.5">
-          <span className={seo.language ? "text-[#FFE028]" : "text-white/30"}>
-            {seo.language ? "✓" : "✗"}
-          </span>
-          <span className="text-sm text-white/70">
-            Language — {seo.language || "not set"}
-          </span>
-        </div>
-
-        {/* Links */}
-        <div className="flex items-start gap-2 py-1.5">
-          <span className="text-[#FFE028]">✓</span>
-          <span className="text-sm text-white/70">
-            {seo.internal_links} internal, {seo.external_links} external links
-          </span>
         </div>
       </div>
+
+      {/* Stats grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
+        <div>
+          <span className="text-sm text-white">H1 Tags</span>
+          <p className="text-3xl font-bold" style={{ color: "#FFE028" }}>{seo.h1_count}</p>
+          <span className="text-xs text-white">{seo.h1_count === 1 ? "ideal" : seo.h1_count === 0 ? "missing" : "should be 1"}</span>
+        </div>
+        <div>
+          <span className="text-sm text-white">Language</span>
+          <p className="text-3xl font-bold" style={{ color: "#FFE028" }}>{seo.language || "—"}</p>
+          <span className="text-xs text-white">{seo.language ? "set" : "not set"}</span>
+        </div>
+        <div>
+          <span className="text-sm text-white">Internal Links</span>
+          <p className="text-3xl font-bold" style={{ color: "#FFE028" }}>{seo.internal_links}</p>
+          <span className="text-xs text-white">on this page</span>
+        </div>
+        <div>
+          <span className="text-sm text-white">External Links</span>
+          <p className="text-3xl font-bold" style={{ color: "#FFE028" }}>{seo.external_links}</p>
+          <span className="text-xs text-white">on this page</span>
+        </div>
+      </div>
+
+      {/* Image alt bar */}
+      {seo.total_images > 0 && (
+        <div>
+          <div className="flex justify-between mb-2">
+            <span className="text-sm text-white">Image alt text</span>
+            <span className="text-sm font-semibold" style={{ color: "#FFE028" }}>
+              {imagesWithAlt}/{seo.total_images}
+            </span>
+          </div>
+          <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
+            <div
+              className="h-full rounded-full"
+              style={{ width: `${altPercent}%`, background: "linear-gradient(90deg, #B8960A 0%, #FFE028 60%, #FFF176 100%)" }}
+            />
+          </div>
+          <p className="text-xs text-white mt-1">{seo.images_missing_alt} missing alt attributes</p>
+        </div>
+      )}
+
+      {/* Checks — 2-column grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10">
+        <div>
+          <CheckItem
+            pass={seo.h1_count === 1}
+            label={seo.h1_texts.length > 0 ? `H1: "${seo.h1_texts[0]}"` : `H1 — ${seo.h1_count === 0 ? "missing" : `${seo.h1_count} found`}`}
+          />
+          <CheckItem pass={!!seo.canonical} label={seo.canonical ? `Canonical — set` : "Canonical URL — missing"} />
+          <CheckItem
+            pass={seo.has_structured_data}
+            label={seo.has_structured_data ? `Structured data — ${seo.schema_types.slice(0, 2).join(", ")}` : "Structured data — none"}
+          />
+        </div>
+        <div>
+          <CheckItem pass={!!seo.og_title} label={seo.og_title ? `og:title — set` : "og:title — missing"} />
+          <CheckItem pass={!!seo.og_image} label={seo.og_image ? "og:image — present" : "og:image — missing"} />
+          <CheckItem
+            pass={!!seo.twitter_card}
+            label={seo.twitter_card ? `Twitter card — ${seo.twitter_card}` : "Twitter card — missing"}
+          />
+        </div>
+      </div>
+
     </div>
   );
 }

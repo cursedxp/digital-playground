@@ -16,7 +16,7 @@ export default function CTASection() {
           text="Book a Free Discovery Call"
           className="inline-block px-8 py-4 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
         />
-        <p className="text-sm text-white/50 mt-6">
+        <p className="text-sm text-white mt-6">
           Or email us:{" "}
           <a href="mailto:hi@optimotion.dev" className="text-white/80 hover:text-white transition-colors">
             hi@optimotion.dev

@@ -29,7 +29,7 @@ export default function ReportHeader({ company, website, overallScore, generated
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-sm text-white/50 uppercase tracking-wider mb-4"
+        className="text-sm text-white uppercase tracking-wider mb-4"
       >
         Website Audit Report
       </motion.p>
@@ -48,7 +48,7 @@ export default function ReportHeader({ company, website, overallScore, generated
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
-        className="text-white/50 hover:text-white/80 transition-colors text-sm mb-10 inline-block"
+        className="text-white hover:text-white/80 transition-colors text-sm mb-10 inline-block"
       >
         {website}
       </motion.a>
@@ -64,7 +64,7 @@ export default function ReportHeader({ company, website, overallScore, generated
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.8 }}
-        className="text-xs text-white/50"
+        className="text-xs text-white"
       >
         Generated on {formattedDate}
       </motion.p>

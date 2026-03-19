@@ -24,16 +24,10 @@ export default function BounceCallout({ lcpMs }: BounceCalloutProps) {
   }
 
   return (
-    <div
-      className="rounded-lg bg-white/5 px-5 py-4"
-      style={{ borderLeft: `4px solid ${borderColor}` }}
-    >
-      <p className="text-sm text-white/70 leading-relaxed">
-        Your page takes <span className="text-white font-semibold">{seconds.toFixed(1)}s</span> to
-        load. Google research shows this causes{" "}
-        <span className="text-white font-semibold">~{bouncePercent}%</span> of mobile visitors to
-        bounce.
-      </p>
-    </div>
+    <p className="text-sm text-white/80 leading-relaxed">
+      Your page takes <span className="font-semibold" style={{ color: "#FFE028" }}>{seconds.toFixed(1)}s</span> to
+      load. Google research shows this causes{" "}
+      <span className="font-semibold" style={{ color: "#FFE028" }}>~{bouncePercent}%</span> of mobile visitors to bounce.
+    </p>
   );
 }

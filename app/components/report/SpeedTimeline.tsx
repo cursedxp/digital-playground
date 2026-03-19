@@ -1,5 +1,3 @@
-import { fcpColor, lcpColor, COLOR_MAP } from "@/app/lib/scoring";
-
 interface SpeedTimelineProps {
   fcpMs: number;
   lcpMs: number;
@@ -16,12 +14,11 @@ export default function SpeedTimeline({ fcpMs, lcpMs }: SpeedTimelineProps) {
 
   const fcpX = padding + (fcpMs / maxMs) * usable;
   const lcpX = padding + (lcpMs / maxMs) * usable;
-  const fcpHex = COLOR_MAP[fcpColor(fcpMs)];
-  const lcpHex = COLOR_MAP[lcpColor(lcpMs)];
+  const hex = "#FFE028";
 
   return (
     <div>
-      <p className="text-sm text-white/50 mb-3">Load Timeline</p>
+      <p className="text-sm text-white/80 mb-3">Load Timeline</p>
       <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto" role="img" aria-label="Speed timeline">
         {/* Track */}
         <rect
@@ -34,14 +31,14 @@ export default function SpeedTimeline({ fcpMs, lcpMs }: SpeedTimelineProps) {
         />
 
         {/* FCP marker */}
-        <line x1={fcpX} y1={trackY - 4} x2={fcpX} y2={trackY + trackHeight + 4} stroke={fcpHex} strokeWidth="2" strokeLinecap="round" />
-        <text x={fcpX} y={trackY - 8} textAnchor="middle" fill={fcpHex} fontSize="10" fontFamily="inherit">
+        <line x1={fcpX} y1={trackY - 4} x2={fcpX} y2={trackY + trackHeight + 4} stroke={hex} strokeWidth="2" strokeLinecap="round" />
+        <text x={fcpX} y={trackY - 8} textAnchor="middle" fill={hex} fontSize="10" fontFamily="inherit">
           FCP {(fcpMs / 1000).toFixed(1)}s
         </text>
 
         {/* LCP marker */}
-        <line x1={lcpX} y1={trackY - 4} x2={lcpX} y2={trackY + trackHeight + 4} stroke={lcpHex} strokeWidth="2" strokeLinecap="round" />
-        <text x={lcpX} y={trackY + trackHeight + 16} textAnchor="middle" fill={lcpHex} fontSize="10" fontFamily="inherit">
+        <line x1={lcpX} y1={trackY - 4} x2={lcpX} y2={trackY + trackHeight + 4} stroke={hex} strokeWidth="2" strokeLinecap="round" />
+        <text x={lcpX} y={trackY + trackHeight + 16} textAnchor="middle" fill={hex} fontSize="10" fontFamily="inherit">
           LCP {(lcpMs / 1000).toFixed(1)}s
         </text>
 

@@ -23,7 +23,7 @@ export default function AccordionSection({ title, children, defaultOpen = false 
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3 }}
-          className="text-white/50 text-2xl leading-none mt-0.5 shrink-0"
+          className="text-white text-2xl leading-none mt-0.5 shrink-0"
         >
           +
         </motion.span>

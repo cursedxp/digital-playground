@@ -2,7 +2,6 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { scoreColor, COLOR_MAP } from "@/app/lib/scoring";
 import AnimatedCounter from "./AnimatedCounter";
 
 interface ScoreRingProps {
@@ -15,46 +14,32 @@ interface ScoreRingProps {
 export default function ScoreRing({ score, label, size = 120, strokeWidth = 8 }: ScoreRingProps) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  const radius = (size - strokeWidth) / 2;
-  const circumference = 2 * Math.PI * radius;
   const value = score ?? 0;
-  const offset = circumference - (value / 100) * circumference;
-  const color = COLOR_MAP[scoreColor(score)];
+
+  const barHeight = Math.max(4, strokeWidth - 2);
+  const scoreSize = size >= 160 ? "text-4xl" : size >= 120 ? "text-2xl" : "text-xl";
+  const maxWidth = size * 2.2;
 
   return (
-    <div ref={ref} className="flex flex-col items-center gap-2">
-      <div className="relative" style={{ width: size, height: size }}>
-        <svg width={size} height={size} className="-rotate-90">
-          <circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke="rgba(255,255,255,0.1)"
-            strokeWidth={strokeWidth}
-          />
-          <motion.circle
-            cx={size / 2}
-            cy={size / 2}
-            r={radius}
-            fill="none"
-            stroke={color}
-            strokeWidth={strokeWidth}
-            strokeLinecap="round"
-            strokeDasharray={circumference}
-            initial={{ strokeDashoffset: circumference }}
-            animate={isInView ? { strokeDashoffset: offset } : { strokeDashoffset: circumference }}
-            transition={{ duration: 1.5, type: "spring", bounce: 0.15 }}
-          />
-        </svg>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-2xl font-bold text-white">
-            {isInView ? <AnimatedCounter target={value} /> : "0"}
-          </span>
-        </div>
+    <div ref={ref} className="flex flex-col gap-2 w-full" style={{ maxWidth }}>
+      <div className="flex items-baseline justify-between gap-3">
+        <span className="text-sm text-white uppercase tracking-wide">{label}</span>
+        <span className={`${scoreSize} font-bold tabular-nums`} style={{ color: "#FFE028" }}>
+          {isInView ? <AnimatedCounter target={value} /> : "0"}
+        </span>
       </div>
-      <span className="text-sm text-white/70 text-center">{label}</span>
+      <div
+        className="w-full rounded-full overflow-hidden"
+        style={{ height: barHeight, background: "rgba(255,255,255,0.08)" }}
+      >
+        <motion.div
+          className="h-full rounded-full"
+          style={{ background: "linear-gradient(90deg, #B8960A 0%, #FFE028 60%, #FFF176 100%)" }}
+          initial={{ width: "0%" }}
+          animate={isInView ? { width: `${value}%` } : { width: "0%" }}
+          transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+        />
+      </div>
     </div>
   );
 }
