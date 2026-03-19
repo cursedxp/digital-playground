@@ -156,7 +156,7 @@ export function parseAnalysis(record: ReportRecord): AnalysisData | null {
 
   // Fallback to legacy JSON field
   try {
-    return JSON.parse(record["Analysis JSON"]) as AnalysisData;
+    return JSON.parse(record["Analysis JSON"] ?? "") as AnalysisData;
   } catch {
     return null;
   }
