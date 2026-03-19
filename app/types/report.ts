@@ -120,7 +120,7 @@ export interface ReportRecord {
   Company: string;
   Website: string;
   Segment: "local" | "saas" | "founder";
-  "Analysis JSON": string;
+  "Analysis JSON"?: string;
   "Overall Score": number;
   Status: "generating" | "ready" | "expired";
   "View Count": number;
@@ -128,6 +128,72 @@ export interface ReportRecord {
   "CTA Clicked": boolean;
   "Generated At": string;
   CreatedAt: string;
+
+  // PageSpeed - Mobile
+  "Mobile Performance": number | null;
+  "Mobile Accessibility": number | null;
+  "Mobile LCP": number | null;
+  "Mobile FID": number | null;
+  "Mobile CLS": number | null;
+  "Mobile FCP": number | null;
+
+  // PageSpeed - Desktop
+  "Desktop Performance": number | null;
+  "Desktop Accessibility": number | null;
+  "Desktop Screenshot": string | null;
+
+  // SEO
+  "SEO H1 Count": number | null;
+  "SEO H1 Texts": string | null;
+  "SEO Canonical": string | null;
+  "SEO OG Title": string | null;
+  "SEO OG Description": string | null;
+  "SEO OG Image": string | null;
+  "SEO Twitter Card": string | null;
+  "SEO Language": string | null;
+  "SEO Total Images": number | null;
+  "SEO Images Missing Alt": number | null;
+  "SEO Has Structured Data": boolean;
+  "SEO Schema Types": string | null;
+  "SEO Internal Links": number | null;
+  "SEO External Links": number | null;
+
+  // SSL
+  "SSL Valid": boolean;
+  "SSL Issuer": string | null;
+  "SSL Expires": string | null;
+  "SSL Days Until Expiry": number | null;
+  "SSL Expired": boolean;
+  "SSL Error": string | null;
+
+  // Observatory
+  "Observatory Grade": string | null;
+  "Observatory Score": number | null;
+  "Observatory Tests Passed": number | null;
+  "Observatory Tests Quantity": number | null;
+
+  // Contact
+  "Has Contact Form": boolean;
+  "Has Email": boolean;
+  "Has Phone": boolean;
+  "Has Live Chat": boolean;
+
+  // Page info
+  "Page Title": string | null;
+  "Page Description": string | null;
+  "Has Mobile Viewport": boolean;
+  "Technologies": string | null;
+  "Copyright Year": number | null;
+  "Freshness Signals": string | null;
+  "Social Media": string | null;
+  "Social Media Count": number | null;
+
+  // SaaS
+  "SaaS Team Size": number | null;
+  "SaaS Has Pricing": boolean;
+  "SaaS Has Integrations": boolean;
+  "SaaS Integrations List": string | null;
+  "SaaS Has Careers": boolean;
 }
 
 export type Severity = "critical" | "warning" | "info";
