@@ -6,7 +6,7 @@ export interface ServiceInfo {
 
 export const SERVICES: Record<string, ServiceInfo> = {
   "monthly-plan": {
-    name: "Monthly Plan",
+    name: "Monthly Retainer",
     description: "Subscribe for ongoing development. Two complete features delivered every month.",
     bullets: [
       "Two complete features delivered per month",

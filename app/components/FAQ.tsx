@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How do you charge for projects?",
     answer:
-      "Monthly Plan: $5,000/month for two complete features delivered every month. Custom Projects: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
+      "Monthly Retainer: $5,000/month for two complete features delivered every month. Custom Projects: We'll quote it after talking. Everything's upfront—no hourly billing, no surprises.",
   },
   {
     question: "What if we need changes after delivery?",
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How does billing work?",
     answer:
-      "Monthly Plan: $5,000/month, billed monthly. Two 2-week sprints delivered each month with two complete features. Cancel anytime with 30 days notice. Stripe handles billing—simple and secure.",
+      "Monthly Retainer: $5,000/month, billed monthly. Two 2-week sprints delivered each month with two complete features. Cancel anytime with 30 days notice. Stripe handles billing—simple and secure.",
   },
   {
     question: "What if I don't need continuous development?",
