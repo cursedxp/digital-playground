@@ -6,17 +6,19 @@ import BookCallButton from "./BookCallButton";
 
 const pricingOptions = [
   {
-    type: "Monthly Plan",
+    type: "Monthly Retainer",
     price: "$5,000",
     priceDetail: "/month",
     timeline: "Two 2-week sprints per month",
-    description: "Subscribe for ongoing development. Two complete features delivered every month.",
+    description:
+      "Ongoing engineering capacity for your product. Two complete features delivered every month \u2014 design, development, and deployment included.",
     highlight:
-      "Start with one month. Keep going if you like it. No commitment.",
-    badge: null,
-    badgeText: null,
+      "Most founders use it as a bridge while figuring out when to hire. Cancel anytime.",
+    badge: "Best for SaaS Founders",
+    badgeText:
+      "SaaS founders at $10K\u2013$50K MRR who need dev capacity without the overhead of a full-time hire.",
     examples:
-      "Examples per sprint (one complete feature): User authentication system, Stripe payment integration, Admin dashboard with analytics, Email notification system, Search functionality, Landing page design & build",
+      "User authentication system, Stripe payment integration, Admin dashboard with analytics, Email notification system, API integrations, Search functionality",
     features: [
       "Two complete features delivered per month",
       "Design + development + deployment included",
@@ -29,20 +31,22 @@ const pricingOptions = [
     type: "Custom Projects",
     price: "Let's Talk",
     priceDetail: null,
-    timeline: "Varies",
+    timeline: "Usually 3\u20135 weeks",
     description:
-      "For projects with custom needs big or small, simple or complex.",
-    highlight: null,
-    badge: null,
-    badgeText: null,
+      "For one-time builds with a defined end point. We assess your needs, propose a fixed price, and deliver it.",
+    highlight:
+      "50% upfront, 50% on delivery. Price is locked at proposal \u2014 never adjusted mid-project.",
+    badge: "Best for Local Businesses",
+    badgeText:
+      "Restaurants, law firms, fitness studios, accountants \u2014 any business that needs a modern website or online systems.",
     examples:
-      "Monthly development partnerships, Multi-feature applications, Enterprise integrations, Legacy system modernization",
+      "Website rebuild, online booking system, mobile-first redesign, Google Business optimization, contact forms and lead capture",
     features: [
-      "Custom assessment & proposal",
-      "Flexible engagement model",
-      "Tailored to your budget & timeline",
-      "Transparent quoting",
-      "Ongoing support options",
+      "Fixed price locked before work begins",
+      "Mobile-first design included",
+      "Usually live in 3\u20135 weeks",
+      "You own everything we build",
+      "Ongoing support available after launch",
     ],
   },
 ];
