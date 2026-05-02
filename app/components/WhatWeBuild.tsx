@@ -29,19 +29,9 @@ export default function WhatWeBuild() {
   return (
     <section className="text-white flex flex-col items-center w-full relative mb-20 sm:mb-50">
       <div className="flex max-w-7xl flex-col sm:flex-row px-8 sm:px-0">
-        <div className="flex-1 order-2 sm:order-1">
-          <div className="grid lg:grid-cols-2 gap-8 mt-8">
-            {items.map((item) => (
-              <div key={item.title}>
-                <h3 className="font-bold mb-2">{item.title}</h3>
-                <p className="text-sm">{item.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="flex-1 flex flex-col items-end order-1 sm:order-2 mb-8 sm:mb-0">
+        <div className="flex-1 flex flex-col order-1 mb-8 sm:mb-0">
           <motion.h2
-            className="text-7xl font-bold text-right"
+            className="text-7xl font-bold"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -51,6 +41,16 @@ export default function WhatWeBuild() {
             <br />
             Build
           </motion.h2>
+        </div>
+        <div className="flex-1 order-2">
+          <div className="grid lg:grid-cols-2 gap-8 mt-4">
+            {items.map((item) => (
+              <div key={item.title}>
+                <h3 className="font-bold mb-2">{item.title}</h3>
+                <p className="text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
