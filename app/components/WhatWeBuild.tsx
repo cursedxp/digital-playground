@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 
 const items = [
   {
-    title: "AI-Integrated Workflows",
+    title: "We Find What's Broken First",
     description:
-      "Your existing tools, connected to AI where it actually helps. Not chatbots for the sake of it. Real process automation — approvals, data extraction, client routing, reporting. Built into how your team already works.",
+      "Before we build anything, we map what's actually broken and why. Sometimes the real bottleneck isn't where you think it is.",
   },
   {
     title: "Custom Internal Tools",
@@ -14,14 +14,14 @@ const items = [
       "Dashboards, admin panels, client portals. Built around your specific workflow, not a template someone else designed for a different kind of business.",
   },
   {
-    title: "Full-Stack Web Applications",
+    title: "Custom Websites & Web Apps",
     description:
       "From idea to production. Design, development, deployment — one person handling it all, no handoffs, no miscommunication.",
   },
   {
-    title: "Process Discovery & Integration Architecture",
+    title: "AI That Does Real Work",
     description:
-      "Before we build anything, we map what's actually broken and why. Sometimes the real bottleneck isn't where you think it is.",
+      "Your existing tools, connected to AI where it actually helps. Not chatbots for the sake of it. Real automation — approvals, data extraction, automatic follow-ups, reporting. Built into how your team already works.",
   },
 ];
 

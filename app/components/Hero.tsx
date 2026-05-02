@@ -17,9 +17,9 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
-          Your business runs on too many tools
+          Your tools
           <span className="relative inline-block font-serif text-7xl sm:text-8xl font-extralight tracking-tight">
-            <span className="relative z-10">that don&apos;t talk to each other.</span>
+            <span className="relative z-10">don&apos;t talk to each other.</span>
             <span
               className="absolute inset-0 -inset-x-2"
               style={{
@@ -34,6 +34,7 @@ export default function Hero() {
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-white mb-10">
           We fix that — with custom software and automated workflows that actually fit how your team works.
+          Your team gets hours back. Fewer errors. One place for everything.
           <br /><br />
           No templates. No off-the-shelf fixes. Built for your exact problem.
         </p>
@@ -41,6 +42,12 @@ export default function Hero() {
           <SoundWave />
           <BookCallButton />
         </div>
+        <p className="text-sm text-white/50 mt-4">
+          Not sure where to start?{" "}
+          <a href="#pricing" className="text-white/80 underline underline-offset-2 hover:text-white transition-colors">
+            $800 Discovery Sprint →
+          </a>
+        </p>
       </div>
     </div>
   );

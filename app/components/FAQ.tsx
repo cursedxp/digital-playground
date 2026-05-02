@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "What if we need changes after delivery?",
     answer:
-      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features beyond your current month's scope, we'll add them to next month's sprint queue. Many clients stay subscribed for continuous improvements.",
+      "If what we built doesn't work as promised, we fix it—that's on us. If you want new features beyond your current month's scope, we'll add them to next month's work. Many clients stay subscribed for continuous improvements.",
   },
   {
     question: "How is this different from hiring a developer?",
@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "How involved do we need to be during the project?",
     answer:
-      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else is async—weekly updates via Loom videos, Slack, email, or your preferred tool. Shared workspace (Notion, Jira, etc.) for tracking progress and feedback. No meetings unless you want them.",
+      "About 2-3 hours total. One discovery call (1 hour), feedback on prototypes (30-60 min), and final handoff (1 hour). Everything else happens without calls—weekly updates via Loom videos, Slack, email, or your preferred tool. Shared workspace (Notion, Jira, etc.) for tracking progress and feedback. No meetings unless you want them.",
   },
   {
     question: "Can you handle projects that typically require a team?",
@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How does billing work?",
     answer:
-      "Monthly Retainer: $5,000/month, billed monthly. Two 2-week sprints delivered each month with two complete features. Cancel anytime with 30 days notice. Stripe handles billing—simple and secure.",
+      "Monthly Retainer: $5,000/month, billed monthly. Two rounds of work delivered each month, two complete features each. Cancel anytime with 30 days notice. Stripe handles billing—simple and secure.",
   },
   {
     question: "What if I don't need continuous development?",

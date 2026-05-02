@@ -6,12 +6,33 @@ import BookCallButton from "./BookCallButton";
 
 const pricingOptions = [
   {
+    type: "Discovery Sprint",
+    price: "$800",
+    priceDetail: " one-time",
+    timeline: "1 week",
+    description:
+      "We map your current workflows, find where time and money are being lost, and give you a concrete action plan \u2014 what to build, in what order, and why.",
+    highlight: "No commitment beyond this. But most clients continue from here.",
+    badge: "Not sure where to start?",
+    badgeText: "Start here. One week, one clear plan.",
+    examples: null,
+    features: [
+      "90-minute workflow discovery call",
+      "Written process map of your current operations",
+      "Bottleneck and opportunity analysis",
+      "Prioritized action plan (what to automate or build first)",
+      "Fixed-scope proposal for next steps if you want to continue",
+    ],
+  },
+  {
     type: "Monthly Retainer",
     price: "$5,000",
     priceDetail: "/month",
-    timeline: "Two 2-week sprints per month",
+    priceContext:
+      "Most founders spend $8,000\u2013$15,000/month on a single mid-level developer plus overhead. This gets you senior-level design, development, and deployment \u2014 without the hiring process, benefits, or long-term commitment.",
+    timeline: "Two projects per month, two weeks each",
     description:
-      "Ongoing engineering capacity for your product. Two complete features delivered every month \u2014 design, development, and deployment included.",
+      "Continuous development for your product. Two complete features delivered every month \u2014 design, development, and deployment included.",
     highlight:
       "Most founders use it as a bridge while figuring out when to hire. Cancel anytime.",
     badge: "Best for SaaS Founders",
@@ -31,6 +52,8 @@ const pricingOptions = [
     type: "Custom Projects",
     price: "Let's Talk",
     priceDetail: null,
+    priceContext:
+      "Every project is different, so we price each one based on scope. No guessing \u2014 you'll have an exact number before any work begins.",
     timeline: "Usually 3\u20135 weeks",
     description:
       "For one-time builds with a defined end point. We assess your needs, propose a fixed price, and deliver it.",
@@ -84,7 +107,7 @@ export default function Pricing() {
           </div>
 
           {/* Pricing Options - Second on mobile, Right on desktop */}
-          <div className="lg:col-span-8 lg:order-2 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="lg:col-span-8 lg:order-2 grid grid-cols-1 md:grid-cols-3 gap-6">
             {pricingOptions.map((option, index) => (
               <motion.div
                 key={index}
@@ -134,6 +157,11 @@ export default function Pricing() {
                       </span>
                     )}
                   </div>
+                  {"priceContext" in option && option.priceContext && (
+                    <p className="text-xs text-white/60 leading-relaxed mb-3">
+                      {option.priceContext}
+                    </p>
+                  )}
                   <div className="text-sm text-white mb-4">
                     Timeline: {option.timeline}
                   </div>
@@ -148,10 +176,12 @@ export default function Pricing() {
                       {option.highlight}
                     </p>
                   )}
-                  <div className="text-xs text-white mb-4">
-                    <span className="font-semibold text-white">Examples:</span>{" "}
-                    {option.examples}
-                  </div>
+                  {option.examples && (
+                    <div className="text-xs text-white mb-4">
+                      <span className="font-semibold text-white">Examples:</span>{" "}
+                      {option.examples}
+                    </div>
+                  )}
                 </div>
 
                 <div className="mb-3">
