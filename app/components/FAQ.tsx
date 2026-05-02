@@ -34,12 +34,12 @@ const faqs = [
   {
     question: "How is this different from hiring a developer?",
     answer:
-      "Hiring takes months and costs $80k-120k/year plus benefits. We start next week, you pay only for what you need, and we handle both design and development. Most developers don't design, so you'd need two hires anyway.",
+      "A full-time developer costs $80K–$120K/year, takes months to hire, and you carry the overhead even in slow periods. With Optimotion you get senior-level work on demand — start in days, pause or stop anytime. And you work directly with the person building it, which means faster decisions and no communication overhead.",
   },
   {
-    question: "Why not use Zapier or other no-code tools?",
+    question: "How do you decide what to automate first?",
     answer:
-      "Zapier's great for simple stuff. When you need custom logic, complex data transformations, branded interfaces, or real-time dashboards—you need actual code. We build what no-code can't.",
+      "We start with a discovery conversation to map your current workflows. We look for the processes that consume the most time, create the most errors, or block other work when they slow down. Usually the biggest wins aren't obvious at first — that's exactly why we map before we build.",
   },
   {
     question: "How involved do we need to be during the project?",

@@ -9,7 +9,7 @@ const caseStudies = [
     year: "2024",
     title: "How Sync turns WhatsApp into a professional support platform",
     summary:
-      "Ticketing system built on WhatsApp Business API for a SaaS company. Real-time message handling, automatic team assignment, Kanban workflow management, and analytics dashboard. Build complete and production-ready, pending Facebook API approval.",
+      "A professional services firm needed to manage client communication at scale without asking their team to switch platforms. We built a complete ticketing and workflow system on WhatsApp Business API — with automatic team assignment, Kanban management, and a real-time analytics dashboard.",
     techStack: ["Next.js", "MongoDB", "WebSockets", "AWS"],
     slug: "sync",
   },
@@ -18,7 +18,7 @@ const caseStudies = [
     year: "2024",
     title: "Storycraft: Build Your Portfolio in 15 Minutes",
     summary:
-      "AI-powered tool that generates professional case studies in minutes. Reduced case study creation from 3-6 hours to 10-15 minutes. Answer 3-4 guided questions, get a polished case study with inline editing, consistent formatting, and one-click export to Markdown, HTML, or PDF.",
+      "Most founders never write case studies because it takes too long. We built a tool that turns a 10-minute conversation into a polished, publish-ready case study. Creation time: down from 3-6 hours to 15 minutes.",
     techStack: ["Next.js", "ChatGPT", "Claude"],
     slug: "generator",
   },

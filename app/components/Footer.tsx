@@ -23,7 +23,7 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-white text-sm">
-              Smart Solutions for Growing Businesses
+              Custom Software &amp; Workflows for Growing Businesses
             </p>
           </div>
 

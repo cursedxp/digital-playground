@@ -11,6 +11,7 @@ const steps = [
     title: "Start up",
     description:
       "Agility and speed drive rapid development and market entry, prioritizing innovation over structure.",
+    question: "Are you doing manually what a system could already handle?",
     position: 0.02,
   },
   {
@@ -18,6 +19,7 @@ const steps = [
     title: "Growth",
     description:
       "Rapid expansion drives focus on scaling operations and optimizing processes to manage complexity.",
+    question: "Are your tools slowing your team down instead of helping them scale?",
     position: 0.28,
   },
   {
@@ -25,6 +27,7 @@ const steps = [
     title: "Maturity",
     description:
       "Businesses prioritize efficiency and stability, refining operations to maximize profitability.",
+    question: "Do you actually know where your biggest operational bottleneck is?",
     position: 0.6,
   },
   {
@@ -32,6 +35,7 @@ const steps = [
     title: "Decline",
     description:
       "Reduced market share and revenue signal challenges from outdated products and shifting preferences.",
+    question: "What broke first — the product or the operations behind it?",
     position: 0.85,
   },
 ];
@@ -199,6 +203,9 @@ export default function ComplencyCurveMobile() {
           </div>
           <p className="text-sm text-gray-300">
             {steps[currentStep].description}
+          </p>
+          <p className="text-sm text-white/60 mt-3 italic">
+            &ldquo;{steps[currentStep].question}&rdquo;
           </p>
         </motion.div>
 

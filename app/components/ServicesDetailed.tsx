@@ -7,27 +7,27 @@ export default function ServicesDetailed() {
   const services = [
     {
       number: "01",
-      title: "Drowning in manual data entry?",
+      title: "Your team spending hours on work a system could do?",
       description:
-        "We make your tools talk to each other automatically. Your CRM syncs with Stripe, payments show up in Google Sheets, emails trigger in Mailchimp. No more copy-paste, no more errors.",
+        "Approvals that wait in inboxes. Reports built by hand every Friday. Client onboarding steps someone does manually every single time. We automate the work that's eating your team's hours.",
     },
     {
       number: "02",
-      title: "Spreadsheets breaking down?",
+      title: "Making decisions from data scattered across five platforms?",
       description:
-        "We build dashboards that show what you need, when you need it. Real-time data, clear visualizations, designed for how you actually work—not how some SaaS company thinks you should.",
+        "We build dashboards around how you actually work — not how some SaaS company thinks you should. Real-time data, one place, no more switching tabs to get the full picture.",
     },
     {
       number: "03",
-      title: "Generic tools not fitting your needs?",
+      title: "Bought ten SaaS tools and still building workarounds?",
       description:
-        "We build software that fits your business exactly. Customer portals, admin tools, booking systems—built around your workflow, not the other way around.",
+        "Every new tool brings a new workaround. We build software that fits your business exactly — customer portals, internal tools, booking systems — so your team stops adapting to software and the software adapts to them.",
     },
     {
       number: "04",
-      title: "Disconnected systems causing chaos?",
+      title: "Every new tool you add creates a new problem?",
       description:
-        "We connect everything into one system that actually makes sense. Your tools talk to each other. One place for the truth, no more hunting through five different platforms.",
+        "Tools that don't talk to each other don't just slow you down — they create errors, duplication, and decisions made on incomplete information. We connect your systems so there's one source of truth.",
     },
   ];
 

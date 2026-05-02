@@ -234,6 +234,8 @@ export default function ComplencyCurve() {
               >
                 Agility and speed drive rapid development and market entry,
                 prioritizing innovation over structure.
+                <br /><br />
+                <em>&ldquo;Are you doing manually what a system could already handle?&rdquo;</em>
               </motion.p>
             </div>
           </div>
@@ -285,6 +287,8 @@ export default function ComplencyCurve() {
               >
                 Rapid expansion drives focus on scaling operations and
                 optimizing processes to manage complexity.
+                <br /><br />
+                <em>&ldquo;Are your tools slowing your team down instead of helping them scale?&rdquo;</em>
               </motion.p>
             </div>
           </div>
@@ -336,6 +340,8 @@ export default function ComplencyCurve() {
               >
                 Businesses prioritize efficiency and stability, refining
                 operations to maximize profitability.
+                <br /><br />
+                <em>&ldquo;Do you actually know where your biggest operational bottleneck is?&rdquo;</em>
               </motion.p>
             </div>
           </div>
@@ -387,6 +393,8 @@ export default function ComplencyCurve() {
               >
                 Reduced market share and revenue signal challenges from outdated
                 products and shifting preferences.
+                <br /><br />
+                <em>&ldquo;What broke first — the product or the operations behind it?&rdquo;</em>
               </motion.p>
             </div>
           </div>

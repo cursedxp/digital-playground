@@ -17,9 +17,9 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-5xl sm:text-7xl font-bold text-white mb-6">
-          Development Subscription
+          Your business runs on too many tools
           <span className="relative inline-block font-serif text-7xl sm:text-8xl font-extralight tracking-tight">
-            <span className="relative z-10">for Businesses</span>
+            <span className="relative z-10">that don&apos;t talk to each other.</span>
             <span
               className="absolute inset-0 -inset-x-2"
               style={{
@@ -33,8 +33,9 @@ export default function Hero() {
           </span>
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl text-white mb-10">
-          We build software that fits your needs, make your systems talk to each other,
-          and handle the repetitive work. Cancel anytime—no long-term contracts.
+          We fix that — with custom software and automated workflows that actually fit how your team works.
+          <br /><br />
+          No templates. No off-the-shelf fixes. Built for your exact problem.
         </p>
         <div className="flex items-center justify-center gap-4">
           <SoundWave />

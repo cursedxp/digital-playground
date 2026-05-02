@@ -114,6 +114,8 @@ export default function TechStack() {
                 <li>• Stripe & PayPal</li>
                 <li>• HubSpot & Notion</li>
                 <li>• OpenAI & Claude</li>
+                <li>• LangChain & AI Agents</li>
+                <li>• n8n & Make</li>
                 <li>• Custom APIs</li>
               </ul>
             </div>

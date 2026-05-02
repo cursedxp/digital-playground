@@ -34,11 +34,11 @@ export const metadata: Metadata = {
   // Basic Meta - Optimized for SEO
   title: {
     default:
-      "Monthly Development Subscription for Growing Businesses | Custom Web Apps & Integrations",
+      "Custom Software & AI Workflow Systems for Growing Businesses | Optimotion",
     template: `%s | ${companyName}`,
   },
   description:
-    "A monthly development subscription for growing businesses. We build custom web apps, connect your tools, and automate your workflows. Cancel anytime—no long-term contracts.",
+    "Optimotion builds custom software and automated workflows for growing businesses. No templates, no off-the-shelf fixes. Built for your exact problem.",
 
   // Keywords for SEO
   keywords: [
@@ -66,9 +66,9 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: companyName,
     title:
-      "Monthly Development Subscription for Growing Businesses | Custom Web Apps",
+      "Custom Software & AI Workflow Systems for Growing Businesses | Optimotion",
     description:
-      "We build custom web apps, connect your tools, and automate your workflows. $2,400/month. Cancel anytime—no long-term contracts.",
+      "Optimotion builds custom software and automated workflows for growing businesses. No templates, no off-the-shelf fixes. Built for your exact problem.",
     images: [
       {
         url: "/opengraph-image.png", // Next.js automatically serves this from /app

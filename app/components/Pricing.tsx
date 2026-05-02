@@ -18,7 +18,7 @@ const pricingOptions = [
     badgeText:
       "SaaS founders at $10K\u2013$50K MRR who need dev capacity without the overhead of a full-time hire.",
     examples:
-      "User authentication system, Stripe payment integration, Admin dashboard with analytics, Email notification system, API integrations, Search functionality",
+      "AI-powered document processing workflow, Client onboarding automation, Internal analytics dashboard replacing disconnected spreadsheets, Automated proposal generation with CRM integration, Custom API integrations between your core tools",
     features: [
       "Two complete features delivered per month",
       "Design + development + deployment included",
@@ -40,7 +40,7 @@ const pricingOptions = [
     badgeText:
       "Restaurants, law firms, fitness studios, accountants \u2014 any business that needs a modern website or online systems.",
     examples:
-      "Website rebuild, online booking system, mobile-first redesign, Google Business optimization, contact forms and lead capture",
+      "Workflow audit + automation roadmap, WhatsApp-based support ticketing system, AI-powered internal tool for a specific team process, Fixed-scope integration between two systems that don't talk to each other",
     features: [
       "Fixed price locked before work begins",
       "Mobile-first design included",
