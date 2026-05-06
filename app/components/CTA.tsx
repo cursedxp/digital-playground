@@ -13,7 +13,7 @@ export default function CTA() {
           concrete action plan. Most clients continue from there.
         </p>
         <BookCallButton
-          text="Book a Discovery Call"
+          text="Book a Free Call"
           className="inline-block px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
         />
       </div>

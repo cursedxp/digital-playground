@@ -29,15 +29,15 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <nav className="grid grid-cols-2 gap-x-6 gap-y-2">
-              <a href="#services" className="text-white hover:text-white/80 transition-colors text-sm">Services</a>
-              <a href="#how-it-works" className="text-white hover:text-white/80 transition-colors text-sm">How It Works</a>
-              <a href="#pricing" className="text-white hover:text-white/80 transition-colors text-sm">Pricing</a>
-              <a href="#about" className="text-white hover:text-white/80 transition-colors text-sm">About</a>
-              <a href="#faq" className="text-white hover:text-white/80 transition-colors text-sm">FAQ</a>
-              <a href="/blog" className="text-white hover:text-white/80 transition-colors text-sm">Blog</a>
-              <a href="/terms" className="text-white hover:text-white/80 transition-colors text-sm">Terms of Service</a>
-              <a href="/impressum" className="text-white hover:text-white/80 transition-colors text-sm">Impressum</a>
-              <a href="/privacy" className="text-white hover:text-white/80 transition-colors text-sm">Privacy Policy</a>
+              <Link href="#services" className="text-white hover:text-white/80 transition-colors text-sm">Services</Link>
+              <Link href="#how-it-works" className="text-white hover:text-white/80 transition-colors text-sm">How It Works</Link>
+              <Link href="#pricing" className="text-white hover:text-white/80 transition-colors text-sm">Pricing</Link>
+              <Link href="#about" className="text-white hover:text-white/80 transition-colors text-sm">About</Link>
+              <Link href="#faq" className="text-white hover:text-white/80 transition-colors text-sm">FAQ</Link>
+              <Link href="/blog" className="text-white hover:text-white/80 transition-colors text-sm">Blog</Link>
+              <Link href="/terms" className="text-white hover:text-white/80 transition-colors text-sm">Terms of Service</Link>
+              <Link href="/impressum" className="text-white hover:text-white/80 transition-colors text-sm">Impressum</Link>
+              <Link href="/privacy" className="text-white hover:text-white/80 transition-colors text-sm">Privacy Policy</Link>
             </nav>
           </div>
 
