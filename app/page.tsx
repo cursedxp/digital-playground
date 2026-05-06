@@ -10,7 +10,6 @@ import ServicesDetailed from "./components/ServicesDetailed";
 import TechStack from "./components/TechStack";
 import Toast from "./components/Toast";
 import WhatWeBuild from "./components/WhatWeBuild";
-import WhoWeAre from "./components/WhoWeAre";
 
 export default function Home() {
   return (
@@ -23,7 +22,6 @@ export default function Home() {
       <DeliveryProcess />
       <Pricing />
       <TechStack />
-      <WhoWeAre />
       <CaseStudyShowcase />
       <FAQ />
       <CTA />
