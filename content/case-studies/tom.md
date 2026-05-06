@@ -31,6 +31,12 @@ Month 1 is useful. Month 6 is a different tool entirely.
 
 **No privacy tradeoffs** No bot in the call. No data sent to our servers. Your OpenAI key means we never see your transcripts.
 
+## Two studios, one problem
+
+TOM started as an internal fix. Both Optimotion and [Automatics](https://www.automatics.dev) were running into the same wall — meetings happening, decisions made, nothing findable three weeks later.
+
+We built it for ourselves first. It's still what we both use daily.
+
 ## What's included
 
 - Local recording via ScreenCaptureKit — other participants don't know
