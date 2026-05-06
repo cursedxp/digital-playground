@@ -42,7 +42,7 @@ const caseStudies = [
       "One API call. Seven channels. Your reminders, notifications, and webhooks fire automatically — no cron jobs, no polling, nothing to babysit.",
     techStack: [],
     slug: "pingfyr",
-    featured: false,
+    featured: true,
   },
   {
     industry: "Client Project",
@@ -62,7 +62,7 @@ const caseStudies = [
       "TOM records and transcribes your meetings locally on your Mac — no bots, no cloud, no subscription. Ask questions across all your past calls and get cited answers with video timestamps. The more meetings you have in it, the more useful it gets.",
     techStack: [],
     slug: "tom",
-    featured: true,
+    featured: false,
   },
 ];
 
