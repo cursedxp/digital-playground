@@ -143,8 +143,8 @@ export default function CaseStudyShowcase({ showAll = false, pageMode = false }:
 
   if (pageMode) {
     return (
-      <section className="bg-black text-white px-6 mb-20">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-black text-white mb-20">
+        <div className="max-w-7xl mx-auto px-6">
           {cardGrid}
         </div>
       </section>
