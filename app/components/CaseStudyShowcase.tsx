@@ -119,25 +119,6 @@ export default function CaseStudyShowcase({ showAll = false, pageMode = false }:
         </motion.div>
       ))}
 
-      {!showAll && (
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: visibleStudies.length * 0.1 }}
-          className="flex items-center"
-        >
-          <Link
-            href="/projects"
-            className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
-          >
-            <span>View all projects</span>
-            <span className="transform group-hover:translate-x-1 transition-transform">
-              →
-            </span>
-          </Link>
-        </motion.div>
-      )}
     </div>
   );
 
@@ -181,6 +162,17 @@ export default function CaseStudyShowcase({ showAll = false, pageMode = false }:
                 Real projects we&apos;ve built. Client work, internal tools, and
                 technical showcases.
               </p>
+              {!showAll && (
+                <Link
+                  href="/projects"
+                  className="group inline-flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm mt-6"
+                >
+                  <span>View all projects</span>
+                  <span className="transform group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </Link>
+              )}
             </div>
           </div>
         </div>
