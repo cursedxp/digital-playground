@@ -134,7 +134,7 @@ export function ArticleSchema({
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.optimotion.dev/case-studies/${slug}`,
+      "@id": `https://www.optimotion.dev/projects/${slug}`,
     },
   };
 

@@ -63,7 +63,7 @@ const pricingOptions = [
     badgeText:
       "Restaurants, law firms, fitness studios, accountants \u2014 any business that needs a modern website or online systems.",
     examples:
-      "Workflow audit + automation roadmap, WhatsApp-based support ticketing system, AI-powered internal tool for a specific team process, Fixed-scope integration between two systems that don't talk to each other",
+      "Custom client portal replacing a manual email workflow, Business website with booking and payment system, AI-powered internal tool for a specific team process, Fixed-scope integration between two systems that don't talk to each other",
     features: [
       "Fixed price locked before work begins",
       "Mobile-first design included",
@@ -152,7 +152,7 @@ export default function Pricing() {
                   <div className="text-4xl font-bold mb-2">
                     {option.price}
                     {option.priceDetail && (
-                      <span className="text-lg white">
+                      <span className="text-lg text-white">
                         {option.priceDetail}
                       </span>
                     )}
@@ -185,7 +185,7 @@ export default function Pricing() {
                 </div>
 
                 <div className="mb-3">
-                  <h4 className="text-sm font-semibold white mb-3">
+                  <h4 className="text-sm font-semibold text-white mb-3">
                     What&apos;s Included:
                   </h4>
                   <ul className="space-y-3">

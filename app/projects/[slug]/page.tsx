@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { frontmatter } = await getCaseStudy(slug);
 
   const baseUrl = "https://www.optimotion.dev";
-  const url = `${baseUrl}/case-studies/${slug}`;
+  const url = `${baseUrl}/projects/${slug}`;
 
   return {
     title: `${frontmatter.title} - Project`,

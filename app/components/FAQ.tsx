@@ -67,7 +67,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="bg-black text-white px-6 mb:20 sm:mb-0">
+    <section id="faq" className="bg-black text-white px-6 mb-20 sm:mb-0">
       <FAQSchema faqs={faqs} />
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
@@ -93,7 +93,7 @@ export default function FAQ() {
               </p>
               <BookCallButton
                 text="Get Your Questions Answered"
-                className="inline-block px-6 py-3 text-black text-sm font-semibold rounded-full transition-all hover:scale-105"
+                className="inline-block px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
               />
             </div>
           </div>

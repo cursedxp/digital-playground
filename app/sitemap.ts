@@ -22,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const caseStudySlugs = getCaseStudySlugs();
 
   const caseStudies = caseStudySlugs.map((slug) => ({
-    url: `${baseUrl}/case-studies/${slug}`,
+    url: `${baseUrl}/projects/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.8,

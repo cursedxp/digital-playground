@@ -1,5 +1,3 @@
-"use client";
-
 import BookCallButton from "./BookCallButton";
 
 export default function CTA() {
@@ -10,12 +8,13 @@ export default function CTA() {
           Ready to Start Building?
         </h2>
         <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
-          Start with a discovery call to identify your bottlenecks, or subscribe
-          for one month to test our collaboration.
+          Start with the Discovery Sprint. One week, $800 — we map your
+          workflows, find where time and money are being lost, and give you a
+          concrete action plan. Most clients continue from there.
         </p>
         <BookCallButton
           text="Book a Discovery Call"
-          className="inline-block px-8 py-4 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
+          className="inline-block px-8 py-3 text-black text-base font-semibold rounded-full transition-all hover:scale-105"
         />
       </div>
     </div>

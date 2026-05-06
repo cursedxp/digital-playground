@@ -87,7 +87,7 @@ export default function CaseStudyShowcase({ showAll = false, pageMode = false }:
           transition={{ duration: 0.5, delay: index * 0.1 }}
         >
           <Link
-            href={`/case-studies/${study.slug}`}
+            href={`/projects/${study.slug}`}
             className="block group h-full"
           >
             <div className="h-full flex flex-col">
