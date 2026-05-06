@@ -5,6 +5,8 @@ summary: "Records and transcribes your meetings locally on your Mac — no bots,
 industry: "Product"
 year: "2025"
 result: "Your entire meeting history, searchable"
+partnerName: "Automatics"
+partnerUrl: "https://www.automatics.dev"
 ---
 
 # TOM: Meeting Intelligence That Compounds

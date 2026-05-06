@@ -55,6 +55,21 @@ export function CaseStudySidebar({ frontmatter }: CaseStudySidebarProps) {
             {frontmatter.result}
           </p>
         </div>
+
+        {/* Built with */}
+        {frontmatter.partnerName && frontmatter.partnerUrl && (
+          <div className="mb-6">
+            <h3 className="text-sm font-semibold mb-2 text-white">Built with</h3>
+            <a
+              href={frontmatter.partnerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-white/60 hover:text-white transition-colors"
+            >
+              {frontmatter.partnerName}
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

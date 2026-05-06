@@ -11,6 +11,8 @@ export interface CaseStudyFrontmatter {
   year: string;
   result: string;
   techStack?: string[];
+  partnerName?: string;
+  partnerUrl?: string;
 }
 
 export interface CaseStudySections {
