@@ -13,8 +13,16 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-black text-white pt-24">
-      <CaseStudyShowcase showAll />
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-7xl mx-auto px-6 pt-32 pb-16">
+        <h1 className="text-7xl font-bold mb-6">
+          All Projects
+        </h1>
+        <p className="text-white/60 text-lg max-w-xl">
+          Client work, internal tools, and technical showcases.
+        </p>
+      </div>
+      <CaseStudyShowcase showAll pageMode />
       <CTA />
     </div>
   );

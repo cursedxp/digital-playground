@@ -68,12 +68,88 @@ const caseStudies = [
 
 interface Props {
   showAll?: boolean;
+  pageMode?: boolean;
 }
 
-export default function CaseStudyShowcase({ showAll = false }: Props) {
+export default function CaseStudyShowcase({ showAll = false, pageMode = false }: Props) {
   const visibleStudies = showAll
     ? caseStudies
     : caseStudies.filter((s) => s.featured);
+
+  const cardGrid = (
+    <div className={`grid grid-cols-1 md:grid-cols-2 ${pageMode ? "lg:grid-cols-3" : ""} gap-6`}>
+      {visibleStudies.map((study, index) => (
+        <motion.div
+          key={study.slug}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+        >
+          <Link
+            href={`/case-studies/${study.slug}`}
+            className="block group h-full"
+          >
+            <div className="h-full flex flex-col">
+              <h3 className="text-xl font-bold mb-3 group-hover:opacity-80 transition-opacity">
+                {study.title}
+              </h3>
+
+              <p className="text-white text-sm leading-relaxed mb-4 grow">
+                {study.summary}
+              </p>
+
+              {study.techStack.length > 0 && (
+                <div className="text-xs text-white mb-4">
+                  {study.techStack.join(" • ")}
+                </div>
+              )}
+
+              <div
+                className="text-sm group-hover:opacity-80 transition-opacity flex items-center gap-2"
+                style={{ color: "#FFE028" }}
+              >
+                <span>Read more</span>
+                <span className="transform group-hover:translate-x-1 transition-transform">
+                  →
+                </span>
+              </div>
+            </div>
+          </Link>
+        </motion.div>
+      ))}
+
+      {!showAll && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: visibleStudies.length * 0.1 }}
+          className="flex items-center"
+        >
+          <Link
+            href="/projects"
+            className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+          >
+            <span>View all projects</span>
+            <span className="transform group-hover:translate-x-1 transition-transform">
+              →
+            </span>
+          </Link>
+        </motion.div>
+      )}
+    </div>
+  );
+
+  if (pageMode) {
+    return (
+      <section className="bg-black text-white px-6 mb-20">
+        <div className="max-w-7xl mx-auto">
+          {cardGrid}
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section
@@ -83,67 +159,8 @@ export default function CaseStudyShowcase({ showAll = false }: Props) {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
           {/* Left side - Projects Grid */}
-          <div className="lg:col-span-8 lg:order-1 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {visibleStudies.map((study, index) => (
-              <motion.div
-                key={study.slug}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Link
-                  href={`/case-studies/${study.slug}`}
-                  className="block group h-full"
-                >
-                  <div className="h-full flex flex-col">
-                    <h3 className="text-xl font-bold mb-3 group-hover:opacity-80 transition-opacity">
-                      {study.title}
-                    </h3>
-
-                    <p className="text-white text-sm leading-relaxed mb-4 grow">
-                      {study.summary}
-                    </p>
-
-                    {study.techStack.length > 0 && (
-                      <div className="text-xs text-white mb-4">
-                        {study.techStack.join(" • ")}
-                      </div>
-                    )}
-
-                    <div
-                      className="text-sm group-hover:opacity-80 transition-opacity flex items-center gap-2"
-                      style={{ color: "#FFE028" }}
-                    >
-                      <span>Read more</span>
-                      <span className="transform group-hover:translate-x-1 transition-transform">
-                        →
-                      </span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
-            ))}
-
-            {!showAll && (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: visibleStudies.length * 0.1 }}
-                className="flex items-center"
-              >
-                <Link
-                  href="/projects"
-                  className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
-                >
-                  <span>View all projects</span>
-                  <span className="transform group-hover:translate-x-1 transition-transform">
-                    →
-                  </span>
-                </Link>
-              </motion.div>
-            )}
+          <div className="lg:col-span-8 lg:order-1">
+            {cardGrid}
           </div>
 
           {/* Right side - Title */}
