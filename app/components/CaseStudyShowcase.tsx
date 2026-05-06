@@ -7,27 +7,63 @@ const caseStudies = [
   {
     industry: "Client Project",
     year: "2024",
-    title: "How Sync turns WhatsApp into a professional support platform",
+    title: "Sync: WhatsApp Support Platform",
     summary:
-      "A professional services firm needed to manage client communication at scale without asking their team to switch platforms. We built a complete ticketing and workflow system on WhatsApp Business API — with automatic team assignment, Kanban management, and a real-time analytics dashboard.",
+      "A professional services firm needed to handle client support through WhatsApp without the message chaos that hits every team past five people. We built a coordination layer on top of WhatsApp Business API — auto-assignment, Kanban tracking, real-time analytics. Customers keep messaging on WhatsApp. The team stops dropping things.",
     techStack: ["Next.js", "MongoDB", "WebSockets", "AWS"],
     slug: "sync",
   },
   {
     industry: "Internal Tool",
     year: "2024",
-    title: "Storycraft: Build Your Portfolio in 15 Minutes",
+    title: "Storycraft: AI Case Study Generator",
     summary:
-      "Most founders never write case studies because it takes too long. We built a tool that turns a 10-minute conversation into a polished, publish-ready case study. Creation time: down from 3-6 hours to 15 minutes.",
+      "Case studies take 3–6 hours to write. Most agencies skip them entirely. We built a tool that turns 3–4 questions into a finished, publish-ready case study in about 15 minutes.",
     techStack: ["Next.js", "ChatGPT", "Claude"],
     slug: "generator",
+  },
+  {
+    industry: "Internal Tool",
+    year: "2025",
+    title: "Lead Finder: Location & ICP-Based Prospecting",
+    summary:
+      "Pick a sector, a city, and what your ideal customer looks like. Lead Finder does the searching. We built it for our own outreach pipeline — and to make entering unfamiliar markets a lot less painful.",
+    techStack: [],
+    slug: "lead-finder",
+  },
+  {
+    industry: "Developer Tool",
+    year: "2025",
+    title: "Pingfyr: Scheduled Delivery API for Developers",
+    summary:
+      "One API call. Seven channels. Your reminders, notifications, and webhooks fire automatically — no cron jobs, no polling, nothing to babysit.",
+    techStack: [],
+    slug: "pingfyr",
+  },
+  {
+    industry: "Client Project",
+    year: "2025",
+    title: "Social Media Automation: Instagram Content Engine",
+    summary:
+      "An inconsistent Instagram feed looks like an inactive business. We built an automation that writes the posts, generates the images, and produces avatar videos with a realistic on-screen presenter — so the feed stays active without the owner ever picking up their phone.",
+    techStack: [],
+    slug: "social-media-automation",
+  },
+  {
+    industry: "Product",
+    year: "2025",
+    title: "TOM: Meeting Intelligence That Compounds",
+    summary:
+      "TOM records and transcribes your meetings locally on your Mac — no bots, no cloud, no subscription. Ask questions across all your past calls and get cited answers with video timestamps. The more meetings you have in it, the more useful it gets.",
+    techStack: [],
+    slug: "tom",
   },
 ];
 
 export default function CaseStudyShowcase() {
   return (
     <section
-      id="case-studies"
+      id="projects"
       className="bg-black text-white px-6 mb-20 sm:mb-50"
     >
       <div className="max-w-7xl mx-auto">

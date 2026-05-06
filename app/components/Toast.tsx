@@ -38,7 +38,7 @@ function ToastContent({ onClose }: { onClose: () => void }) {
           <div className="mt-4 space-y-4">
             <p className="text-black/80 text-sm leading-relaxed">
               Join our first 3 founding members - priority scheduling,
-              co-creation process, featured case study
+              co-creation process, featured project
             </p>
             <a
               href="https://cal.com/optimotion.dev/60-min-meeting"

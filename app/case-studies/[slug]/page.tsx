@@ -27,7 +27,7 @@ export async function generateMetadata({
   const url = `${baseUrl}/case-studies/${slug}`;
 
   return {
-    title: `${frontmatter.title} - Case Study`,
+    title: `${frontmatter.title} - Project`,
     description:
       frontmatter.summary ||
       `${frontmatter.industry} project completed in ${frontmatter.year}. ${frontmatter.result}`,
@@ -35,7 +35,7 @@ export async function generateMetadata({
       canonical: url,
     },
     openGraph: {
-      title: `${frontmatter.title} - Case Study`,
+      title: `${frontmatter.title} - Project`,
       description: frontmatter.summary,
       url: url,
       type: "article",
