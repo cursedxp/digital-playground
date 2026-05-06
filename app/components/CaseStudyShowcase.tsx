@@ -12,6 +12,7 @@ const caseStudies = [
       "A professional services firm needed to handle client support through WhatsApp without the message chaos that hits every team past five people. We built a coordination layer on top of WhatsApp Business API — auto-assignment, Kanban tracking, real-time analytics. Customers keep messaging on WhatsApp. The team stops dropping things.",
     techStack: ["Next.js", "MongoDB", "WebSockets", "AWS"],
     slug: "sync",
+    featured: true,
   },
   {
     industry: "Internal Tool",
@@ -21,6 +22,7 @@ const caseStudies = [
       "Case studies take 3–6 hours to write. Most agencies skip them entirely. We built a tool that turns 3–4 questions into a finished, publish-ready case study in about 15 minutes.",
     techStack: ["Next.js", "ChatGPT", "Claude"],
     slug: "generator",
+    featured: false,
   },
   {
     industry: "Internal Tool",
@@ -30,6 +32,7 @@ const caseStudies = [
       "Pick a sector, a city, and what your ideal customer looks like. Lead Finder does the searching. We built it for our own outreach pipeline — and to make entering unfamiliar markets a lot less painful.",
     techStack: [],
     slug: "lead-finder",
+    featured: true,
   },
   {
     industry: "Developer Tool",
@@ -39,6 +42,7 @@ const caseStudies = [
       "One API call. Seven channels. Your reminders, notifications, and webhooks fire automatically — no cron jobs, no polling, nothing to babysit.",
     techStack: [],
     slug: "pingfyr",
+    featured: false,
   },
   {
     industry: "Client Project",
@@ -48,6 +52,7 @@ const caseStudies = [
       "An inconsistent Instagram feed looks like an inactive business. We built an automation that writes the posts, generates the images, and produces avatar videos with a realistic on-screen presenter — so the feed stays active without the owner ever picking up their phone.",
     techStack: [],
     slug: "social-media-automation",
+    featured: false,
   },
   {
     industry: "Product",
@@ -57,10 +62,19 @@ const caseStudies = [
       "TOM records and transcribes your meetings locally on your Mac — no bots, no cloud, no subscription. Ask questions across all your past calls and get cited answers with video timestamps. The more meetings you have in it, the more useful it gets.",
     techStack: [],
     slug: "tom",
+    featured: true,
   },
 ];
 
-export default function CaseStudyShowcase() {
+interface Props {
+  showAll?: boolean;
+}
+
+export default function CaseStudyShowcase({ showAll = false }: Props) {
+  const visibleStudies = showAll
+    ? caseStudies
+    : caseStudies.filter((s) => s.featured);
+
   return (
     <section
       id="projects"
@@ -68,9 +82,9 @@ export default function CaseStudyShowcase() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-          {/* Left side - Case Studies Grid */}
+          {/* Left side - Projects Grid */}
           <div className="lg:col-span-8 lg:order-1 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {caseStudies.map((study, index) => (
+            {visibleStudies.map((study, index) => (
               <motion.div
                 key={study.slug}
                 initial={{ opacity: 0, y: 20 }}
@@ -83,22 +97,20 @@ export default function CaseStudyShowcase() {
                   className="block group h-full"
                 >
                   <div className="h-full flex flex-col">
-                    {/* Title */}
                     <h3 className="text-xl font-bold mb-3 group-hover:opacity-80 transition-opacity">
                       {study.title}
                     </h3>
 
-                    {/* Summary */}
                     <p className="text-white text-sm leading-relaxed mb-4 grow">
                       {study.summary}
                     </p>
 
-                    {/* Tech Stack */}
-                    <div className="text-xs text-white mb-4">
-                      {study.techStack.join(" • ")}
-                    </div>
+                    {study.techStack.length > 0 && (
+                      <div className="text-xs text-white mb-4">
+                        {study.techStack.join(" • ")}
+                      </div>
+                    )}
 
-                    {/* Read More Link */}
                     <div
                       className="text-sm group-hover:opacity-80 transition-opacity flex items-center gap-2"
                       style={{ color: "#FFE028" }}
@@ -112,6 +124,26 @@ export default function CaseStudyShowcase() {
                 </Link>
               </motion.div>
             ))}
+
+            {!showAll && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: visibleStudies.length * 0.1 }}
+                className="flex items-center"
+              >
+                <Link
+                  href="/projects"
+                  className="group flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
+                >
+                  <span>View all projects</span>
+                  <span className="transform group-hover:translate-x-1 transition-transform">
+                    →
+                  </span>
+                </Link>
+              </motion.div>
+            )}
           </div>
 
           {/* Right side - Title */}
